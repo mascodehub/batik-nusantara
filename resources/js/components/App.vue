@@ -1,46 +1,54 @@
 <template>
    <div>
-      <h1>Postingan</h1>
-      <input v-model="title" placeholder="Judul" />
-      <textarea v-model="content" placeholder="Konten"></textarea>
-      <input type="file" @change="e => image = e.target.files[0]" />
-      <button @click="createPost">Tambah</button>
-
-      <ul>
-         <li v-for="post in posts" :key="post.id">
-            <h2>{{ post.title }}</h2>
-            <p>{{ post.content }}</p>
-            <img v-if="post.image" :src="'/storage/' + post.image" width="200" />
-         </li>
-      </ul>
+      <Navbar />
+      <Banner />
+      <div class="container mx-auto px-4">
+         <div class="flex flex-col lg:flex-row">
+            <Sidebar @filter-change="applyFilter" />
+            <ProductGrid :products="filteredProducts" @edit="editProduct" @delete="deleteProduct" />
+         </div>
+      </div>
+      <ContactSection />
+      <Footer />
    </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import axios from 'axios'
+import { ref } from 'vue'
+import Navbar from './Navbar.vue'
+import Banner from './Banner.vue'
+import Sidebar from './Sidebar.vue'
+import ProductGrid from './ProductGrid.vue'
+import ContactSection from './ContactSection.vue'
+import Footer from './Footer.vue'
 
-const posts = ref([])
-const title = ref('')
-const content = ref('')
-const image = ref(null)
+const products = ref([
+   { id: 1, title: 'Ring Fastening Cardigan', price: 159, image: 'https://aspenhillvillage.bigpic.dev/wp-content/uploads/2020/12/300x300-Placeholder-Image.jpg' },
+   { id: 2, title: 'Silk Polo Neck Jumper', price: 89, image: 'https://aspenhillvillage.bigpic.dev/wp-content/uploads/2020/12/300x300-Placeholder-Image.jpg' },
+   { id: 3, title: 'Cashmere Stripe Polo', price: 109, image: 'https://aspenhillvillage.bigpic.dev/wp-content/uploads/2020/12/300x300-Placeholder-Image.jpg' },
+   { id: 4, title: 'Cashmere Jumper', price: 95, image: 'https://aspenhillvillage.bigpic.dev/wp-content/uploads/2020/12/300x300-Placeholder-Image.jpg' },
+   { id: 5, title: 'Wool Polo Neck Jumper', price: 89, image: 'https://aspenhillvillage.bigpic.dev/wp-content/uploads/2020/12/300x300-Placeholder-Image.jpg' },
+   { id: 6, title: 'Chunky Ottoman Jumper', price: 159, image: 'https://aspenhillvillage.bigpic.dev/wp-content/uploads/2020/12/300x300-Placeholder-Image.jpg' }
+])
 
-const fetchPosts = async () => {
-   const res = await axios.get('/api/posts')
-   posts.value = res.data
+const filteredProducts = ref([...products.value])
+
+const applyFilter = (filterFn) => {
+   filteredProducts.value = products.value.filter(filterFn)
 }
 
-const createPost = async () => {
-   const form = new FormData()
-   form.append('title', title.value)
-   form.append('content', content.value)
-   if (image.value) form.append('image', image.value)
-
-   await axios.post('/api/posts', form)
-   fetchPosts()
-   title.value = content.value = ''
-   image.value = null
+const editProduct = (id) => {
+   alert('Edit product ID: ' + id)
 }
 
-onMounted(fetchPosts)
+const deleteProduct = (id) => {
+   filteredProducts.value = filteredProducts.value.filter(p => p.id !== id)
+}
 </script>
+
+<style>
+body {
+   font-family: 'Arial', sans-serif;
+   background: #fff;
+}
+</style>
