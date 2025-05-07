@@ -14,10 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
-Route::get('/post', function (Request $request) {
-    dd($request);
-});
+Route::get('/{any}', function () {
+    return view('index'); // atau nama view blade kamu
+})->where('any', '.*');
+
+// Route::get('/{any}', function () {
+//     return view('index');
+// })->where('any', '^(?!api|login).*$');
+
+// Route::get('/post', function (Request $request) {
+//     dd($request);
+// });
