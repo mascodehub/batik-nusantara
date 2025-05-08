@@ -1,10 +1,25 @@
 <template>
   <aside class="w-full lg:w-1/4 p-4">
     <div class="mb-6">
-      <h2 class="font-bold mb-2">Filter</h2>
-      <button @click="$emit('filter-change', () => true)" class="underline text-blue-500">All</button>
-      <button @click="$emit('filter-change', p => p.price < 100)" class="ml-2 underline text-blue-500">Under
-        £100</button>
+      <h2 class="font-bold mb-2">Category</h2>
+      <ul>
+        <li>
+          <button @click="$emit('filter-change', () => true)" class="underline text-blue-500 hover:text-black cursor-pointer">All</button>
+        </li>
+        <li>
+          <button @click="$emit('filter-change', () => true)" class="underline text-blue-500 hover:text-black cursor-pointer">New Realease</button>
+        </li>
+        <li>
+          <button @click="$emit('filter-change', () => true)" class="underline text-blue-500 hover:text-black cursor-pointer">Men</button>
+        </li>
+        <li>
+          <button @click="$emit('filter-change', () => true)" class="underline text-blue-500 hover:text-black cursor-pointer">Women</button>
+        </li>
+        <li>
+          <button @click="$emit('filter-change', () => true)" class="underline text-blue-500 hover:text-black cursor-pointer">Couple</button>
+        </li>
+      </ul>
+      <!-- <button @click="$emit('filter-change', p => p.price < 100)" class="ml-2 underline text-blue-500">Under £100</button> -->
     </div>
     <div>
       <h2 class="font-bold mb-2">Colour</h2>
