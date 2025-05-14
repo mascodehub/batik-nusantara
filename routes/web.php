@@ -1,31 +1,28 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+// === ADMIN PANEL ===
+Route::prefix('admin')->middleware(['auth', 'role:admin'])->group(function () {
+    Route::name('admin.')->group(function () {
+        Route::get('/', function () {
+            dd('asd');
+            // return view('admin.dashboard');
+        })->name('index');
 
-// Route::get('/', function () {
-//     return view('index');
-// });
+        Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+        Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+        Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    });
+});
 
+// === AUTH ===
+require __DIR__.'/auth.php';
+
+// === FRONTEND CUSTOMER (Vue.js SPA) ===
 Route::get('/{any}', function () {
-    return view('index'); // atau nama view blade kamu
-})->where('any', '.*');
+    return view('index'); // load Vue app
+})->where('any', '^(?!admin).*');
 
-// Route::get('/{any}', function () {
-//     return view('index');
-// })->where('any', '^(?!api|login).*$');
-
-// Route::get('/post', function (Request $request) {
-//     dd($request);
-// });
