@@ -5,7 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 // === ADMIN PANEL ===
-Route::middleware(['auth', 'role:admin'])->prefix('admin')->group(function () {
+Route::middleware(['auth:admin', 'role:admin'])->prefix('admin')->group(function () {
     Route::name('admin.')->group(function () {
         Route::get('/', function () {
             return view('admin.dashboard');

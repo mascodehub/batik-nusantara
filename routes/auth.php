@@ -37,7 +37,7 @@ Route::middleware('guest')->group(function () {
     });
 });
 
-Route::middleware('auth')->group(function () {
+Route::middleware('auth:admin', 'role:admin')->group(function () {
     Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('verify-email', EmailVerificationPromptController::class)
             ->name('verification.notice');
