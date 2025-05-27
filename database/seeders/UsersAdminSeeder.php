@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\UsersAdmin;
+use App\Models\UserAdmin;
 use Illuminate\Support\Facades\Hash;
 
 class UsersAdminSeeder extends Seeder
@@ -14,7 +14,7 @@ class UsersAdminSeeder extends Seeder
      */
     public function run(): void
     {
-        UsersAdmin::create([
+        UserAdmin::create([
             'name' => 'Super Admin',
             'email' => 'admin@batikshop.test',
             'password' => Hash::make('admin123'), // Gunakan password kuat di produksi
