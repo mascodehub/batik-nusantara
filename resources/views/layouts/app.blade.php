@@ -12,8 +12,11 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link href="{{ asset('assets/css/datatables.min.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
+    <script src="{{ asset('assets/js/datatables.min.js') }}"></script>
+
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/alpine.js'])
 </head>
 
@@ -25,7 +28,7 @@
                 @include('layouts.sidebar', ['sidebar' => $sidebar])
             </div>
             <main class="w-screen h-screen py-2 px-2">
-                <div class="bg-stone-100 rounded-md h-full">
+                <div class="bg-stone-100 rounded-md h-full overflow-y-auto">
                     {{ $slot }}
                 </div>
             </main>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -12,8 +13,16 @@ class ProductController extends Controller
      */
     public function index()
     {
+        $products = DB::table('m_product')
+            ->select('*', DB::raw('coalesce(stock, 0) as stock'))
+            ->orderBy('name')
+            ->get();
+
         return view('admin.pages.products', [
-            'sidebar' => 'Products'
+            'sidebar' => 'Products',
+            'data' => [
+                'products' => $products
+            ]
         ]);
     }
 
