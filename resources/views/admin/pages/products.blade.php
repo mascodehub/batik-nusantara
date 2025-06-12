@@ -2,34 +2,39 @@
     <div class="p-6 text-gray-900">
         {{ __('Products') }}
 
-        <table class="min-w-full mt-10 text-sm" id="tblProduct">
+        @include('admin.modals.products')
+
+        <table class="table" id="tblProduct">
             <thead>
                 <tr>
-                    <th style="text-align: center;width: 2%">
+                    <th style="width: 2%;text-align: center;">
                         No
                     </th>
-                    <th style="text-align: center;width: 10%">
+                    <th style="width: 10%;text-align: center;">
                         Nama
                     </th>
-                    <th style="text-align: center;width: 10%">
+                    <th style="width: 10%;text-align: center;">
                         Type
                     </th>
-                    <th style="text-align: center;width: 10%">
+                    <th style="width: 10%;text-align: center;">
                         Price
                     </th>
-                    <th style="text-align: center;width: 10%">
+                    <th style="width: 10%;text-align: center;">
                         Stock
                     </th>
-                    <th style="text-align: center;width: 10%">
+                    <th style="width: 10%;text-align: center;">
                         Estimation
                     </th>
-                    <th style="text-align: center;width: 10%">
+                    <th style="width: 10%;text-align: center;">
                         Action
                     </th>
                 </tr>
             </thead>
         </table>
+
     </div>
+
+
 </x-app-layout>
 
 <script src="{{ asset('assets/js/admin/product.js') }}"></script>
