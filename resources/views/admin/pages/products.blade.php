@@ -11,7 +11,7 @@
                         No
                     </th>
                     <th style="width: 10%;text-align: center;">
-                        Nama
+                        Name
                     </th>
                     <th style="width: 10%;text-align: center;">
                         Type
