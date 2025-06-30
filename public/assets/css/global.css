@@ -37,7 +37,8 @@
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 2rem;
     z-index: 50;
 }
 
@@ -45,8 +46,19 @@
     background: white;
     padding: 1.5rem;
     border-radius: 0.5rem;
-    max-width: 400px;
     width: 100%;
+}
+
+.modal-sm {
+    max-width: 30vw;
+}
+
+.modal-md {
+    max-width: 45vw;
+}
+
+.modal-xl {
+    max-width: 80vw;
 }
 
 .hidden {

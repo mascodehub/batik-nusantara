@@ -1,0 +1,34 @@
+[
+  {
+    "id": "ORD001",
+    "user_id": 1,
+    "order_date": "2025-06-25T10:00:00Z",
+    "total_amount": 250000,
+    "status": "completed",
+    "items": [
+      {"product_id": 1, "product_name": "Kaos Basic Hitam", "quantity": 2, "price": 75000},
+      {"product_id": 3, "product_name": "Celana Jeans Slim Fit", "quantity": 1, "price": 100000}
+    ]
+  },
+  {
+    "id": "ORD002",
+    "user_id": 1,
+    "order_date": "2025-06-28T14:30:00Z",
+    "total_amount": 180000,
+    "status": "pending",
+    "items": [
+      {"product_id": 2, "product_name": "Kemeja Flanel Merah", "quantity": 1, "price": 180000}
+    ]
+  },
+  {
+    "id": "ORD003",
+    "user_id": 2,
+    "order_date": "2025-06-29T09:00:00Z",
+    "total_amount": 135000,
+    "status": "completed",
+    "items": [
+      {"product_id": 5, "product_name": "T-Shirt Putih Polos", "quantity": 1, "price": 60000},
+      {"product_id": 1, "product_name": "Kaos Basic Hitam", "quantity": 1, "price": 75000}
+    ]
+  }
+]

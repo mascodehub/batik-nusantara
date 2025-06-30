@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Kaos Basic Hitam",
+    "description": "Kaos katun lembut, nyaman dipakai sehari-hari dengan desain minimalis.",
+    "price": 75000,
+    "category": "T-Shirt",
+    "imageUrl": "https://aspenhillvillage.bigpic.dev/wp-content/uploads/2020/12/300x300-Placeholder-Image.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Kemeja Flanel Merah",
+    "description": "Kemeja flanel kotak-kotak merah, gaya kasual dan hangat untuk berbagai kesempatan.",
+    "price": 180000,
+    "category": "Kemeja",
+    "imageUrl": "https://aspenhillvillage.bigpic.dev/wp-content/uploads/2020/12/300x300-Placeholder-Image.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Celana Jeans Slim Fit",
+    "description": "Jeans denim berkualitas tinggi dengan potongan slim fit yang modern dan nyaman.",
+    "price": 250000,
+    "category": "Celana",
+    "imageUrl": "https://aspenhillvillage.bigpic.dev/wp-content/uploads/2020/12/300x300-Placeholder-Image.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Jaket Bomber Keren",
+    "description": "Jaket bomber dengan lapisan hangat, cocok untuk musim dingin atau gaya urban.",
+    "price": 350000,
+    "category": "Jaket",
+    "imageUrl": "https://aspenhillvillage.bigpic.dev/wp-content/uploads/2020/12/300x300-Placeholder-Image.jpg"
+  },
+  {
+    "id": 5,
+    "name": "T-Shirt Putih Polos",
+    "description": "Kaos putih dasar, item wajib yang mudah dipadukan dengan gaya apapun.",
+    "price": 60000,
+    "category": "T-Shirt",
+    "imageUrl": "https://aspenhillvillage.bigpic.dev/wp-content/uploads/2020/12/300x300-Placeholder-Image.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Kemeja Denim Biru",
+    "description": "Kemeja denim klasik dengan bahan lembut, tak lekang oleh waktu.",
+    "price": 195000,
+    "category": "Kemeja",
+    "imageUrl": "https://aspenhillvillage.bigpic.dev/wp-content/uploads/2020/12/300x300-Placeholder-Image.jpg"
+  }
+]
