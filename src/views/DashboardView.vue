@@ -3,8 +3,28 @@ import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import Button from 'primevue/button'
 
-const showModalDetail = ref(false)
-const selectedItem = ref(null)
+const showModalDetail = ref(false);
+const selectedItem = ref(null);
+const selectedImage = ref(null);
+
+const openModal = (item) => {
+  selectedItem.value = item;
+
+  // Prioritaskan image sebagai gambar utama
+  selectedImage.value = item.image;
+
+  showModalDetail.value = true;
+};
+
+const closeModal = () => {
+  showModalDetail.value = false;
+  selectedItem.value = null;
+  selectedImage.value = null;
+};
+
+const changeImage = (image) => {
+  selectedImage.value = image;
+};
 
 const galleryItems = ref([
   {
@@ -14,6 +34,12 @@ const galleryItems = ref([
       'Sutra ATBM murni dengan pewarnaan alami kayu soga dan tingi. Pengerjaan canting halus selama 4 bulan oleh maestro batik Giriloyo dengan presisi geometris sakral khas keraton Mataram. Menampilkan kemegahan Parang Barong yang dahulu dikhususkan bagi para bangsawan berwibawa tinggi.',
     image:
       'https://lh3.googleusercontent.com/aida/AEtjO1Uh0EXDiHAt-hHwbKsD6V-vSUE5s5waBfQEYXWbgQM7Csp86tyEktDfw7cxdRBb6Gt2Tf8vrPdTlXcc-PzbskZDcCNUxCMr2I_vEkYkvGBI0pARTWVBb4MkC9xnrB_f5G0Y2lg4RHUl8rNpdTUUTCygK--6xfsgRbnmfWOkgKjZxxokcuAtDjo-cLUbAvjf-0vJjQiVLg9_Ln8jZADHI4zQB7QvziYjr8WF66BVz04eCiZV3K8HgBvfjA',
+    images: [
+      'https://lh3.googleusercontent.com/aida/AEtjO1Uh0EXDiHAt-hHwbKsD6V-vSUE5s5waBfQEYXWbgQM7Csp86tyEktDfw7cxdRBb6Gt2Tf8vrPdTlXcc-PzbskZDcCNUxCMr2I_vEkYkvGBI0pARTWVBb4MkC9xnrB_f5G0Y2lg4RHUl8rNpdTUUTCygK--6xfsgRbnmfWOkgKjZxxokcuAtDjo-cLUbAvjf-0vJjQiVLg9_Ln8jZADHI4zQB7QvziYjr8WF66BVz04eCiZV3K8HgBvfjA',
+      'https://lh3.googleusercontent.com/aida/AEtjO1UwOB4OmaYaQFvVcOvlKs5LQMhUzyBlK0AoIyqZm9YGjBqkuVhjmUmppjzLOUUSOjBO6MQMLzc9lXKdDyaEXF-uPL2FV6DDraQiZY3BuP9H0Eavn0DtiFZXQlw5_i17eAT0X1-i6R9tg4ydz26pQPNuZZOUCb06VVKPxesY1IJt8qAwhYi6pV1fpAa8YT9o6wVrj5K2J9l8rkIZKsZ2r0TZIHbS687Gn8SncXWlK8StjOtGubGBio2Z',
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuDpGhWp5sFcYiBkRRnbIxKmpiff4nYBNEmpaQxuBqCcPOIp-P-ImxmB0i4eTsxdzjlKgncPSczQOCTWrhl54F4gw2n_byIsjsr7L8EbGoSR_tSPA74AVVDBtYGXPriVvQ_9ecFCjMYcO2sG7uh5tdhFks3DBQy25BPk4aU2BnBmEVEn51bVE4-MT4UsxngRQKByFdozKSPVxgPOyyQ_TNFHpqn3c4lAW827HbDQ2Cu60n6Kg5oGzuI',
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuD8A63OiFL0_p3kcYgmHW9B_OiFmEcUWuwnZimgp7zUYG9_DAPa9q9MAzWy95xih_LES4Bh589JHto0CY7NgTECC15a4w4vuFDUs_NQ1NAIQOh1VoP1tfCvXwwjmKnPRlCcE_x8gFNvxwPRoWnbdA9F2K1PIv7RdP3s3OOModlRLRy3PPvbgIcx1WQ6k8YdXmzzG0dmLv1Qms2vXvv-b_4okw52bqUHVq4n2-ASfIPpFx1S0twEMx4'
+    ],
     material: 'Sutra ATBM Murni (Alat Tenun Bukan Mesin)',
     origin: 'Giriloyo, Imogiri, Yogyakarta',
     tag: 'Koleksi Maestro',
@@ -40,6 +66,12 @@ const galleryItems = ref([
     categoryLabel: "Fashion",
     description: "Gaun malam potongan asimetris berpadu filosofi motif Sido Asih yang melambangkan kasih sayang abadi dan keanggunan wanita Nusantara. Jatuhan kain yang dramatis mengalir seperti ombak pesisir Samudra Hindia dengan tatahan payet tembaga antik artisan kotagede.",
     image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDpGhWp5sFcYiBkRRnbIxKmpiff4nYBNEmpaQxuBqCcPOIp-P-ImxmB0i4eTsxdzjlKgncPSczQOCTWrhl54F4gw2n_byIsjsr7L8EbGoSR_tSPA74AVVDBtYGXPriVvQ_9ecFCjMYcO2sG7uh5tdhFks3DBQy25BPk4aU2BnBmEVEn51bVE4-MT4UsxngRQKByFdozKSPVxgPOyyQ_TNFHpqn3c4lAW827HbDQ2Cu60n6Kg5oGzuI",
+    images: [
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuDpGhWp5sFcYiBkRRnbIxKmpiff4nYBNEmpaQxuBqCcPOIp-P-ImxmB0i4eTsxdzjlKgncPSczQOCTWrhl54F4gw2n_byIsjsr7L8EbGoSR_tSPA74AVVDBtYGXPriVvQ_9ecFCjMYcO2sG7uh5tdhFks3DBQy25BPk4aU2BnBmEVEn51bVE4-MT4UsxngRQKByFdozKSPVxgPOyyQ_TNFHpqn3c4lAW827HbDQ2Cu60n6Kg5oGzuI',
+      'https://lh3.googleusercontent.com/aida/AEtjO1Uh0EXDiHAt-hHwbKsD6V-vSUE5s5waBfQEYXWbgQM7Csp86tyEktDfw7cxdRBb6Gt2Tf8vrPdTlXcc-PzbskZDcCNUxCMr2I_vEkYkvGBI0pARTWVBb4MkC9xnrB_f5G0Y2lg4RHUl8rNpdTUUTCygK--6xfsgRbnmfWOkgKjZxxokcuAtDjo-cLUbAvjf-0vJjQiVLg9_Ln8jZADHI4zQB7QvziYjr8WF66BVz04eCiZV3K8HgBvfjA',
+      'https://lh3.googleusercontent.com/aida/AEtjO1UwOB4OmaYaQFvVcOvlKs5LQMhUzyBlK0AoIyqZm9YGjBqkuVhjmUmppjzLOUUSOjBO6MQMLzc9lXKdDyaEXF-uPL2FV6DDraQiZY3BuP9H0Eavn0DtiFZXQlw5_i17eAT0X1-i6R9tg4ydz26pQPNuZZOUCb06VVKPxesY1IJt8qAwhYi6pV1fpAa8YT9o6wVrj5K2J9l8rkIZKsZ2r0TZIHbS687Gn8SncXWlK8StjOtGubGBio2Z',
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuD8A63OiFL0_p3kcYgmHW9B_OiFmEcUWuwnZimgp7zUYG9_DAPa9q9MAzWy95xih_LES4Bh589JHto0CY7NgTECC15a4w4vuFDUs_NQ1NAIQOh1VoP1tfCvXwwjmKnPRlCcE_x8gFNvxwPRoWnbdA9F2K1PIv7RdP3s3OOModlRLRy3PPvbgIcx1WQ6k8YdXmzzG0dmLv1Qms2vXvv-b_4okw52bqUHVq4n2-ASfIPpFx1S0twEMx4'
+    ],
     material: "Sutra Organza & Kain Mori Sutra Superfine",
     origin: "Yogyakarta Creative Hub",
     tag: "Adibusana",
@@ -63,25 +95,6 @@ const galleryItems = ref([
   },
 ])
 
-function openModal(item) {
-  selectedItem.value = item
-  showModalDetail.value = true
-
-  // Lock scroll halaman
-  document.body.style.overflow = 'hidden'
-}
-
-function closeModal() {
-  showModalDetail.value = false
-
-  // Unlock scroll halaman
-  document.body.style.overflow = ''
-
-  // Bersihkan data setelah modal ditutup
-  setTimeout(() => {
-    selectedItem.value = null
-  }, 300)
-}
 
 </script>
 
@@ -527,14 +540,32 @@ function closeModal() {
 
             <div class="grid grid-cols-1 md:grid-cols-12 max-h-[85vh] overflow-y-auto">
               <!-- Modal Image -->
-              <div class="md:col-span-6 bg-surface-container relative min-h-[300px] md:min-h-[460px]">
-                <img :src="selectedItem.image" :alt="selectedItem.title" class="w-full h-full object-cover" />
+              <div class="md:col-span-6 bg-surface-container relative p-4 flex flex-col">
+                <!-- Main Image -->
+                <div class="relative flex-1 aspect-[3/4] overflow-hidden rounded-lg">
+                  <img :src="selectedImage" :alt="selectedItem.alt" class="w-full h-full object-cover" />
 
-                <div class="absolute bottom-4 left-4">
-                  <span
-                    class="bg-primary text-surface-bright font-label-sm text-label-sm uppercase px-3 py-1 rounded-full shadow-sm">
-                    {{ selectedItem.tag }}
-                  </span>
+                  <!-- Tag -->
+                  <div class="absolute bottom-4 left-4">
+                    <span
+                      class="bg-primary text-surface-bright font-label-sm text-label-sm uppercase px-3 py-1 rounded-full shadow-sm">
+                      {{ selectedItem.tag }}
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Gallery -->
+                <div v-if="selectedItem.images?.length > 1" class="flex gap-2 mt-3 overflow-x-auto flex-nowrap pb-1">
+                  <button v-for="(image, index) in selectedItem.images" :key="`${selectedItem.id}-${index}`"
+                    type="button"
+                    class="flex-none w-18 h-24 p-1 rounded overflow-hidden focus:outline-none cursor-pointer transition-colors"
+                    :class="selectedImage === image
+                        ? 'border-2 border-primary'
+                        : 'border border-outline-variant/50 hover:border-primary'
+                      " @click="changeImage(image)">
+                    <img :src="image" :alt="`${selectedItem.title} - Detail ${index + 1}`"
+                      class="w-full h-full aspect-[3/4] object-cover" />
+                  </button>
                 </div>
               </div>
 
