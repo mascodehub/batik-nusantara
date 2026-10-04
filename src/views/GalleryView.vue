@@ -194,7 +194,6 @@ function closeModal() {
 
       <div class="segment-gallery-grid w-full max-w-[1320px] mx-auto px-margin-mobile md:px-margin mb-space-2xl">
          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="gallery-grid">
-            <!-- Item 1: Kain Batik -->
             <article v-for="item in galleryItems" :key="item.title"
                class="gallery-card group flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
                <!-- Image -->

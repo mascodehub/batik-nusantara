@@ -1,8 +1,87 @@
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import Button from 'primevue/button'
 
+const showModalDetail = ref(false)
+const selectedItem = ref(null)
+
+const galleryItems = ref([
+  {
+    category: 'kain',
+    categoryLabel: 'Kain Batik',
+    description:
+      'Sutra ATBM murni dengan pewarnaan alami kayu soga dan tingi. Pengerjaan canting halus selama 4 bulan oleh maestro batik Giriloyo dengan presisi geometris sakral khas keraton Mataram. Menampilkan kemegahan Parang Barong yang dahulu dikhususkan bagi para bangsawan berwibawa tinggi.',
+    image:
+      'https://lh3.googleusercontent.com/aida/AEtjO1Uh0EXDiHAt-hHwbKsD6V-vSUE5s5waBfQEYXWbgQM7Csp86tyEktDfw7cxdRBb6Gt2Tf8vrPdTlXcc-PzbskZDcCNUxCMr2I_vEkYkvGBI0pARTWVBb4MkC9xnrB_f5G0Y2lg4RHUl8rNpdTUUTCygK--6xfsgRbnmfWOkgKjZxxokcuAtDjo-cLUbAvjf-0vJjQiVLg9_Ln8jZADHI4zQB7QvziYjr8WF66BVz04eCiZV3K8HgBvfjA',
+    material: 'Sutra ATBM Murni (Alat Tenun Bukan Mesin)',
+    origin: 'Giriloyo, Imogiri, Yogyakarta',
+    tag: 'Koleksi Maestro',
+    technique: 'Batik Tulis Canting Tembaga Halus (4 Bulan Proses)',
+    title: 'Kain Tulis Klasik Parang Barong Soga Alam',
+    subtitle: 'Pewarnaan Soga Alami',
+    exclusive: 'Karya Eksklusif 1/1',
+  },
+  {
+    category: "fashion",
+    categoryLabel: "Fashion",
+    description: "Struktur blazer modern dengan paduan motif Sekar Jagad monokromatik. Menghadirkan wibawa formal dengan kenyamanan linen premium. Didesain untuk para pemimpin kontemporer yang menghargai paduan warisan budaya Nusantara dan ketajaman siluet internasional modern.",
+    image: "https://lh3.googleusercontent.com/aida/AEtjO1UwOB4OmaYaQFvVcOvlKs5LQMhUzyBlK0AoIyqZm9YGjBqkuVhjmUmppjzLOUUSOjBO6MQMLzc9lXKdDyaEXF-uPL2FV6DDraQiZY3BuP9H0Eavn0DtiFZXQlw5_i17eAT0X1-i6R9tg4ydz26pQPNuZZOUCb06VVKPxesY1IJt8qAwhYi6pV1fpAa8YT9o6wVrj5K2J9l8rkIZKsZ2r0TZIHbS687Gn8SncXWlK8StjOtGubGBio2Z",
+    material: "Linen Blend & Katun Primissima Batik Tulis",
+    origin: "Surakarta & Jakarta Atelier",
+    tag: "Ready-to-Wear",
+    technique: "Semi-Bespoke Tailoring dengan Hand-stitched Lapel",
+    title: "Modern Tailored Blazer Sekar Jagad",
+    subtitle: "Siluet Kontemporer",
+    exclusive: "Edisi Terbatas"
+  },
+  {
+    category: "fashion",
+    categoryLabel: "Fashion",
+    description: "Gaun malam potongan asimetris berpadu filosofi motif Sido Asih yang melambangkan kasih sayang abadi dan keanggunan wanita Nusantara. Jatuhan kain yang dramatis mengalir seperti ombak pesisir Samudra Hindia dengan tatahan payet tembaga antik artisan kotagede.",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDpGhWp5sFcYiBkRRnbIxKmpiff4nYBNEmpaQxuBqCcPOIp-P-ImxmB0i4eTsxdzjlKgncPSczQOCTWrhl54F4gw2n_byIsjsr7L8EbGoSR_tSPA74AVVDBtYGXPriVvQ_9ecFCjMYcO2sG7uh5tdhFks3DBQy25BPk4aU2BnBmEVEn51bVE4-MT4UsxngRQKByFdozKSPVxgPOyyQ_TNFHpqn3c4lAW827HbDQ2Cu60n6Kg5oGzuI",
+    material: "Sutra Organza & Kain Mori Sutra Superfine",
+    origin: "Yogyakarta Creative Hub",
+    tag: "Adibusana",
+    technique: "Draping Eksklusif & Batik Tulis Dua Muka",
+    title: "Gaun Pesta Sido Asih Samodra",
+    subtitle: "Evening Couture",
+    exclusive: "Karya Adibusana"
+  },
+  {
+    category: "interior",
+    categoryLabel: "Produk Rumah Tangga",
+    description: "Dekorasi ruang tamu berupa bantal sofa sutra dan taplak meja kanvas katun motif Truntum geometris yang hangat dan bersahaja. Menghadirkan suasana keheningan ruang keluarga berestetika Wabi-Sabi Jawa dengan ketahanan cuci tinggi untuk pemakaian harian mewah.",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuD8A63OiFL0_p3kcYgmHW9B_OiFmEcUWuwnZimgp7zUYG9_DAPa9q9MAzWy95xih_LES4Bh589JHto0CY7NgTECC15a4w4vuFDUs_NQ1NAIQOh1VoP1tfCvXwwjmKnPRlCcE_x8gFNvxwPRoWnbdA9F2K1PIv7RdP3s3OOModlRLRy3PPvbgIcx1WQ6k8YdXmzzG0dmLv1Qms2vXvv-b_4okw52bqUHVq4n2-ASfIPpFx1S0twEMx4",
+    material: "Kanvas Katun Organik & Sutra Habutai",
+    origin: "Cirebon & Surakarta Workshop",
+    tag: "Living & Decor",
+    technique: "Batik Cap Tembaga Kombinasi Tulis Rengrengan",
+    title: "Set Aksesori Interior & Table Runner Truntum",
+    subtitle: "Tata Ruang Nusantara",
+    exclusive: "Set Terpadu 5 Pcs"
+  },
+])
+
+function openModal(item) {
+  selectedItem.value = item
+  showModalDetail.value = true
+
+  // Lock scroll halaman
+  document.body.style.overflow = 'hidden'
+}
+
+function closeModal() {
+  showModalDetail.value = false
+
+  // Unlock scroll halaman
+  document.body.style.overflow = ''
+
+  // Bersihkan data setelah modal ditutup
+  setTimeout(() => {
+    selectedItem.value = null
+  }, 300)
+}
 
 </script>
 
@@ -33,7 +112,7 @@ import Button from 'primevue/button'
                 kebutuhan personal, bisnis, dan berbagai kebutuhan lainnya.
               </p>
               <div class="flex flex-wrap items-center gap-space-md">
-                <a class="inline-flex items-center justify-center bg-primary text-surface-bright font-label-lg text-label-lg px-7 py-3.5 rounded-sm hover:bg-tertiary-container transition-colors duration-200"
+                <a class="inline-flex items-center justify-center bg-primary text-surface-bright hover:text-gray-300 font-label-lg text-label-lg px-7 py-3.5 rounded-sm hover:bg-tertiary-container transition-colors duration-200"
                   data-path="galeri" href="gallery">
                   Lihat Produk
                 </a>
@@ -255,131 +334,64 @@ import Button from 'primevue/button'
           </a>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
-          <!-- Product 1 -->
-          <div
-            class="group bg-surface-container-lowest rounded-sm overflow-hidden flex flex-col transition-all duration-300 hover:bg-surface-container-low">
-            <div class="relative aspect-[3/4] bg-surface-container overflow-hidden">
-              <img alt="Kain Batik Tulis Parang Barong bahan sutra ATBM halus pewarnaan soga alam"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgVh42R4pSUjOkiRNcQoE-kLKxrD35y7iwy-T2W9bDU5jYmvUtRyLYp493jZTrOWBPI1HCozAPHfovbPivvo037L7-TXQdiiQnXL5cCmYPxDmR9QmaNEprVBNlE1WGKUGi-5wQck5AWSlA7Yd7OJX5VGNFsOgwygwXquXzUzED075pyrea85nQq9VFDC09OIhqfzgn3sGAhOHzmGhUEOMPd-J6NpvV1RYTH1_Wwmc4AqLblzEnZNA" />
-              <span
-                class="absolute top-3 left-3 bg-surface-bright/95 text-primary text-label-sm font-label-sm px-2.5 py-1 rounded-sm uppercase tracking-wider">
-                Kain Tradisional
-              </span>
+          <article v-for="item in galleryItems" :key="item.title"
+            class="gallery-card group flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+            <!-- Image -->
+            <div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden cursor-pointer"
+              @click="openModal(item)">
+              <img :src="item.image" :alt="item.title"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+
+              <!-- Badges -->
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span
+                  class="bg-surface-bright/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase px-2.5 py-1 rounded-full">
+                  {{ item.categoryLabel }}
+                </span>
+
+                <span
+                  class="bg-primary text-surface-bright font-label-sm text-label-sm uppercase px-2.5 py-1 rounded-full">
+                  {{ item.tag }}
+                </span>
+              </div>
             </div>
-            <div class="p-space-md flex flex-col flex-grow justify-between">
+
+            <!-- Content -->
+            <div class="p-space-md flex flex-col flex-1 justify-between bg-surface-container-lowest">
               <div>
+                <span
+                  class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider block mb-1">
+                  {{ item.subtitle }}
+                </span>
+
                 <h3
-                  class="font-title-md text-title-md text-primary mb-1 group-hover:text-tertiary-container transition-colors">
-                  Batik Tulis Parang Barong
+                  class="font-headline-sm text-headline-sm text-primary tracking-tight mb-2 group-hover:text-secondary transition-colors">
+                  {{ item.title }}
                 </h3>
-                <p class="font-body-sm text-body-sm text-secondary line-clamp-2 leading-relaxed">
-                  Sutra ATBM halus dengan pewarnaan soga alam, pengerjaan tangan 3 bulan penuh ketelitian canting.
+
+                <p class="font-body-sm text-body-sm text-secondary leading-relaxed line-clamp-2 mb-space-md">
+                  {{ item.description }}
                 </p>
               </div>
-              <div class="mt-space-md pt-space-sm flex items-center justify-between">
-                <span class="font-label-md text-label-md text-primary font-semibold">Edisi Terbatas</span>
-                <a class="text-primary hover:text-on-tertiary-container inline-flex items-center gap-1 font-label-sm text-label-sm font-semibold uppercase tracking-wider"
-                  data-path="galeri" href="#">
-                  Lihat Detail <span class="material-symbols-outlined text-sm">north_east</span>
-                </a>
+
+              <!-- Footer -->
+              <div class="pt-space-sm flex items-center justify-between">
+                <span class="font-label-md text-label-md text-outline">
+                  {{ item.exclusive }}
+                </span>
+
+                <button type="button"
+                  class="open-modal-btn bg-white hover:border-white inline-flex items-center gap-1.5 text-primary hover:text-on-tertiary-container font-label-md text-label-md transition-colors py-1"
+                  @click.stop="openModal(item)">
+                  <span>Lihat Detail</span>
+
+                  <span class="material-symbols-outlined text-[18px]">
+                    visibility
+                  </span>
+                </button>
               </div>
             </div>
-          </div>
-          <!-- Product 2 -->
-          <div
-            class="group bg-surface-container-lowest rounded-sm overflow-hidden flex flex-col transition-all duration-300 hover:bg-surface-container-low">
-            <div class="relative aspect-[3/4] bg-surface-container overflow-hidden">
-              <img alt="Modern Batik Blazer Senopati dengan siluet tailoring kontemporer Sekar Jagad"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkdi3q5ftsSkvixAzMQ0Cu4_9ZnTgsFZ67G7V5em-VRgyQKv9BY2d3TrRvo2RpdcQSrCtwfro8hFGVksFvwtrE2UDkFbLasUOP8XtyB8MzbDT6aQgi8DCMsQ8ihQauFjWUHoKGKfH9OacGwVy_zYomPP7ZGw2lOg2M5PBgqxcuvU85xaF-6P66kVUCmdg5GQKlTyPLJtb16L9n96xiUEpx8RKvTbBJDMmcqzy1zA6ayooi8A_2Kik" />
-              <span
-                class="absolute top-3 left-3 bg-surface-bright/95 text-primary text-label-sm font-label-sm px-2.5 py-1 rounded-sm uppercase tracking-wider">
-                Fashion Ready-to-Wear
-              </span>
-            </div>
-            <div class="p-space-md flex flex-col flex-grow justify-between">
-              <div>
-                <h3
-                  class="font-title-md text-title-md text-primary mb-1 group-hover:text-tertiary-container transition-colors">
-                  Modern Blazer Senopati
-                </h3>
-                <p class="font-body-sm text-body-sm text-secondary line-clamp-2 leading-relaxed">
-                  Siluet modern tailoring berpadu motif Sekar Jagad monokrom, nyaman untuk agenda bisnis &amp; formal.
-                </p>
-              </div>
-              <div class="mt-space-md pt-space-sm flex items-center justify-between">
-                <span class="font-label-md text-label-md text-primary font-semibold">Tersedia Ukuran S-XL</span>
-                <a class="text-primary hover:text-on-tertiary-container inline-flex items-center gap-1 font-label-sm text-label-sm font-semibold uppercase tracking-wider"
-                  data-path="galeri" href="#">
-                  Lihat Detail <span class="material-symbols-outlined text-sm">north_east</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Product 3 -->
-          <div
-            class="group bg-surface-container-lowest rounded-sm overflow-hidden flex flex-col transition-all duration-300 hover:bg-surface-container-low">
-            <div class="relative aspect-[3/4] bg-surface-container overflow-hidden">
-              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                data-alt="Kain batik cap kontemporer motif Kawung geometris rapi dengan warna natural earth tone di atas alas kayu studio hangat"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDil4u6hAgiuQeK8RW5v3vpZBeg1mIuyemtdZy15LiiyByUfvlTHIK7qhudz9NnB5M857mqi_vGtCpw6rFXYNogRZDtwa5Dd8hA2WdwEsBNofPO3PWx5SDI7d9ol72CPLx8pHX6Y-SNeQI9ylGB_0oQUK-Xy7DTj-o4kVs8ROPERvvl0ecc_o77H1C6RFBmZM1QHwJk81xrw68-6lsj0ud9_sAJBNN-_qklGEaOfZwwMTbEIDetZnU" />
-              <span
-                class="absolute top-3 left-3 bg-surface-bright/95 text-primary text-label-sm font-label-sm px-2.5 py-1 rounded-sm uppercase tracking-wider">
-                Tekstil &amp; Bahan
-              </span>
-            </div>
-            <div class="p-space-md flex flex-col flex-grow justify-between">
-              <div>
-                <h3
-                  class="font-title-md text-title-md text-primary mb-1 group-hover:text-tertiary-container transition-colors">
-                  Batik Cap Kontemporer Kawung
-                </h3>
-                <p class="font-body-sm text-body-sm text-secondary line-clamp-2 leading-relaxed">
-                  Katun primissima adem dan jatuh, ideal untuk kemeja formal, gaun santai, maupun aksen interior.
-                </p>
-              </div>
-              <div class="mt-space-md pt-space-sm flex items-center justify-between">
-                <span class="font-label-md text-label-md text-primary font-semibold">Per Meter / Potong</span>
-                <a class="text-primary hover:text-on-tertiary-container inline-flex items-center gap-1 font-label-sm text-label-sm font-semibold uppercase tracking-wider"
-                  data-path="galeri" href="#">
-                  Lihat Detail <span class="material-symbols-outlined text-sm">north_east</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Product 4 -->
-          <div
-            class="group bg-surface-container-lowest rounded-sm overflow-hidden flex flex-col transition-all duration-300 hover:bg-surface-container-low">
-            <div class="relative aspect-[3/4] bg-surface-container overflow-hidden">
-              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                data-alt="Set hampers eksklusif berisi selendang sutra batik motif Truntum kemasan kotak kayu jati berukir pita keemasan elegan"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6SMdyf7jfvjf01N1uIy2mgPI39uNRBgYw0mUKXhs42kg8jN4fAx9FWj1LObIULnADsG_WEcOT1yu4V7Gn6IuciQOxGLNhmsSwwUS_MbeGT2lXc0tA604tFXc9tM2RTby7vaGafDzHOYc0Js3AoE2-sA1myIfjY_OMUuSnl_726YVNOnoJJ1WTjHOa2Lv4SwQuX7MDsmmH-trHpaHIBWnI6cYHXQHDFvnGk-p2V7shscfpGHco5Fg" />
-              <span
-                class="absolute top-3 left-3 bg-surface-bright/95 text-primary text-label-sm font-label-sm px-2.5 py-1 rounded-sm uppercase tracking-wider">
-                Aksesori &amp; Gift
-              </span>
-            </div>
-            <div class="p-space-md flex flex-col flex-grow justify-between">
-              <div>
-                <h3
-                  class="font-title-md text-title-md text-primary mb-1 group-hover:text-tertiary-container transition-colors">
-                  Hampers &amp; Silk Scarf Truntum
-                </h3>
-                <p class="font-body-sm text-body-sm text-secondary line-clamp-2 leading-relaxed">
-                  Scarf sutra murni eksklusif dengan kotak kayu ukir premium, siap untuk bingkisan korporat
-                  kehormatan.
-                </p>
-              </div>
-              <div class="mt-space-md pt-space-sm flex items-center justify-between">
-                <span class="font-label-md text-label-md text-primary font-semibold">Paket Kemitraan</span>
-                <a class="text-primary hover:text-on-tertiary-container inline-flex items-center gap-1 font-label-sm text-label-sm font-semibold uppercase tracking-wider"
-                  data-path="galeri" href="#">
-                  Lihat Detail <span class="material-symbols-outlined text-sm">north_east</span>
-                </a>
-              </div>
-            </div>
-          </div>
+          </article>
         </div>
       </div>
     </div>
@@ -486,6 +498,145 @@ import Button from 'primevue/button'
         </div>
       </div>
     </div>
+
+    <!-- modal interactive -->
+
+    <Transition enter-active-class="transition-opacity duration-300" enter-from-class="opacity-0"
+      enter-to-class="opacity-100" leave-active-class="transition-opacity duration-300" leave-from-class="opacity-100"
+      leave-to-class="opacity-0">
+      <div v-if="showModalDetail && selectedItem"
+        class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 md:p-10 overflow-y-auto">
+        <!-- Backdrop -->
+        <div class="fixed inset-0 bg-primary/75 backdrop-blur-sm" @click="closeModal"></div>
+
+        <!-- Modal Box -->
+        <Transition appear enter-active-class="transition-all duration-300" enter-from-class="scale-95 opacity-0"
+          enter-to-class="scale-100 opacity-100" leave-active-class="transition-all duration-300"
+          leave-from-class="scale-100 opacity-100" leave-to-class="scale-95 opacity-0">
+          <div
+            class="relative w-full max-w-4xl bg-surface-container-lowest rounded-xl shadow-2xl overflow-hidden z-10 my-auto"
+            @click.stop>
+            <!-- Close Button -->
+            <button type="button" aria-label="Tutup Detail"
+              class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-surface-bright/90 backdrop-blur-md flex items-center justify-center text-primary hover:bg-surface-bright hover:text-error transition-colors shadow-md"
+              @click="closeModal">
+              <span class="material-symbols-outlined text-[20px]">
+                close
+              </span>
+            </button>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 max-h-[85vh] overflow-y-auto">
+              <!-- Modal Image -->
+              <div class="md:col-span-6 bg-surface-container relative min-h-[300px] md:min-h-[460px]">
+                <img :src="selectedItem.image" :alt="selectedItem.title" class="w-full h-full object-cover" />
+
+                <div class="absolute bottom-4 left-4">
+                  <span
+                    class="bg-primary text-surface-bright font-label-sm text-label-sm uppercase px-3 py-1 rounded-full shadow-sm">
+                    {{ selectedItem.tag }}
+                  </span>
+                </div>
+              </div>
+
+              <!-- Modal Text & Metadata -->
+              <div
+                class="md:col-span-6 p-space-lg md:p-space-xl flex flex-col justify-between bg-surface-container-lowest">
+                <div>
+                  <!-- Category -->
+                  <div class="flex items-center gap-2 mb-2">
+                    <span
+                      class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider font-semibold">
+                      {{ selectedItem.categoryLabel }}
+                    </span>
+
+                    <span class="text-outline-variant">•</span>
+
+                    <span class="font-label-sm text-label-sm text-outline">
+                      Karya Autentik
+                    </span>
+                  </div>
+
+                  <!-- Title -->
+                  <h3 class="font-headline-md text-headline-md text-primary tracking-tight mb-space-md">
+                    {{ selectedItem.title }}
+                  </h3>
+
+                  <!-- Description -->
+                  <p class="font-body-md text-body-md text-secondary leading-relaxed mb-space-lg">
+                    {{ selectedItem.description }}
+                  </p>
+
+                  <!-- Metadata -->
+                  <div class="space-y-space-sm bg-surface-container-low p-space-md rounded-lg mb-space-lg">
+                    <!-- Origin -->
+                    <div class="flex items-start justify-between text-body-sm">
+                      <span class="text-outline">
+                        Asal Daerah:
+                      </span>
+
+                      <span class="font-label-md text-label-md text-primary text-right font-medium">
+                        {{ selectedItem.origin }}
+                      </span>
+                    </div>
+
+                    <!-- Material -->
+                    <div class="flex items-start justify-between text-body-sm">
+                      <span class="text-outline">
+                        Material:
+                      </span>
+
+                      <span class="font-label-md text-label-md text-primary text-right font-medium">
+                        {{ selectedItem.material }}
+                      </span>
+                    </div>
+
+                    <!-- Technique -->
+                    <div class="flex items-start justify-between text-body-sm">
+                      <span class="text-outline">
+                        Teknik:
+                      </span>
+
+                      <span class="font-label-md text-label-md text-primary text-right font-medium">
+                        {{ selectedItem.technique }}
+                      </span>
+                    </div>
+
+                    <!-- Certificate -->
+                    <div class="flex items-start justify-between text-body-sm">
+                      <span class="text-outline">
+                        Sertifikat:
+                      </span>
+
+                      <span class="font-label-md text-label-md text-on-tertiary-container text-right font-medium">
+                        Sertifikat Orisinalitas Batik Nusantara
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="pt-space-sm flex flex-col sm:flex-row items-center gap-space-sm">
+                  <a href="gallery"
+                    class="w-full sm:flex-1 inline-flex items-center justify-center bg-primary-container text-surface-bright font-label-lg text-label-lg py-3 rounded-lg hover:bg-tertiary-container hover:text-secondary transition-colors">
+                    <span class="material-symbols-outlined text-[18px] mr-2">
+                      chat
+                    </span>
+
+                    <span>Konsultasi Karya Ini</span>
+                  </a>
+
+                  <button type="button"
+                    class="w-full sm:w-auto px-space-md py-3 text-white hover:text-secondary font-label-lg text-label-lg transition-colors"
+                    @click="closeModal">
+                    Tutup
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Transition>
+      </div>
+    </Transition>
 
   </div>
 </template>
