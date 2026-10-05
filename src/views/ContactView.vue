@@ -27,7 +27,7 @@ import Button from 'primevue/button'
                   class="lg:col-span-4 flex flex-col gap-space-sm bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
                   <div class="flex items-start gap-space-sm">
                      <span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5"
-                        style="font-variation-settings: 'FILL' 1;">timer</span>
+                        style="font-variation-settings: 'FILL' 1;">collections_bookmark</span>
                      <div class="flex flex-col">
                         <span class="font-title-md text-title-md text-primary">Discover Our Collections</span>
                         <span class="font-body-sm text-body-sm text-secondary">
@@ -38,7 +38,7 @@ import Button from 'primevue/button'
                   <div class="w-full h-px bg-surface-container my-1"></div>
                   <div class="flex items-start gap-space-sm">
                      <span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5"
-                        style="font-variation-settings: 'FILL' 1;">video_camera_front</span>
+                        style="font-variation-settings: 'FILL' 1;">psychology</span>
                      <div class="flex flex-col">
                         <span class="font-title-md text-title-md text-primary">Share Your Ideas</span>
                         <span class="font-body-sm text-body-sm text-secondary">
@@ -49,7 +49,7 @@ import Button from 'primevue/button'
                   <div class="w-full h-px bg-surface-container my-1"></div>
                   <div class="flex items-start gap-space-sm">
                      <span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5"
-                        style="font-variation-settings: 'FILL' 1;">palette</span>
+                        style="font-variation-settings: 'FILL' 1;">handshake</span>
                      <div class="flex flex-col">
                         <span class="font-title-md text-title-md text-primary">Meet Us in Person</span>
                         <span class="font-body-sm text-body-sm text-secondary">
@@ -72,7 +72,7 @@ import Button from 'primevue/button'
                      <div
                         class="w-10 h-10 rounded-full bg-primary text-surface-bright flex items-center justify-center mb-space-md">
                         <span class="material-symbols-outlined text-[20px]">
-                           room_service
+                           chat
                         </span>
                      </div>
                      <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant mb-1">

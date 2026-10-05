@@ -66,7 +66,7 @@ import Button from 'primevue/button'
                   </div>
                   <!-- Master Visual Right Column -->
                   <div class="lg:col-span-6 flex flex-col gap-4">
-                     <div class="relative overflow-hidden rounded-lg aspect-[4/3] bg-surface-container">
+                     <div class="relative overflow-hidden rounded-lg aspect-[5/3] bg-surface-container">
                         <img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                            data-alt="Editorial still life photograph of folded authentic handcrafted Indonesian batik cloth with classic dark soga and charcoal Parang Barong pattern resting on a warm teak studio desk beside traditional canting tools and natural clay dye bowls under soft window light"
                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYguEHg3g5WMtfiB4AWTPAzZ4pyPfNGV1xtBLEXU_jpGWnfSid1QXYfCIoMrl36ri9fXGSCCOjN_nCe15y_8TbToWF8zlb96Ilg8TFAZAZw6v1tTLkwHvWV_K3G5mOufDF0I0_kxu2v6nCfwG5qqRPTVKjW6fqafE5H7_vzlJ8d3u4965pWaFc-lo2zW-gdYmA7ClumDVz1OdOKuJKDONV7lnfw_ZygWqf1uBvviaRZtxrZTwgbMM" />
@@ -86,7 +86,7 @@ import Button from 'primevue/button'
                         </div>
                      </div>
                      <!-- Micro Explanations -->
-                     <div class="grid grid-cols-3 gap-3 text-center">
+                     <!-- <div class="grid grid-cols-3 gap-3 text-center">
                         <div class="p-3 bg-surface-container-low rounded-lg">
                            <span class="font-label-sm text-label-sm text-outline uppercase block">Garis Lereng</span>
                            <span class="font-body-sm text-body-sm text-primary font-medium">Arah Pendakian Rohani</span>
@@ -100,7 +100,7 @@ import Button from 'primevue/button'
                            <span class="font-body-sm text-body-sm text-primary font-medium">Konsentrasi
                               Pernapasan</span>
                         </div>
-                     </div>
+                     </div> -->
                   </div>
                </div>
             </div>
