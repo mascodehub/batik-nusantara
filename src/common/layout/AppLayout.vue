@@ -147,7 +147,7 @@ sidebarMenu.value = false;
                     </div>
                     <div class="lg:col-span-3 flex flex-col gap-space-md">
                         <span class="font-title-md text-title-md text-surface-bright uppercase tracking-wider">
-                            Navigasi
+                            Navigation
                         </span>
                         <nav class="flex flex-col gap-space-sm" data-active-classes="text-surface-bright font-title-md">
                             <a :class="[{ 'font-body-md text-body-md text-outline-variant hover:text-surface-bright transition-colors': appStore.topbar != item.MENU_NAME }, { 'transition-colors text-surface-bright font-title-md': appStore.topbar == item.MENU_NAME }]"
@@ -158,18 +158,23 @@ sidebarMenu.value = false;
                     </div>
                     <div class="lg:col-span-4 flex flex-col gap-space-md">
                         <span class="font-title-md text-title-md text-surface-bright uppercase tracking-wider">
-                            Informasi Kontak
+                            Contact Information
                         </span>
                         <div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-outline-variant">
-                            <div class="flex items-start gap-space-xs">
+                            <!-- <div class="flex items-start gap-space-xs">
                                 <span
                                     class="material-symbols-outlined text-[18px] text-surface-bright mt-0.5">call</span>
                                 <span>Telepon: +62 21 5890 2234</span>
-                            </div>
+                            </div> -->
                             <div class="flex items-start gap-space-xs">
-                                <span
-                                    class="material-symbols-outlined text-[18px] text-surface-bright mt-0.5">chat</span>
-                                <span>WhatsApp: +62 812 8900 1928</span>
+                                <span class="material-symbols-outlined text-[18px] text-surface-bright mt-0.5">
+                                    chat
+                                </span>
+                                <span>
+                                    WhatsApp:
+                                    <a class="text-white hover:text-gray-200" href="https://wa.me/628156653189" rel="noopener noreferrer" target="_blank">
+                                        +6281 5665 3189</a>
+                                </span>
                             </div>
                             <div class="flex items-start gap-space-xs">
                                 <span
@@ -179,7 +184,8 @@ sidebarMenu.value = false;
                             <div class="flex items-start gap-space-xs">
                                 <span
                                     class="material-symbols-outlined text-[18px] text-surface-bright mt-0.5">location_on</span>
-                                <span>Jl. Tirtodipuran No. 42, Mantrijeron, Yogyakarta 55143</span>
+                                <span>Jl. Puri Jambangan Baru III, Karah, Kec. Jambangan, Surabaya, Jawa Timur
+                                    60232</span>
                             </div>
                         </div>
                     </div>
@@ -199,7 +205,7 @@ sidebarMenu.value = false;
                     <p class="font-label-sm text-label-sm text-outline-variant tracking-wider">
                         © 2026 Batik Nusantara. All rights reserved.</p>
                     <p class="font-label-sm text-label-sm text-outline-variant tracking-widest uppercase">
-                        Yogyakarta • Surakarta • Cirebon
+                        Surabaya
                     </p>
                 </div>
             </div>
