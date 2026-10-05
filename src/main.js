@@ -26,7 +26,7 @@ app.use(PrimeVue, {
 });
 
 const gtag = createGtag({
-  config: { id: 'G-87PGJG6VX9' } // Replace with your GA4 ID
+  config: { id: 'G-HEMSK7KS2L' } // Replace with your GA4 ID
 }, router)
 
 app.use(gtag)
