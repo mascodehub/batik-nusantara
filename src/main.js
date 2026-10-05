@@ -11,7 +11,7 @@ import router from "./common/router";
 import "@fortawesome/fontawesome-free/css/all.css";
 import { ConfirmationService, ToastService } from "primevue";
 
-import VueGtag from 'vue-gtag'
+import { install as VueGtag } from 'vue-gtag'
 
 
 const app = createApp(App);
