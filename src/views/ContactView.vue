@@ -11,25 +11,15 @@ import Button from 'primevue/button'
 
       <div class="segment-main w-full bg-surface-bright pt-space-xl pb-space-2xl">
          <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin flex flex-col">
-            <!-- Category Tag & Ornamental Line -->
-            <div class="flex items-center gap-space-sm mb-space-sm">
-               <span
-                  class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-widest font-semibold">
-                  <span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
-                  Konsultasi, Kunjungan Atelier &amp; Kemitraan
-               </span>
-            </div>
             <!-- Main Heading & Narrative Lead -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-end mt-space-sm">
                <div class="lg:col-span-8 flex flex-col gap-space-md">
                   <h1 class="font-display-xl text-display-xl text-primary leading-tight tracking-tight">
-                     Menyambung Rasa, Mewujudkan Wastra Impian Anda
+                     Let’s Stay Connected
                   </h1>
                   <p class="font-body-lg text-body-lg text-secondary leading-relaxed max-w-2xl">
-                     Baik untuk pemesanan adibusana bespoke, pengadaan cinderamata kenegaraan, seragam korporat, hingga
-                     reservasi private session di atelier kami di Yogyakarta, Solo, dan Cirebon. Tim kurator budaya
-                     Batik Nusantara
-                     siap mendampingi setiap langkah Anda dengan ketulusan tradisi.
+                     Interested in our collections or have a design of your own in mind? Get in touch with our team and
+                     we’ll be happy to discuss your ideas with you.
                   </p>
                </div>
                <!-- Trust & SLA Pillars -->
@@ -39,10 +29,10 @@ import Button from 'primevue/button'
                      <span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5"
                         style="font-variation-settings: 'FILL' 1;">timer</span>
                      <div class="flex flex-col">
-                        <span class="font-title-md text-title-md text-primary">Respons Tim Kurator &lt; 4 Jam</span>
-                        <span class="font-body-sm text-body-sm text-secondary">Prioritas penanganan hari kerja untuk
-                           setiap
-                           permohonan.</span>
+                        <span class="font-title-md text-title-md text-primary">Discover Our Collections</span>
+                        <span class="font-body-sm text-body-sm text-secondary">
+                           Explore our collections and learn more about the pieces we offer.
+                        </span>
                      </div>
                   </div>
                   <div class="w-full h-px bg-surface-container my-1"></div>
@@ -50,10 +40,10 @@ import Button from 'primevue/button'
                      <span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5"
                         style="font-variation-settings: 'FILL' 1;">video_camera_front</span>
                      <div class="flex flex-col">
-                        <span class="font-title-md text-title-md text-primary">Konsultasi Tatap Muka &amp; Daring</span>
-                        <span class="font-body-sm text-body-sm text-secondary">Didampingi kurator wastra ahli melalui
-                           sesi
-                           video interaktif.</span>
+                        <span class="font-title-md text-title-md text-primary">Share Your Ideas</span>
+                        <span class="font-body-sm text-body-sm text-secondary">
+                           Have your own idea or design in mind? Let’s discuss the possibilities.
+                        </span>
                      </div>
                   </div>
                   <div class="w-full h-px bg-surface-container my-1"></div>
@@ -61,10 +51,10 @@ import Button from 'primevue/button'
                      <span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5"
                         style="font-variation-settings: 'FILL' 1;">palette</span>
                      <div class="flex flex-col">
-                        <span class="font-title-md text-title-md text-primary">Swatch Warna &amp; Sampel Fisik</span>
-                        <span class="font-body-sm text-body-sm text-secondary">Kit serat sutra dan katun primissima
-                           dikirim
-                           langsung ke domisili.</span>
+                        <span class="font-title-md text-title-md text-primary">Meet Us in Person</span>
+                        <span class="font-body-sm text-body-sm text-secondary">
+                           Visit our gallery in Surabaya and experience our collections up close.
+                        </span>
                      </div>
                   </div>
                </div>
@@ -75,6 +65,28 @@ import Button from 'primevue/button'
       <div class="segment-contact w-full bg-surface-container-low py-space-xl">
          <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+               <!-- WhatsApp Card -->
+               <a class="group flex flex-col justify-between p-space-lg bg-primary-container text-surface-bright rounded-xl shadow-sm hover:bg-tertiary-container transition-all duration-300"
+                  href="https://wa.me/628156653189" rel="noopener noreferrer" target="_blank">
+                  <div class="flex flex-col">
+                     <div
+                        class="w-10 h-10 rounded-full bg-primary text-surface-bright flex items-center justify-center mb-space-md">
+                        <span class="material-symbols-outlined text-[20px]">room_service</span>
+                     </div>
+                     <span
+                        class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant mb-1">WhatsApp</span>
+                     <span class="font-title-md text-title-md text-surface-bright mb-1">
+                        +628156653189
+                     </span>
+                  </div>
+                  <div
+                     class="mt-space-md pt-space-xs text-surface-bright text-body-sm flex items-center justify-between font-semibold">
+                     <span>Konsultasi Foto Motif &amp; Cek
+                        Ketersediaan</span>
+                     <span
+                        class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                  </div>
+               </a>
                <!-- IG Card -->
                <a class="group flex flex-col justify-between p-space-lg bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
                   href="https://www.instagram.com/batiknusantarasby" target="_blank">
@@ -105,40 +117,19 @@ import Button from 'primevue/button'
                </a>
                <!-- Tokopedia Card -->
                <a class="group flex flex-col justify-between p-space-lg bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
-                  href="https://www.tokopedia.com/nadeenbybatiknusantara" target="_blank">
+                  href="https://www.tiktok.com/@batiknusantarasurabaya" target="_blank">
                   <div class="flex flex-col">
                      <div
                         class="w-10 h-10 rounded-full bg-secondary-container text-primary flex items-center justify-center mb-space-md group-hover:bg-primary-container group-hover:text-surface-bright transition-colors">
                         <span class="material-symbols-outlined text-[20px]">call</span>
                      </div>
                      <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1">
-                        tokopedia
+                        tiktok
                      </span>
-                     <span class="font-title-md text-title-md text-primary mb-1">nadeenbybatiknusantara</span>
+                     <span class="font-title-md text-title-md text-primary mb-1">@batiknusantarasurabaya</span>
                   </div>
                </a>
-               <!-- WhatsApp Card -->
-               <a class="group flex flex-col justify-between p-space-lg bg-primary-container text-surface-bright rounded-xl shadow-sm hover:bg-tertiary-container transition-all duration-300"
-                  href="https://wa.me/628156653189" rel="noopener noreferrer" target="_blank">
-                  <div class="flex flex-col">
-                     <div
-                        class="w-10 h-10 rounded-full bg-primary text-surface-bright flex items-center justify-center mb-space-md">
-                        <span class="material-symbols-outlined text-[20px]">room_service</span>
-                     </div>
-                     <span
-                        class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant mb-1">WhatsApp</span>
-                     <span class="font-title-md text-title-md text-surface-bright mb-1">
-                        +628156653189
-                     </span>
-                  </div>
-                  <div
-                     class="mt-space-md pt-space-xs text-surface-bright text-body-sm flex items-center justify-between font-semibold">
-                     <span>Konsultasi Foto Motif &amp; Cek
-                        Ketersediaan</span>
-                     <span
-                        class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                  </div>
-               </a>
+
             </div>
          </div>
       </div>
@@ -148,17 +139,12 @@ import Button from 'primevue/button'
             <!-- Section Title & Narrative -->
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md">
                <div>
-                  <span
-                     class="font-label-sm text-label-sm uppercase tracking-widest text-on-tertiary-container font-semibold">Sentra
-                     Cagar Budaya</span>
                   <h2 class="font-headline-lg text-headline-lg text-primary mt-space-xs">
-                     Kunjungi Ruang Cipta &amp; Galeri Kami di Tiga Sentra Wastra
+                     Where to find us
                   </h2>
                </div>
                <p class="font-body-md text-body-md text-secondary max-w-md">
-                  Masing-masing lokasi menyuguhkan keistimewaan karakter motif, workshop canting hidup, serta ruang
-                  kurasi
-                  yang menenangkan.
+                  Discover our collections in person at our gallery and selected locations across Surabaya.
                </p>
             </div>
             <!-- Cards Grid -->

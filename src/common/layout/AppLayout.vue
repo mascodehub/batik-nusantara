@@ -63,6 +63,7 @@ sidebarMenu.value = false;
             <div class="h-20 max-w-[1320px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between">
                 <div class="flex items-center gap-space-md">
                     <a class="flex items-center gap-space-sm group" data-path="home" href="#">
+                        <img alt="Batik Nusantara Logo" class="h-9 w-auto object-contain" src="/raw-logo.png" />
                         <img alt="Batik Nusantara Logo" class="h-9 w-auto object-contain" src="/banus-trans.png" />
                         <!-- <div class="flex flex-col">
                             <span
