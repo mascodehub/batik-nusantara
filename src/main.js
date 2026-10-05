@@ -11,8 +11,7 @@ import router from "./common/router";
 import "@fortawesome/fontawesome-free/css/all.css";
 import { ConfirmationService, ToastService } from "primevue";
 
-import { install as VueGtag } from 'vue-gtag'
-
+import { createGtag } from 'vue-gtag'
 
 const app = createApp(App);
 const pinia = createPinia();
@@ -26,9 +25,11 @@ app.use(PrimeVue, {
   },
 });
 
-app.use(VueGtag, {
-  config: { id: 'G-87PGJG6VX9' } // Replace with your GA4 Measurement ID
+const gtag = createGtag({
+  config: { id: 'G-87PGJG6VX9' } // Replace with your GA4 ID
 }, router)
+
+app.use(gtag)
 
 app.use(pinia);
 app.use(router);
