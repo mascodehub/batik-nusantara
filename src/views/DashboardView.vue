@@ -135,7 +135,7 @@ const galleryItems = ref([
                 </a>
               </div>
               <div
-                class="mt-space-2xl pt-space-md flex items-center gap-space-xl bg-surface-container-low/60 p-space-md rounded-sm max-w-lg">
+                class="mt-space-2xl pt-space-md flex items-center gap-space-lg sm:gap-space-xl bg-surface-container-low/60 p-space-md rounded-sm max-w-lg">
                 <div class="flex flex-col">
                   <span class="font-headline-sm text-headline-sm text-primary font-serif">
                     100%
