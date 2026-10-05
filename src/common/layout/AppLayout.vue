@@ -25,12 +25,12 @@ let list_menu = [
         STATUS: 0,
         URL: 'service',
     },
-    {
-        IDMENU: 4,
-        MENU_NAME: 'Price',
-        STATUS: 0,
-        URL: 'price',
-    },
+    // {
+    //     IDMENU: 4,
+    //     MENU_NAME: 'Price',
+    //     STATUS: 0,
+    //     URL: 'price',
+    // },
     {
         IDMENU: 5,
         MENU_NAME: 'Philosophy',
@@ -60,7 +60,7 @@ sidebarMenu.value = false;
 <template>
     <div class="app-container w-full">
         <aside class="topbar ">
-            <div class="h-20 max-w-[1320px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between">
+            <div class="h-20 max-w-330 mx-auto px-margin-mobile md:px-margin flex items-center justify-between">
                 <div class="flex items-center gap-space-md">
                     <a class="flex items-center gap-space-sm group" data-path="home" href="#">
                         <img alt="Batik Nusantara Logo" class="h-9 w-auto object-contain" src="/raw-logo.png" />
@@ -111,7 +111,7 @@ sidebarMenu.value = false;
         </div>
 
         <footer class="w-full bg-primary-container text-surface-container-low">
-            <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin pt-space-2xl pb-space-xl">
+            <div class="max-w-330 mx-auto px-margin-mobile md:px-margin pt-space-2xl pb-space-xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl">
                     <div class="lg:col-span-5 flex flex-col gap-space-md">
                         <div class="flex items-center gap-space-sm">
@@ -186,7 +186,7 @@ sidebarMenu.value = false;
                 </div>
                 <div class="my-space-xl flex items-center justify-center gap-space-md opacity-30">
                     <div class="h-px w-full bg-outline-variant"></div><svg
-                        class="w-5 h-5 flex-shrink-0 text-outline-variant fill-current" viewbox="0 0 24 24">
+                        class="w-5 h-5 shrink-0 text-outline-variant fill-current" viewbox="0 0 24 24">
                         <circle cx="12" cy="12" fill="none" r="4" stroke="currentColor" stroke-width="1.5"></circle>
                         <path
                             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"

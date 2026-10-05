@@ -71,20 +71,25 @@ import Button from 'primevue/button'
                   <div class="flex flex-col">
                      <div
                         class="w-10 h-10 rounded-full bg-primary text-surface-bright flex items-center justify-center mb-space-md">
-                        <span class="material-symbols-outlined text-[20px]">room_service</span>
+                        <span class="material-symbols-outlined text-[20px]">
+                           room_service
+                        </span>
                      </div>
-                     <span
-                        class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant mb-1">WhatsApp</span>
+                     <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant mb-1">
+                        WhatsApp
+                     </span>
                      <span class="font-title-md text-title-md text-surface-bright mb-1">
                         +628156653189
                      </span>
                   </div>
                   <div
                      class="mt-space-md pt-space-xs text-surface-bright text-body-sm flex items-center justify-between font-semibold">
-                     <span>Konsultasi Foto Motif &amp; Cek
-                        Ketersediaan</span>
-                     <span
-                        class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                     <span>
+                        Konsultasi Foto Motif &amp; Cek Ketersediaan
+                     </span>
+                     <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">
+                        arrow_forward
+                     </span>
                   </div>
                </a>
                <!-- IG Card -->
@@ -93,12 +98,14 @@ import Button from 'primevue/button'
                   <div class="flex flex-col">
                      <div
                         class="w-10 h-10 rounded-full bg-secondary-container text-primary flex items-center justify-center mb-space-md group-hover:bg-primary-container group-hover:text-surface-bright transition-colors">
-                        <span class="material-symbols-outlined text-[20px]">call</span>
+                        <i class="fab fa-instagram"></i>
                      </div>
                      <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1">
                         instagram
                      </span>
-                     <span class="font-title-md text-title-md text-primary mb-1">@batiknusantarasby</span>
+                     <span class="font-title-md text-title-md text-primary mb-1">
+                        @batiknusantarasby
+                     </span>
                   </div>
                </a>
                <!-- Shopee Card -->
@@ -107,12 +114,14 @@ import Button from 'primevue/button'
                   <div class="flex flex-col">
                      <div
                         class="w-10 h-10 rounded-full bg-secondary-container text-primary flex items-center justify-center mb-space-md group-hover:bg-primary-container group-hover:text-surface-bright transition-colors">
-                        <span class="material-symbols-outlined text-[20px]">call</span>
+                        <i class="fab fa-shopify"></i>
                      </div>
                      <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1">
                         shopee
                      </span>
-                     <span class="font-title-md text-title-md text-primary mb-1">@batiknusantarasby</span>
+                     <span class="font-title-md text-title-md text-primary mb-1">
+                        @batiknusantarasby
+                     </span>
                   </div>
                </a>
                <!-- Tokopedia Card -->
@@ -121,15 +130,16 @@ import Button from 'primevue/button'
                   <div class="flex flex-col">
                      <div
                         class="w-10 h-10 rounded-full bg-secondary-container text-primary flex items-center justify-center mb-space-md group-hover:bg-primary-container group-hover:text-surface-bright transition-colors">
-                        <span class="material-symbols-outlined text-[20px]">call</span>
+                        <i class="fab fa-tiktok"></i>
                      </div>
                      <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1">
                         tiktok
                      </span>
-                     <span class="font-title-md text-title-md text-primary mb-1">@batiknusantarasurabaya</span>
+                     <span class="font-title-md text-title-md text-primary mb-1">
+                        @batiknusantarasurabaya
+                     </span>
                   </div>
                </a>
-
             </div>
          </div>
       </div>
@@ -148,57 +158,63 @@ import Button from 'primevue/button'
                </p>
             </div>
             <!-- Cards Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-space-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-xl">
                <!-- Location 1: Yogyakarta -->
                <div
                   class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
                   <div class="w-full h-56 bg-cover bg-center"
                      data-location="Jl. Tirtodipuran No. 42, Mantrijeron, Yogyakarta"
-                     style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCri4mJEaBFqegPFPVjX0bsYYeWBVTN6KVszhCAQadYjEIuk9L5hYtkgA94rgeAGIsqDYr0FkfxMzIemtYqpkD6mYxJ_uN0plw9dOWfVUbge1xieiDW3mQKFrdL0MhatwZkuUxdPr40IFIBI1u6NFxcilM8uSgvX_catLazbEX2bkcYGkJTm5kaU17Yf-4FmAjybSu9cSYP19MKas06zjuaANiDcvdwjf2KsF9Ox8HZEDD2FSOH4Ao')">
+                     style="background-image: url('/gallery-maps.png')">
                   </div>
                   <div class="p-space-lg flex flex-col flex-grow justify-between">
                      <div class="flex flex-col">
-                        <div class="flex items-center justify-between mb-space-xs">
-                           <span
-                              class="font-label-sm text-label-sm uppercase tracking-widest text-on-tertiary-container font-semibold">Atelier
-                              &amp; Ruang Kurasi 01</span>
-                           <span
-                              class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-primary font-semibold">Pusat
-                              Desain</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">Atelier Tirtodipuran
-                           Yogyakarta
+                        <h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">
+                           BATIK NUSANTARA GALLERY & WORKSHOP
                         </h3>
                         <div class="flex items-start gap-space-xs text-secondary font-body-sm text-body-sm mb-space-sm">
-                           <span class="material-symbols-outlined text-[18px] text-primary mt-0.5">location_on</span>
-                           <span>Jl. Tirtodipuran No. 42, Mantrijeron, Kota Yogyakarta 55143</span>
+                           <span class="material-symbols-outlined text-[18px] text-primary mt-0.5">
+                              location_on
+                           </span>
+                           <span>
+                              Jl. Puri Jambangan Baru III, Karah, Kec. Jambangan, Surabaya, Jawa Timur 60232
+                           </span>
                         </div>
                         <div class="flex items-start gap-space-xs text-secondary font-body-sm text-body-sm mb-space-md">
-                           <span class="material-symbols-outlined text-[18px] text-primary mt-0.5">schedule</span>
-                           <span>Selasa – Minggu, 09:00 – 17:30 WIB <br /><span class="text-outline text-xs">(Senin
-                                 Tutup untuk
-                                 Perawatan Koleksi)</span></span>
+                           <span class="material-symbols-outlined text-[18px] text-primary mt-0.5">
+                              schedule
+                           </span>
+                           <span>
+                              senin – Minggu, 08:00 – 16:00 WIB <br />
+                              <!-- <span class="text-outline text-xs">
+                                 (Senin Tutup untuk Perawatan Koleksi)
+                              </span> -->
+                           </span>
                         </div>
                         <!-- Highlight Facilities -->
                         <div class="p-space-sm bg-surface-container-low rounded-lg mb-space-md">
-                           <span
-                              class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1">Fasilitas
-                              Khusus:</span>
+                           <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1">
+                              GALLERY SERVICES :
+                           </span>
                            <ul
                               class="font-body-sm text-body-sm text-on-surface-variant space-y-1 list-inside list-disc">
-                              <li>Private Fitting &amp; Bespoke Suite</li>
-                              <li>Ruang Arsip Naskah &amp; Cap Keraton</li>
-                              <li>Kebun Tanaman Pewarna Alami Soga</li>
+                              <li>Design & Order Consultation</li>
+                              <li>Custom Garment Measurements</li>
+                              <li>Batik-Making Classes</li>
+                              <li>Feel Free to Browse Our Collections</li>
                            </ul>
                         </div>
                      </div>
                      <!-- Action Buttons -->
                      <div class="flex items-center gap-space-sm pt-space-xs">
                         <a class="flex-1 py-2.5 px-3 rounded-lg bg-surface-container text-primary hover:bg-secondary-container text-center font-label-md text-label-md uppercase tracking-wider transition-colors flex items-center justify-center gap-1"
-                           href="https://maps.google.com/?q=Jl.+Tirtodipuran+No.+42+Yogyakarta"
+                           href="https://maps.app.goo.gl/BMBNgSPjzuuAfpQA7?g_st=ic"
                            rel="noopener noreferrer" target="_blank">
-                           <span class="material-symbols-outlined text-base">directions</span>
-                           <span>Peta Navigasi</span>
+                           <span class="material-symbols-outlined text-base">
+                              directions
+                           </span>
+                           <span>
+                              Peta Navigasi
+                           </span>
                         </a>
                      </div>
                   </div>
@@ -208,104 +224,38 @@ import Button from 'primevue/button'
                   class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
                   <div class="w-full h-56 bg-cover bg-center"
                      data-location="Jl. Dr. Rajiman No. 518, Laweyan, Surakarta"
-                     style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5n4vcxvnC5Hh0cxgDpaGtaTrzXMEjg2hzSkcCiDwC_ZlWlP8NqDL5CMFZnMMtMsOJJqhqEeSzcx5Vr3bzlTxJzit8BGt5q_nKRdutJXt74d6U6AIK9OnyqMFwgE2I2uyB4bY4698oxXccGOd1CpwQ76pJC3RAW2PttMw3PDhD30eBsFnQpcwMSUEq3-onr-oBPXk0IiDqUCqSQAADiJoYQDIEKqxvvGRXLi4DVUfrwSXXQBWVgL0')">
+                     style="background-image: url('/hotel-majapahit.png')">
                   </div>
                   <div class="p-space-lg flex flex-col flex-grow justify-between">
                      <div class="flex flex-col">
-                        <div class="flex items-center justify-between mb-space-xs">
-                           <span
-                              class="font-label-sm text-label-sm uppercase tracking-widest text-on-tertiary-container font-semibold">Galeri
-                              Tradisi 02</span>
-                           <span
-                              class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-primary font-semibold">Sentra
-                              Klasik</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">Galeri Laweyan Surakarta
+                        <h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">
+                           Hotel Majapahit Surabaya
                         </h3>
                         <div class="flex items-start gap-space-xs text-secondary font-body-sm text-body-sm mb-space-sm">
                            <span class="material-symbols-outlined text-[18px] text-primary mt-0.5">location_on</span>
-                           <span>Kawasan Cagar Budaya Laweyan, Jl. Dr. Rajiman No. 518, Surakarta 57148</span>
+                           <span>Jl. Tunjungan No.65, Genteng, Kec. Genteng, Surabaya, Jawa Timur 60275</span>
                         </div>
                         <div class="flex items-start gap-space-xs text-secondary font-body-sm text-body-sm mb-space-md">
                            <span class="material-symbols-outlined text-[18px] text-primary mt-0.5">schedule</span>
-                           <span>Setiap Hari, 09:30 – 18:00 WIB <br /><span class="text-outline text-xs">(Termasuk Hari
-                                 Libur
-                                 Nasional)</span></span>
-                        </div>
-                        <!-- Highlight Facilities -->
-                        <div class="p-space-sm bg-surface-container-low rounded-lg mb-space-md">
-                           <span
-                              class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1">Fasilitas
-                              Khusus:</span>
-                           <ul
-                              class="font-body-sm text-body-sm text-on-surface-variant space-y-1 list-inside list-disc">
-                              <li>Studio Pengrajin Canting Tulis Alus</li>
-                              <li>Display Koleksi Parang &amp; Kawung Maestro</li>
-                              <li>Ruang Jamuan Teh Kemitraan Adat</li>
-                           </ul>
+                           <span>
+                              Everyday, Open daily during hotel hours <br />
+                              <!-- <span class="text-outline text-xs">
+                                 (Termasuk Hari Libur Nasional)
+                              </span> -->
+                           </span>
                         </div>
                      </div>
                      <!-- Action Buttons -->
                      <div class="flex items-center gap-space-sm pt-space-xs">
                         <a class="flex-1 py-2.5 px-3 rounded-lg bg-surface-container text-primary hover:bg-secondary-container text-center font-label-md text-label-md uppercase tracking-wider transition-colors flex items-center justify-center gap-1"
-                           href="https://maps.google.com/?q=Laweyan+Jl.+Dr.+Rajiman+518+Solo" rel="noopener noreferrer"
+                           href="https://maps.app.goo.gl/QpqBgDnmkJQENaQp7" rel="noopener noreferrer"
                            target="_blank">
-                           <span class="material-symbols-outlined text-base">directions</span>
-                           <span>Peta Navigasi</span>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <!-- Location 3: Cirebon -->
-               <div
-                  class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
-                  <div class="w-full h-56 bg-cover bg-center"
-                     data-location="Jl. Syekh Datul Kahfi No. 88, Plered, Cirebon"
-                     style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdduCNRsxJGUtoK5fMgsJe26UPu28XtteUvFhQyf-9Bt88cxz54AnMa6IWJp-Wz42Tzbf9s0eO4RR0s0fhr-9KBjlw9waDcyx_tRt4-Jm-M8ndUnOFM-a-CUIqUkwGAVoM-JdXK5gCKd-m1JBc31EJOBGHzNWuX7smLC23bIiO-k93ngjPn_wguxUkuOSkzUZ-AF-qKRKqUJj9TDPmDYLuimTdhvntyxbK5z7pxKZJgTDvdQZEGGo')">
-                  </div>
-                  <div class="p-space-lg flex flex-col flex-grow justify-between">
-                     <div class="flex flex-col">
-                        <div class="flex items-center justify-between mb-space-xs">
-                           <span
-                              class="font-label-sm text-label-sm uppercase tracking-widest text-on-tertiary-container font-semibold">Rumah
-                              Wastra Pesisir 03</span>
-                           <span
-                              class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-primary font-semibold">Koleksi
-                              Indigo</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">Rumah Wastra Trusmi
-                           Cirebon
-                        </h3>
-                        <div class="flex items-start gap-space-xs text-secondary font-body-sm text-body-sm mb-space-sm">
-                           <span class="material-symbols-outlined text-[18px] text-primary mt-0.5">location_on</span>
-                           <span>Sentra Batik Trusmi, Jl. Syekh Datul Kahfi No. 88, Plered, Cirebon 45154</span>
-                        </div>
-                        <div class="flex items-start gap-space-xs text-secondary font-body-sm text-body-sm mb-space-md">
-                           <span class="material-symbols-outlined text-[18px] text-primary mt-0.5">schedule</span>
-                           <span>Senin – Sabtu, 08:30 – 17:00 WIB <br /><span class="text-outline text-xs">(Minggu
-                                 dengan
-                                 Perjanjian Khusus)</span></span>
-                        </div>
-                        <!-- Highlight Facilities -->
-                        <div class="p-space-sm bg-surface-container-low rounded-lg mb-space-md">
-                           <span
-                              class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1">Fasilitas
-                              Khusus:</span>
-                           <ul
-                              class="font-body-sm text-body-sm text-on-surface-variant space-y-1 list-inside list-disc">
-                              <li>Koleksi Pewarnaan Alami Indigofera &amp; Mega Mendung</li>
-                              <li>Laboratorium Ekstraksi Daun Tarum</li>
-                              <li>Galeri Souvenir Souvenir VIP Box Diplomat</li>
-                           </ul>
-                        </div>
-                     </div>
-                     <!-- Action Buttons -->
-                     <div class="flex items-center gap-space-sm pt-space-xs">
-                        <a class="flex-1 py-2.5 px-3 rounded-lg bg-surface-container text-primary hover:bg-secondary-container text-center font-label-md text-label-md uppercase tracking-wider transition-colors flex items-center justify-center gap-1"
-                           href="https://maps.google.com/?q=Trusmi+Jl.+Syekh+Datul+Kahfi+88+Cirebon"
-                           rel="noopener noreferrer" target="_blank">
-                           <span class="material-symbols-outlined text-base">directions</span>
-                           <span>Peta Navigasi</span>
+                           <span class="material-symbols-outlined text-base">
+                              directions
+                           </span>
+                           <span>
+                              Peta Navigasi
+                           </span>
                         </a>
                      </div>
                   </div>

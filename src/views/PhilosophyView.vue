@@ -24,47 +24,20 @@ import Button from 'primevue/button'
                <div class="lg:col-span-8">
                   <span
                      class="inline-block font-label-md text-label-md text-tertiary-container tracking-widest uppercase mb-3">
-                     Arsip Budaya &amp; Filosofi Wastra
+                     SURABAYA'S BATIK HERITAGE
                   </span>
                   <h1 class="font-headline-lg text-headline-lg text-primary leading-tight tracking-tight">
-                     Filosofi Batik: Mengenal Makna di Balik Setiap Motif
+                     The Story Behind Surabaya Batik
                   </h1>
                </div>
                <div class="lg:col-span-4 flex flex-col justify-end">
                   <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                     Batik bukan sekadar torehan malam pada sehelai kain, melainkan kidung doa, kosmologi Jawa, dan laku
-                     spiritual para empu pembatik. Setiap guratan garis dan kelopak memuat sandi moral yang
-                     menghubungkan
-                     manusia, alam semesta, dan Sang Khalik.
+                     Surabaya batik reflects the city’s identity through motifs inspired by its people, culture, local
+                     cuisine, natural surroundings, and heritage. Its journey continues to evolve, giving each motif a
+                     story and meaning of its own.
                   </p>
                </div>
             </div>
-            <!-- Metadata Strip -->
-            <div
-               class="mt-space-xl pt-6 pb-6 bg-surface-container-low px-6 rounded-lg grid grid-cols-1 md:grid-cols-3 gap-6 text-on-surface">
-               <div class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-secondary text-2xl">auto_stories</span>
-                  <div>
-                     <p class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Kurasi Khusus</p>
-                     <p class="font-title-md text-title-md text-primary">6 Motif Pusaka Nusantara</p>
-                  </div>
-               </div>
-               <div class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-secondary text-2xl">history_edu</span>
-                  <div>
-                     <p class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Sumber Arsip</p>
-                     <p class="font-title-md text-title-md text-primary">Naskah Keraton &amp; Etnografi Wastra</p>
-                  </div>
-               </div>
-               <div class="flex items-center gap-3">
-                  <span class="material-symbols-outlined text-secondary text-2xl">category</span>
-                  <div>
-                     <p class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Klasifikasi Pola</p>
-                     <p class="font-title-md text-title-md text-primary">Pakem Keraton &amp; Gaya Pesisiran</p>
-                  </div>
-               </div>
-            </div>
-
          </div>
 
          <div class="segment-motif-spotlight max-w-[1320px] mx-auto px-margin-mobile md:px-margin my-space-xl">
@@ -73,40 +46,22 @@ import Button from 'primevue/button'
                   <!-- Narrative Left Column -->
                   <div class="lg:col-span-6 flex flex-col justify-between h-full ">
                      <div>
-                        <div class="flex items-center gap-3 mb-4">
-                           <span
-                              class="px-3 py-1 bg-surface-container-high rounded-full font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Mahakarya
-                              Unggulan</span>
-                           <span class="text-outline font-label-sm text-label-sm">Awisan Dalem (Motif Larangan)</span>
-                        </div>
-                        <h2 class="font-headline-md text-headline-md text-primary mb-2">Parang Barong</h2>
-                        <p class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-6">
-                           Keraton Surakarta &amp; Yogyakarta • Abad ke-16
+                        <h2 class="font-headline-md text-headline-md text-primary text-3xl mb-2">A Growing Collection of
+                           Surabaya’s Stories</h2>
+
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-2">
+                           The journey took a defining step in 2022, when the Surabaya City Government held its first
+                           Batik Design Competition. Six winning motifs were selected and later patented as distinctive
+                           symbols of the city, reflecting different aspects of Surabaya’s identity.
                         </p>
-                        <blockquote
-                           class="pl-4 italic font-headline-sm text-headline-sm text-primary/90 leading-snug my-6">
-                           “Garis diagonal Parang melambangkan ombak laut selatan yang tiada henti menerjang karang —
-                           manifestasi keteguhan batin, kejernihan budi, dan semangat pantang menyerah seorang
-                           pemimpin.”
-                        </blockquote>
+
                         <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                           Diciptakan oleh Sultan Agung Hanyakrakusuma saat bermeditasi di tebing Pantai Selatan Jawa.
-                           Bentuk
-                           'S' yang saling menjalin tanpa terputus menyimbolkan kesinambungan hidup, pertalian darah
-                           leluhur
-                           yang tak pernah terputus, dan tanggung jawab memimpin masyarakat dengan welas asih.
+                           Two years later, the second edition introduced six new motifs, bringing the collection to
+                           twelve Surabaya batik motifs. Together, they draw inspiration from the city’s people,
+                           culture, local cuisine, nature, landmarks, and heritage—each carrying its own story and
+                           meaning.
+
                         </p>
-                     </div>
-                     <!-- Provenance & Anatomy Details -->
-                     <div class="grid grid-cols-2 gap-4 bg-surface-container-low rounded-lg">
-                        <div class="p-4">
-                           <p class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Pencipta</p>
-                           <p class="font-title-md text-title-md text-primary">Sultan Agung Mataram</p>
-                        </div>
-                        <div class="p-4">
-                           <p class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Peruntukan</p>
-                           <p class="font-title-md text-title-md text-primary">Raja &amp; Putra Mahkota</p>
-                        </div>
                      </div>
                   </div>
                   <!-- Master Visual Right Column -->
@@ -154,9 +109,12 @@ import Button from 'primevue/button'
          <div class="segment-motif-title max-w-[1320px] mx-auto px-margin-mobile md:px-margin mt-space-2xl mb-space-md">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                <div>
-                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary block">Katalog
-                     Ensiklopedia</span>
-                  <h2 class="font-headline-md text-headline-md text-primary">Enam Ragam Motif Pusaka</h2>
+                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary block">
+                     SURABAYA BATIK COLLECTION
+                  </span>
+                  <h2 class="font-headline-md text-headline-md text-primary">
+                     The Meaning Behind the Motifs
+                  </h2>
                </div>
             </div>
 
@@ -539,148 +497,27 @@ import Button from 'primevue/button'
             </div>
          </div>
 
-         <div class="segment-trilogy w-full bg-surface-container-low py-space-2xl">
-            <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
-               <div class="max-w-2xl mx-auto text-center mb-space-xl">
-                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary block mb-2">
-                     Struktur Kosmologis Sehelai Kain
-                  </span>
-                  <h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mb-4">
-                     Tiga Tingkatan Makna Wastra (Trilogi Filosofis)
-                  </h2>
-                  <p class="font-body-md text-body-md text-on-surface-variant">
-                     Setiap lembar kain batik klasik dirancang mengikuti tiga kesatuan kosmik yang mencerminkan harmoni
-                     diri
-                     dengan semesta dan Sang Pencipta.
-                  </p>
-               </div>
-               <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  <!-- Element 1 -->
-                  <div class="bg-surface-container-lowest p-8 rounded-lg flex flex-col justify-between shadow-sm">
-                     <div>
-                        <div
-                           class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-6">
-                           <span class="font-headline-sm text-headline-sm font-semibold">I</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Ornamen Utama</h3>
-                        <p
-                           class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider mb-4 font-semibold">
-                           Ragam Hias Pokok</p>
-                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                           Merupakan poros dari doa yang dihaturkan. Melambangkan niat dasar penggunanya—seperti garuda
-                           (kejayaan), pohon hayat (kehidupan abadi), atau lidah api (kekuatan batin).
-                        </p>
-                     </div>
-                     <div class="mt-6 pt-4 bg-surface-container-low p-3 rounded">
-                        <span class="font-label-sm text-label-sm text-outline block mb-1">Peran Spiritual</span>
-                        <span class="font-body-sm text-body-sm text-primary font-medium">Kalam doa &amp; identitas
-                           pemakai</span>
-                     </div>
-                  </div>
-                  <!-- Element 2 -->
-                  <div class="bg-surface-container-lowest p-8 rounded-lg flex flex-col justify-between shadow-sm">
-                     <div>
-                        <div
-                           class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-6">
-                           <span class="font-headline-sm text-headline-sm font-semibold">II</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Isen-Isen</h3>
-                        <p
-                           class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider mb-4 font-semibold">
-                           Tekstur Pengisi Ruang</p>
-                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                           Titik-titik (cecek) dan arsiran halus (sawut) yang membutuhkan ribuan sentuhan canting.
-                           Menguji
-                           kesabaran tanpa batas, ketekunan cipta, dan keheningan batin sang perajin.
-                        </p>
-                     </div>
-                     <div class="mt-6 pt-4 bg-surface-container-low p-3 rounded">
-                        <span class="font-label-sm text-label-sm text-outline block mb-1">Peran Spiritual</span>
-                        <span class="font-body-sm text-body-sm text-primary font-medium">Laku tapa raga &amp; ketelitian
-                           mikrokosmos</span>
-                     </div>
-                  </div>
-                  <!-- Element 3 -->
-                  <div class="bg-surface-container-lowest p-8 rounded-lg flex flex-col justify-between shadow-sm">
-                     <div>
-                        <div
-                           class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-6">
-                           <span class="font-headline-sm text-headline-sm font-semibold">III</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Pinggiran (Tumpal)</h3>
-                        <p
-                           class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider mb-4 font-semibold">
-                           Garis Batas Etika</p>
-                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                           Bingkai pembatas pada tepian kain yang mengingatkan manusia akan batas-batas moral, adab
-                           pergaulan,
-                           dan rasa hormat terhadap tata karma kehidupan bermasyarakat.
-                        </p>
-                     </div>
-                     <div class="mt-6 pt-4 bg-surface-container-low p-3 rounded">
-                        <span class="font-label-sm text-label-sm text-outline block mb-1">Peran Spiritual</span>
-                        <span class="font-body-sm text-body-sm text-primary font-medium">Penjaga tata susila &amp; etika
-                           adiluhung</span>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-         </div>
-
-         <div class="segment-quote max-w-[1320px] mx-auto px-margin-mobile md:px-margin my-space-2xl">
-            <div
-               class="relative rounded-lg overflow-hidden bg-primary-container text-surface p-8 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-8">
-               <div class="max-w-2xl">
-                  <span
-                     class="font-label-sm text-label-sm uppercase tracking-widest text-on-tertiary-container block mb-3">
-                     Ajaran Luhur Pembatik Sepuh
-                  </span>
-                  <p class="font-headline-md text-headline-md text-surface-bright leading-relaxed">
-                     “Nyanting iku kaya ndedonga. Nalika malam tumetes ing mori, napas kudu ajeg, rasa kudu resik, lan
-                     ati
-                     mung sumarah marang Gusti.”
-                  </p>
-                  <p class="mt-4 font-body-sm text-body-sm text-outline-variant">
-                     (Membatik itu laksana memanjatkan doa. Ketika malam menetes di kain mori, napas harus teratur,
-                     batin
-                     jernih, dan hati berserah seutuhnya).
-                  </p>
-               </div>
-               <div class="flex-shrink-0 text-center lg:text-right">
-                  <div class="inline-block p-4 bg-primary rounded-lg text-surface-bright">
-                     <span class="font-display-xl text-display-xl font-serif leading-none block">100+</span>
-                     <span
-                        class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant block mt-1">Hari
-                        Pengerjaan Sehelai Tulis</span>
-                  </div>
-               </div>
-            </div>
-         </div>
-
          <div class="segment-cta w-full bg-primary-container text-surface-container-low py-space-2xl">
             <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
                <div class="max-w-3xl mx-auto text-center flex flex-col items-center">
                   <span class="font-label-sm text-label-sm text-on-tertiary-container tracking-widest uppercase mb-3">
-                     Konsultasi Filosofi &amp; Custom Wastra
+                     CUSTOM DESIGN CONSULTATION
                   </span>
                   <h2 class="font-headline-lg text-headline-lg text-surface-bright leading-tight mb-4">
-                     Ingin Menghidupkan Filosofi Tertentu ke dalam Wastra Anda?
+                     Made Beyond the Catalogue
                   </h2>
                   <p class="font-body-lg text-body-lg text-outline-variant mb-8 leading-relaxed">
-                     Tim kurator budaya dan maestro batik Batik Nusantara siap mendampingi Anda memilih atau merancang motif
-                     pakem
-                     yang merefleksikan nilai personal, momen pernikahan suci, maupun lambang kehormatan keluarga.
+                     Our catalogue is only a starting point. If you have your own motif, illustration, or concept, share
+                     it with us. Together, we can explore how your idea can be developed into a unique textile design.
                   </p>
                   <div class="flex flex-col sm:flex-row items-center gap-4">
                      <a class="w-full sm:w-auto px-8 py-3.5 bg-secondary-container text-primary font-label-lg text-label-lg rounded hover:bg-surface-bright transition-colors font-semibold"
                         href="contact">
-                        Konsultasi Makna Motif
+                        Discuss Your Idea
                      </a>
                      <a class="w-full sm:w-auto px-8 py-3.5 bg-transparent border-none text-surface-bright hover:text-white font-label-lg text-label-lg transition-colors flex items-center justify-center gap-2"
                         href="gallery">
-                        <span>Jelajahi Galeri Karya</span>
-                        <span class="material-symbols-outlined text-sm">east</span>
+                        <span>Explore Our Collections</span>
                      </a>
                   </div>
                </div>
