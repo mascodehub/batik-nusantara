@@ -46,9 +46,9 @@ import Button from 'primevue/button'
                   <!-- Narrative Left Column -->
                   <div class="lg:col-span-6 flex flex-col justify-between h-full ">
                      <div>
-                        <h2 class="font-headline-md text-headline-md text-primary text-3xl mb-2">A Growing Collection of
-                           Surabaya’s Stories</h2>
-
+                        <h2 class="font-headline-md text-headline-md text-primary text-3xl mb-2">
+                           A Growing Collection of Surabaya’s Stories
+                        </h2>
                         <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-2">
                            The journey took a defining step in 2022, when the Surabaya City Government held its first
                            Batik Design Competition. Six winning motifs were selected and later patented as distinctive
@@ -73,11 +73,12 @@ import Button from 'primevue/button'
                         <div
                            class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-sm p-4 rounded-md flex items-center justify-between">
                            <div>
-                              <span
-                                 class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block">Struktur
-                                 Geometri</span>
-                              <span class="font-title-md text-title-md text-primary">Lereng 45° dengan Isen Cecek
-                                 Mlinjon</span>
+                              <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block">
+                                 Struktur Geometri
+                              </span>
+                              <span class="font-title-md text-title-md text-primary">
+                                 Lereng 45° dengan Isen Cecek Mlinjon
+                              </span>
                            </div>
                            <div
                               class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary">
@@ -517,7 +518,9 @@ import Button from 'primevue/button'
                      </a>
                      <a class="w-full sm:w-auto px-8 py-3.5 bg-transparent border-none text-surface-bright hover:text-white font-label-lg text-label-lg transition-colors flex items-center justify-center gap-2"
                         href="gallery">
-                        <span>Explore Our Collections</span>
+                        <span>
+                           Explore Our Collections
+                        </span>
                      </a>
                   </div>
                </div>

@@ -27,9 +27,13 @@ import Button from 'primevue/button'
                   class="lg:col-span-4 flex flex-col gap-space-sm bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
                   <div class="flex items-start gap-space-sm">
                      <span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5"
-                        style="font-variation-settings: 'FILL' 1;">collections_bookmark</span>
+                        style="font-variation-settings: 'FILL' 1;">
+                        collections_bookmark
+                     </span>
                      <div class="flex flex-col">
-                        <span class="font-title-md text-title-md text-primary">Discover Our Collections</span>
+                        <span class="font-title-md text-title-md text-primary">
+                           Discover Our Collections
+                        </span>
                         <span class="font-body-sm text-body-sm text-secondary">
                            Explore our collections and learn more about the pieces we offer.
                         </span>
@@ -38,9 +42,13 @@ import Button from 'primevue/button'
                   <div class="w-full h-px bg-surface-container my-1"></div>
                   <div class="flex items-start gap-space-sm">
                      <span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5"
-                        style="font-variation-settings: 'FILL' 1;">psychology</span>
+                        style="font-variation-settings: 'FILL' 1;">
+                        psychology
+                     </span>
                      <div class="flex flex-col">
-                        <span class="font-title-md text-title-md text-primary">Share Your Ideas</span>
+                        <span class="font-title-md text-title-md text-primary">
+                           Share Your Ideas
+                        </span>
                         <span class="font-body-sm text-body-sm text-secondary">
                            Have your own idea or design in mind? Let’s discuss the possibilities.
                         </span>
@@ -49,9 +57,13 @@ import Button from 'primevue/button'
                   <div class="w-full h-px bg-surface-container my-1"></div>
                   <div class="flex items-start gap-space-sm">
                      <span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5"
-                        style="font-variation-settings: 'FILL' 1;">handshake</span>
+                        style="font-variation-settings: 'FILL' 1;">
+                        handshake
+                     </span>
                      <div class="flex flex-col">
-                        <span class="font-title-md text-title-md text-primary">Meet Us in Person</span>
+                        <span class="font-title-md text-title-md text-primary">
+                           Meet Us in Person
+                        </span>
                         <span class="font-body-sm text-body-sm text-secondary">
                            Visit our gallery in Surabaya and experience our collections up close.
                         </span>
@@ -71,9 +83,7 @@ import Button from 'primevue/button'
                   <div class="flex flex-col">
                      <div
                         class="w-10 h-10 rounded-full bg-primary text-surface-bright flex items-center justify-center mb-space-md">
-                        <span class="material-symbols-outlined text-[20px]">
-                           chat
-                        </span>
+                        <i class="fab fa-whatsapp"></i>
                      </div>
                      <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant mb-1">
                         WhatsApp
@@ -207,8 +217,8 @@ import Button from 'primevue/button'
                      <!-- Action Buttons -->
                      <div class="flex items-center gap-space-sm pt-space-xs">
                         <a class="flex-1 py-2.5 px-3 rounded-lg bg-surface-container text-primary hover:bg-secondary-container text-center font-label-md text-label-md uppercase tracking-wider transition-colors flex items-center justify-center gap-1"
-                           href="https://maps.app.goo.gl/BMBNgSPjzuuAfpQA7?g_st=ic"
-                           rel="noopener noreferrer" target="_blank">
+                           href="https://maps.app.goo.gl/BMBNgSPjzuuAfpQA7?g_st=ic" rel="noopener noreferrer"
+                           target="_blank">
                            <span class="material-symbols-outlined text-base">
                               directions
                            </span>
@@ -248,8 +258,7 @@ import Button from 'primevue/button'
                      <!-- Action Buttons -->
                      <div class="flex items-center gap-space-sm pt-space-xs">
                         <a class="flex-1 py-2.5 px-3 rounded-lg bg-surface-container text-primary hover:bg-secondary-container text-center font-label-md text-label-md uppercase tracking-wider transition-colors flex items-center justify-center gap-1"
-                           href="https://maps.app.goo.gl/QpqBgDnmkJQENaQp7" rel="noopener noreferrer"
-                           target="_blank">
+                           href="https://maps.app.goo.gl/QpqBgDnmkJQENaQp7" rel="noopener noreferrer" target="_blank">
                            <span class="material-symbols-outlined text-base">
                               directions
                            </span>
