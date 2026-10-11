@@ -172,11 +172,12 @@ sidebarMenu.value = false;
                                 </span>
                                 <span>
                                     WhatsApp:
-                                    <a class="text-white hover:text-gray-200" href="https://wa.me/628156653189" rel="noopener noreferrer" target="_blank">
+                                    <a class="text-white hover:text-gray-400" href="https://wa.me/628156653189"
+                                        rel="noopener noreferrer" target="_blank">
                                         +6281 5665 3189</a>
                                 </span>
                             </div>
-                            <div class="flex items-start gap-space-xs">
+                            <div class="flex items-start gap-space-xs hidden">
                                 <span
                                     class="material-symbols-outlined text-[18px] text-surface-bright mt-0.5">mail</span>
                                 <span>Email: halo@batiknusantara.id</span>
@@ -184,20 +185,16 @@ sidebarMenu.value = false;
                             <div class="flex items-start gap-space-xs">
                                 <span
                                     class="material-symbols-outlined text-[18px] text-surface-bright mt-0.5">location_on</span>
-                                <span>Jl. Puri Jambangan Baru III, Karah, Kec. Jambangan, Surabaya, Jawa Timur
-                                    60232</span>
+                                <a class="text-gray-300 hover:text-gray-400" href="https://maps.app.goo.gl/BMBNgSPjzuuAfpQA7?g_st=ic" target="_blank">
+                                    Jl. Puri Jambangan Baru III, Karah, Kec. Jambangan, Surabaya, Jawa Timur 60232
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="my-space-xl flex items-center justify-center gap-space-md opacity-30">
-                    <div class="h-px w-full bg-outline-variant"></div><svg
-                        class="w-5 h-5 shrink-0 text-outline-variant fill-current" viewbox="0 0 24 24">
-                        <circle cx="12" cy="12" fill="none" r="4" stroke="currentColor" stroke-width="1.5"></circle>
-                        <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-                            fill="none" opacity="0.5" stroke="currentColor" stroke-width="1"></path>
-                    </svg>
+                <div class="my-space-xl flex items-center justify-center gap-space-md opacity-60">
+                    <div class="h-px w-full bg-outline-variant"></div>
+                    <img alt="Batik Nusantara Logo" class="h-7 w-auto" src="/raw-logo.png" />
                     <div class="h-px w-full bg-outline-variant"></div>
                 </div>
                 <div

@@ -255,12 +255,11 @@ function closeModal() {
             </h1>
             <p class="font-body-lg text-body-lg text-secondary leading-relaxed">
                Eksplorasi ragam kain batik tulis pesisir dan pedalaman, siluet busana kontemporer, ornamen interior,
-               hingga
-               karya kreasi kustom bernilai seni adiluhung.
+               hingga karya kreasi kustom bernilai seni adiluhung.
             </p>
-            <div class="flex items-center gap-space-md mt-space-lg opacity-40">
+            <div class="flex items-center gap-space-md mt-space-lg">
                <span class="h-px w-16 bg-outline-variant"></span>
-               <span class="material-symbols-outlined text-[16px] text-primary">spa</span>
+               <img alt="Batik Nusantara Logo" class="h-7 w-auto object-contain" src="/raw-logo.png" />
                <span class="h-px w-16 bg-outline-variant"></span>
             </div>
          </div>
