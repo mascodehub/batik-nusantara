@@ -3,6 +3,177 @@ import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import Button from 'primevue/button'
 
+const motifs = [
+   {
+      id: 'abhiboyo',
+      title: 'ABHIBOYO',
+      artist: 'Heri Supriyatno',
+      category: 'leadership',
+      image:
+         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+      alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
+      description: `
+      Inspired by Abhimanyu, a figure symbolizing courage, responsibility, and heroism, the Abhiboyo motif combines these values with the crocodile (boyo), an iconic symbol of Surabaya.
+      The motif reflects the resilience and unwavering spirit of the people of Surabaya in facing challenges and standing strong to protect their home.
+      The intertwined elements, leaves, and flowers represent perseverance, unity, peace, and compassion values that continue to shape the spirit of community and everyday life.`
+   },
+   {
+      id: 'abhiboyo',
+      title: 'GEMBILI WONOKROMO',
+      artist: 'Wahyu Subianto',
+      category: 'leadership',
+      image:
+         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+      alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
+      description: `
+      Inspired by the vibrant kampung life of Wonokromo, Surabaya, the Gembili Wonokromo motif captures the rhythm of everyday life within the city where people, places, and stories come together.
+      The motif brings to life memories of old Surabaya, from bustling traditional markets and travelling vendors to railway tracks and the warm interactions shared between neighbours as night falls.
+      It is a celebration of everyday moments, community, and the nostalgic spirit of Surabaya where simple scenes become lasting memories.`
+   },
+   {
+      id: 'abhiboyo',
+      title: 'ABHIBOYO',
+      artist: 'Heri Supriyatno',
+      category: 'leadership',
+      image:
+         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+      alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
+      description: `
+      Inspired by Abhimanyu, a figure symbolizing courage, responsibility, and heroism, the Abhiboyo motif combines these values with the crocodile (boyo), an iconic symbol of Surabaya.
+      The motif reflects the resilience and unwavering spirit of the people of Surabaya in facing challenges and standing strong to protect their home.
+      The intertwined elements, leaves, and flowers represent perseverance, unity, peace, and compassion values that continue to shape the spirit of community and everyday life.`
+   },
+   {
+      id: 'abhiboyo',
+      title: 'REMO SURABAYAN',
+      artist: 'Umi Badriah',
+      category: 'leadership',
+      image:
+         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+      alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
+      description: `
+      Inspired by Tari Remo, one of Surabaya’s iconic traditional dances, the Remo Surabayan motif brings together stylized elements of the dancer’s attire with the distinctive four-leaf clover, a beloved symbol of Surabaya.
+      The motif embodies the spirit of perseverance, strength, agility, and mindfulness reflecting the values that guide people through life.
+      Created as a contemporary interpretation of Surabaya’s batik heritage, the design celebrates local culture through a fresh and distinctive expression, while preserving the values and identity at its heart.`
+   },
+   {
+      id: 'abhiboyo',
+      title: 'SPARKLING TASTE OF SURABAYA',
+      artist: 'Arina Halimatus Anjani',
+      category: 'leadership',
+      image:
+         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+      alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
+      description: `
+      Inspired by Sparkling Dance and Surabaya’s iconic culinary heritage, Rujak Cingur (a traditional dish from Surabaya), the Sparkling Taste of Surabaya motif celebrates the energy, beauty, and cultural diversity of the people of Surabaya.
+      The graceful and dynamic elements of the dance are expressed through flowing forms, while ingredients found in Rujak Cingur such as water spinach, bean sprouts, and other local ingredients represent simplicity, unity, and the unwavering spirit of the Surabaya community.
+      Bringing together movement and culinary heritage, the motif offers a vibrant expression of Surabaya’s identity, where culture, community, and everyday life come together.`
+   },
+   {
+      id: 'abhiboyo',
+      title: 'KEMBANG BUNGUR',
+      artist: 'Risha Iffatur Rahmah',
+      category: 'leadership',
+      image:
+         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+      alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
+      description: `
+      Inspired by the bungur flower, a distinctive floral symbol of Surabaya, the Kembang Bungur motif reflects the beauty, solidarity, tolerance, and open-minded spirit of the city’s people.
+      The delicate beauty of its petals represents togetherness and gratitude, celebrating the shared values that bring communities closer through everyday life.
+      Complementary ornaments within the motif embody simplicity, harmony, spirituality, and resilience capturing the strength of Surabaya’s people in navigating life’s many challenges while remaining rooted in their cultural values.`
+   },
+   {
+      id: 'abhiboyo',
+      title: 'KINTIR-KINTIRAN',
+      artist: 'Nuraini Farida',
+      category: 'leadership',
+      image:
+         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+      alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
+      description: `
+      Inspired by Surabaya’s rivers, the Kintir-Kintiran motif celebrates the city’s connection to water and the natural richness it represents, envisioning clean, unpolluted waterways as a reflection of environmental harmony.
+      Beyond its connection to nature, the motif symbolizes the adaptable and resilient spirit of the people of Surabaya. Like flowing water that moves with the current, they embrace the changing tides of time, adapting to different circumstances while remaining determined to pursue their dreams and aspirations.
+      The motif reflects a spirit of flexibility, perseverance, and forward movement a reminder that, like water, strength lies in the ability to adapt without losing sight of one’s purpose`
+   },
+   {
+      id: 'abhiboyo',
+      title: 'BANYU SEMARAK',
+      artist: 'Suryawati Liman Halim',
+      category: 'leadership',
+      image:
+         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+      alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
+      description: `
+      Banyu Semarak portrays Surabaya as a city of water that has grown into a vibrant metropolitan hub, rich in history, culture, and diversity.
+      Featuring iconic landmarks and cultural elements from Siola Building and Kenjeran Beach to Sparkling Dance, Chinatown, bamboo spears, and the bungur flower the motif reflects Surabaya’s journey from its historical roots to its modern identity.
+      A celebration of resilience, progress, and cultural harmony, Banyu Semarak captures the dynamic spirit of Surabaya while preserving the cultural values that shape its identity.`
+   },
+   {
+      id: 'abhiboyo',
+      title: 'GREGET REL PASAR TURI',
+      artist: 'Eka Sumarlin',
+      category: 'leadership',
+      image:
+         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+      alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
+      description: `
+      Inspired by Pasar Turi, one of Surabaya’s historic markets, this motif captures the vibrant atmosphere of urban life and the energy of its people.
+      The turi flower, reflecting the market’s name, is paired with railway tracks that symbolize the city’s dynamic rhythm and the harmonious coexistence of diverse communities.
+      True to the meaning of greget spirit and determination the motif celebrates the hardworking, resilient, and energetic character of Surabaya’s people, reflecting a cultural identity that continues to thrive amid the evolving cityscape.`
+   },
+   {
+      id: 'abhiboyo',
+      title: 'PESONA MANGROVE WONOREJO',
+      artist: `Muchammad Syafi'i`,
+      category: 'leadership',
+      image:
+         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+      alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
+      description: `
+      Inspired by Wonorejo Mangrove Forest, this motif celebrates Surabaya’s natural beauty through symbols of strength, endurance, and harmony.
+      The sturdy mangrove roots represent the perseverance of Surabaya’s people in facing life’s challenges, while the heron symbolizes freedom, harmony with nature, and hope for a brighter future.
+      Reflecting the close relationship between people and the environment, the motif serves as a reminder to preserve nature as an essential part of Surabaya’s identity. Its organic, flowing forms evoke a sense of calm and strength, reflecting the grounded character of Surabaya’s people and their ability to adapt to change.`
+   },
+   {
+      id: 'abhiboyo',
+      title: 'SUROBOYOAN',
+      artist: `Risha Iffatur Rahmah`,
+      category: 'leadership',
+      image:
+         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+      alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
+      description: `
+      The Suroboyoan batik motif celebrates Surabaya’s identity through symbols of heroism, togetherness, and cultural diversity. The 10 November motif, inspired by the iconic Heroes Monument, represents the courage, unity, and fighting spirit of the city’s people.
+      Coffee beans reflect the tradition of cangkrukan (gathering to share stories) and connect across communities while the aseman motif symbolizes harmony and mutual support. The dalanan motif captures Surabaya’s evolving urban life, blending modernity, innovation, and cherished memories.
+      Together, these elements portray the warm, determined, and forward looking spirit of Surabaya, where cultural heritage and modern life continue to thrive side by side.`
+   },
+   {
+      id: 'abhiboyo',
+      title: 'SKENA SURABAYA',
+      artist: `Risha Iffatur Rahmah`,
+      category: 'leadership',
+      image:
+         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+      alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
+      description: `
+      The Skena Surabaya motif captures the spirit of exploring the city in a relaxed, free-spirited, and meaningful way.
+      Inspired by urban skena culture and travelers’ journey stamps, the motif reflects the joy of meeting new people, sharing stories, and discovering Surabaya’s hidden corners through simple yet memorable experiences.
+      Each element represents adventure, cherished memories, and pride in Surabaya’s modern identity and welcoming spirit.`
+   },
+   {
+      id: 'abhiboyo',
+      title: 'TJAP TOENDJOENGAN',
+      artist: `Davit Eko Kris Cahyono`,
+      category: 'leadership',
+      image:
+         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+      alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
+      description: `
+      Inspired by the festive atmosphere of Tjap Toendjoengan’s night market, this motif celebrates the spirit of togetherness and the cultural diversity of Surabaya. It reflects a community where people from different backgrounds live side by side in harmony.
+      Iconic local delicacies, including Lontong Balap, Rujak Cingur, and almond crisps, highlight Surabaya’s rich culinary heritage, while Siola Building and Hotel Oranje evoke the city’s history and patriotic spirit.
+      Bringing together culinary traditions, historical landmarks, and local culture, the motif embodies unity, diversity, and pride in Surabaya’s heritage a living legacy that continues to evolve with the city.`
+   }
+];
 
 </script>
 
@@ -123,378 +294,35 @@ import Button from 'primevue/button'
 
          <div class="segment-motif-chosen max-w-[1320px] mx-auto px-margin-mobile md:px-margin mb-space-2xl">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="motif-grid">
-               <!-- Card 1: Parang -->
-               <article
+               <article v-for="motif in motifs" :key="motif.id"
                   class="motif-card flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm transition-all duration-300 hover:bg-surface-container-low"
-                  data-category="leadership">
+                  :data-category="motif.category">
+                  <!-- Image -->
                   <div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
-                     <img class="w-full h-full object-cover"
-                        data-alt="Close up textile macro photograph of handmade classic Parang batik pattern on smooth woven silk displaying brown natural soga and deep indigo dye with precise diagonal continuous lines"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk" />
-                     <span
-                        class="absolute top-3 right-3 bg-surface/90 text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">
-                        Keraton Mataram
-                     </span>
+                     <img :src="motif.image" :alt="motif.alt" class="w-full h-full object-cover" loading="lazy" />
                   </div>
+
+                  <!-- Content -->
                   <div class="p-6 flex flex-col flex-1 justify-between">
                      <div>
                         <div class="flex items-center justify-between mb-2">
                            <span
-                              class="font-label-sm text-label-sm text-tertiary-container tracking-wider uppercase font-semibold">Motif
-                              Pusaka I</span>
-                           <span class="font-label-sm text-label-sm text-outline">Abad ke-16</span>
+                              class="font-label-sm text-label-sm text-tertiary-container tracking-wider uppercase font-semibold">
+                              Creator: {{ motif.artist }}
+                           </span>
                         </div>
-                        <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Parang Rusak &amp; Barong</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4">
-                           Mengambil bentuk ombak laut yang tiada henti memecah karang. Melambangkan kesinambungan
-                           perjuangan,
-                           keteguhan hati pantang menyerah, dan kedalaman wibawa kepemimpinan.
+
+                        <h3 class="font-headline-sm text-headline-sm text-primary">
+                           {{ motif.title }}
+                        </h3>
+
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-4 whitespace-pre-line">
+                           {{ motif.description }}
                         </p>
-                        <div class="space-y-2 mb-4 bg-surface-container p-3 rounded-md">
-                           <div class="flex items-start gap-2">
-                              <span class="material-symbols-outlined text-sm text-secondary mt-0.5">history</span>
-                              <p class="font-body-sm text-body-sm text-on-surface"><span
-                                    class="font-semibold">Sejarah:</span>
-                                 Disusun Sultan Agung saat laku prihatin di pesisir selatan.</p>
-                           </div>
-                           <div class="flex items-start gap-2">
-                              <span class="material-symbols-outlined text-sm text-secondary mt-0.5">verified</span>
-                              <p class="font-body-sm text-body-sm text-on-surface"><span
-                                    class="font-semibold">Konteks:</span>
-                                 Busana agung kenegaraan &amp; penobatan.</p>
-                           </div>
-                        </div>
-                     </div>
-                     <div>
-                        <div class="flex flex-wrap gap-1.5 mb-4">
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Keteguhan</span>
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Kepemimpinan</span>
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Awisan
-                              Dalem</span>
-                        </div>
-                        <button
-                           class="w-full py-2.5 px-4 bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-label-md text-label-md rounded text-center transition-colors flex items-center justify-center gap-2"
-                           onclick="openMotifModal('parang')">
-                           <span>Pelajari Makna Lengkap</span>
-                           <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                        </button>
                      </div>
                   </div>
                </article>
-               <!-- Card 2: Kawung -->
-               <article
-                  class="motif-card flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm transition-all duration-300 hover:bg-surface-container-low"
-                  data-category="wisdom">
-                  <div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
-                     <img class="w-full h-full object-cover"
-                        data-alt="Overhead macro image of authentic Kawung batik textile showing four intersecting oval geometric fruit shapes with white and beige highlights over a deep umber brown natural dye background"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu0TWNx6g_BaA6bMdP2owMBuRVabBd2jSLydAIljxsy5Ib1Lk0TFWmoD26UebxIwpIRYubM_GWlsubxywMAlYm2p_X_q3tUbIzhvtSBJp7hteDWIQRfp2HrR5gPqu3jOKD7WNDMqXSGoFVP_poocZccl60zdin64mVpbTrqSqKn9hiPMzpaDJ84CkcvyoZcw8CJdk0TRI4HtllwHn_ns4pKoaAys-BycLjOioR7V4EqxUuYqIJtHY" />
-                     <span
-                        class="absolute top-3 right-3 bg-surface/90 text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">
-                        Yogyakarta &amp; Solo
-                     </span>
-                  </div>
-                  <div class="p-6 flex flex-col flex-1 justify-between">
-                     <div>
-                        <div class="flex items-center justify-between mb-2">
-                           <span
-                              class="font-label-sm text-label-sm text-tertiary-container tracking-wider uppercase font-semibold">Motif
-                              Pusaka II</span>
-                           <span class="font-label-sm text-label-sm text-outline">Abad ke-13</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Kawung</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4">
-                           Terinspirasi dari penampang buah kolang-kaling (aren). Empat kelopak bersinggungan mewakili
-                           ajaran
-                           'Sedulur Papat Limo Pancer' serta pengendalian hawa nafsu dan kesucian hati.
-                        </p>
-                        <div class="space-y-2 mb-4 bg-surface-container p-3 rounded-md">
-                           <div class="flex items-start gap-2">
-                              <span class="material-symbols-outlined text-sm text-secondary mt-0.5">history</span>
-                              <p class="font-body-sm text-body-sm text-on-surface"><span
-                                    class="font-semibold">Sejarah:</span>
-                                 Berakar dari masa Singasari-Majapahit, lestari di Keraton.</p>
-                           </div>
-                           <div class="flex items-start gap-2">
-                              <span class="material-symbols-outlined text-sm text-secondary mt-0.5">verified</span>
-                              <p class="font-body-sm text-body-sm text-on-surface"><span
-                                    class="font-semibold">Konteks:</span>
-                                 Cendekiawan, abdi dalem, etika integritas.</p>
-                           </div>
-                        </div>
-                     </div>
-                     <div>
-                        <div class="flex flex-wrap gap-1.5 mb-4">
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Kesucian
-                              Hati</span>
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Keadilan</span>
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Pengendalian
-                              Diri</span>
-                        </div>
-                        <button
-                           class="w-full py-2.5 px-4 bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-label-md text-label-md rounded text-center transition-colors flex items-center justify-center gap-2"
-                           onclick="openMotifModal('kawung')">
-                           <span>Pelajari Makna Lengkap</span>
-                           <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                        </button>
-                     </div>
-                  </div>
-               </article>
-               <!-- Card 3: Mega Mendung -->
-               <article
-                  class="motif-card flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm transition-all duration-300 hover:bg-surface-container-low"
-                  data-category="harmony">
-                  <div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
-                     <img class="w-full h-full object-cover"
-                        data-alt="Detailed horizontal flat lay of Cirebon Mega Mendung batik showing rich graduated layers of cloud motifs moving from deep navy indigo through sky blue and soft beige cream with smooth lines"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCix_sA3Yh6dSgrX4n3ley00XUKbLvFE3QCtbIr4jk-KJWbHnbgC_LKAdsqoPWDF2D8uQF8nijepIbBvW87YzGb6lXmEeGAQ04V4G0h0qFg6Lqiut6G6akeuD4LxlwqT7f05SdhdPDGuMQZJlp3_SJ-nkpdPjnPRNR3wfF9Cdxc8zFvSRMHFu8yYlcHVJgYS9Xd3qIZSW2-Ojcmti9Cf8S8m2tRQF6TXRDRywklVAb7ORz9TQ9vTa4" />
-                     <span
-                        class="absolute top-3 right-3 bg-surface/90 text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">
-                        Pesisir Cirebon
-                     </span>
-                  </div>
-                  <div class="p-6 flex flex-col flex-1 justify-between">
-                     <div>
-                        <div class="flex items-center justify-between mb-2">
-                           <span
-                              class="font-label-sm text-label-sm text-tertiary-container tracking-wider uppercase font-semibold">Motif
-                              Pusaka III</span>
-                           <span class="font-label-sm text-label-sm text-outline">Abad ke-15</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Mega Mendung</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4">
-                           Gumpalan awan pembawa hujan penyejuk mayapada. Buah perpaduan keindahan estetika Tiongkok
-                           dengan
-                           nilai tasawuf, mengajarkan keluasan jiwa dan kesabaran meneduhkan amarah.
-                        </p>
-                        <div class="space-y-2 mb-4 bg-surface-container p-3 rounded-md">
-                           <div class="flex items-start gap-2">
-                              <span class="material-symbols-outlined text-sm text-secondary mt-0.5">history</span>
-                              <p class="font-body-sm text-body-sm text-on-surface"><span
-                                    class="font-semibold">Sejarah:</span>
-                                 Akulturasi Sunan Gunung Jati dengan Putri Ong Tien.</p>
-                           </div>
-                           <div class="flex items-start gap-2">
-                              <span class="material-symbols-outlined text-sm text-secondary mt-0.5">verified</span>
-                              <p class="font-body-sm text-body-sm text-on-surface"><span
-                                    class="font-semibold">Konteks:</span>
-                                 Perayaan kultural, diplomasi, wastra prestise.</p>
-                           </div>
-                        </div>
-                     </div>
-                     <div>
-                        <div class="flex flex-wrap gap-1.5 mb-4">
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Kelapangan
-                              Dada</span>
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Akulturasi</span>
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Peneduh
-                              Jiwa</span>
-                        </div>
-                        <button
-                           class="w-full py-2.5 px-4 bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-label-md text-label-md rounded text-center transition-colors flex items-center justify-center gap-2"
-                           onclick="openMotifModal('megamendung')">
-                           <span>Pelajari Makna Lengkap</span>
-                           <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                        </button>
-                     </div>
-                  </div>
-               </article>
-               <!-- Card 4: Truntum -->
-               <article
-                  class="motif-card flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm transition-all duration-300 hover:bg-surface-container-low"
-                  data-category="love">
-                  <div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
-                     <img class="w-full h-full object-cover"
-                        data-alt="Intricate studio capture of Truntum batik motif fabric featuring delicate geometric star and floral clusters sprinkled uniformly across a dark charcoal background resembling a clear midnight constellation"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSC-nRkCnt2uUI5Ps0G2acW1lKZmWr4OpRWOi80YltSuyZPmwhgbJTCFp8vFOzQeTttC0AijxCE_d22KsOmqXhECzpLDntg3HDkvTHEBYdPrB50IlUC_V7oYmt-Hn3f2y42bfqid6HhgrnFwGwqPjUvmEVtmW5WpKolvOc9-Ec5wnBR2KmXbnxjchYhNGdHYSiPh6jr6P8hl5OxQv6S342zMBvZy3TqKenVZKl5GlYbCijhDLQGoY" />
-                     <span
-                        class="absolute top-3 right-3 bg-surface/90 text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">
-                        Kasunanan Surakarta
-                     </span>
-                  </div>
-                  <div class="p-6 flex flex-col flex-1 justify-between">
-                     <div>
-                        <div class="flex items-center justify-between mb-2">
-                           <span
-                              class="font-label-sm text-label-sm text-tertiary-container tracking-wider uppercase font-semibold">Motif
-                              Pusaka IV</span>
-                           <span class="font-label-sm text-label-sm text-outline">Abad ke-18</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Truntum</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4">
-                           Dari kata 'tumaruntum' bermakna bersemi kembali. Bintang-bintang kecil yang diciptakan sang
-                           permaisuri dalam sunyi malam, menjadi simbol cinta tulus tanpa syarat yang abadi.
-                        </p>
-                        <div class="space-y-2 mb-4 bg-surface-container p-3 rounded-md">
-                           <div class="flex items-start gap-2">
-                              <span class="material-symbols-outlined text-sm text-secondary mt-0.5">history</span>
-                              <p class="font-body-sm text-body-sm text-on-surface"><span
-                                    class="font-semibold">Sejarah:</span>
-                                 Digubah Kanjeng Ratu Kencana (Pakubuwono III).</p>
-                           </div>
-                           <div class="flex items-start gap-2">
-                              <span class="material-symbols-outlined text-sm text-secondary mt-0.5">verified</span>
-                              <p class="font-body-sm text-body-sm text-on-surface"><span
-                                    class="font-semibold">Konteks:</span>
-                                 Dikenakan orang tua pengantin dalam temu manten.</p>
-                           </div>
-                        </div>
-                     </div>
-                     <div>
-                        <div class="flex flex-wrap gap-1.5 mb-4">
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Cinta
-                              Sejati</span>
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Restu
-                              Orang Tua</span>
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Pernikahan
-                              Adat</span>
-                        </div>
-                        <button
-                           class="w-full py-2.5 px-4 bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-label-md text-label-md rounded text-center transition-colors flex items-center justify-center gap-2"
-                           onclick="openMotifModal('truntum')">
-                           <span>Pelajari Makna Lengkap</span>
-                           <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                        </button>
-                     </div>
-                  </div>
-               </article>
-               <!-- Card 5: Sekar Jagad -->
-               <article
-                  class="motif-card flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm transition-all duration-300 hover:bg-surface-container-low"
-                  data-category="harmony">
-                  <div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
-                     <img class="w-full h-full object-cover"
-                        data-alt="Editorial photograph of Sekar Jagad batik textile displaying an assemblage of varied patchwork-like floral and geometric island motifs dyed in warm terracotta soga and off-white wax resist lines"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRv8IDiB5zv1q2yZRihRJ_MPn-Jk13oSLG_Y9m7EFt4iuPIlyLnyxK3mVnWQBjwg6Vv7gXQ7JhkKNV_yakBoM2zkM5LKQqJ5HfM_wuwola_SrMasbHWGWbOiVJ-os3p-ibXZCFjo_FzUH99WUxzdGHcuedeVXEJHFIPVvwVQUBZ7NDRSnOsfbsAlHCPOxAr4zcGrKNTxRDGq367bvxMi-XvCi30KpJYY1IsW4yuag7mpX3PK8GHXE" />
-                     <span
-                        class="absolute top-3 right-3 bg-surface/90 text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">
-                        Yogyakarta &amp; Solo
-                     </span>
-                  </div>
-                  <div class="p-6 flex flex-col flex-1 justify-between">
-                     <div>
-                        <div class="flex items-center justify-between mb-2">
-                           <span
-                              class="font-label-sm text-label-sm text-tertiary-container tracking-wider uppercase font-semibold">Motif
-                              Pusaka V</span>
-                           <span class="font-label-sm text-label-sm text-outline">Abad ke-18</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Sekar Jagad</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4">
-                           Bermakna 'Bunga Dunia' atau peta keberagaman semesta ('kar' peta, 'jagad' jagat raya).
-                           Menampilkan
-                           mosaik ragam ornamen Nusantara yang dipersatukan dalam keanggunan.
-                        </p>
-                        <div class="space-y-2 mb-4 bg-surface-container p-3 rounded-md">
-                           <div class="flex items-start gap-2">
-                              <span class="material-symbols-outlined text-sm text-secondary mt-0.5">history</span>
-                              <p class="font-body-sm text-body-sm text-on-surface"><span
-                                    class="font-semibold">Sejarah:</span>
-                                 Manifestasi kebhinnekaan lanskap pulau Nusantara.</p>
-                           </div>
-                           <div class="flex items-start gap-2">
-                              <span class="material-symbols-outlined text-sm text-secondary mt-0.5">verified</span>
-                              <p class="font-body-sm text-body-sm text-on-surface"><span
-                                    class="font-semibold">Konteks:</span>
-                                 Perayaan syukur, jamuan kenegaraan multikultural.</p>
-                           </div>
-                        </div>
-                     </div>
-                     <div>
-                        <div class="flex flex-wrap gap-1.5 mb-4">
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Kebhinnekaan</span>
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Peta
-                              Semesta</span>
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Syukur
-                              Raya</span>
-                        </div>
-                        <button
-                           class="w-full py-2.5 px-4 bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-label-md text-label-md rounded text-center transition-colors flex items-center justify-center gap-2"
-                           onclick="openMotifModal('sekarjagad')">
-                           <span>Pelajari Makna Lengkap</span>
-                           <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                        </button>
-                     </div>
-                  </div>
-               </article>
-               <!-- Card 6: Sido Mukti -->
-               <article
-                  class="motif-card flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm transition-all duration-300 hover:bg-surface-container-low"
-                  data-category="love">
-                  <div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
-                     <img class="w-full h-full object-cover"
-                        data-alt="Macro view of traditional Sido Mukti batik fabric featuring delicate butterfly motifs wing ornaments and jewel-like symmetric house shapes hand-drawn in authentic soga brown and gold accents"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYH-t1jC3EpFbY9063HS0XrmyRgnyFmK6_6GWl_aev5IgbAKKdpihb9riXQpHlkwG-peJEV6zsn-LNFf9_N_Qat1BxXXx1JtH3HkVLWUj1QYJf4jS-WHwzjH40OHANbEm9nIIW1hVpfjxxRyfdI_gsGKx64MFkJyoKZuCp1zYLhiU4STwnhfIaoeynf6PaTjiEimQ0N9_Q7KKd2eDUqhwHyVxEi0YS4rdvnamVNiJfHWu_cSu6Mno" />
-                     <span
-                        class="absolute top-3 right-3 bg-surface/90 text-primary font-label-sm text-label-sm px-2.5 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">
-                        Surakarta
-                     </span>
-                  </div>
-                  <div class="p-6 flex flex-col flex-1 justify-between">
-                     <div>
-                        <div class="flex items-center justify-between mb-2">
-                           <span
-                              class="font-label-sm text-label-sm text-tertiary-container tracking-wider uppercase font-semibold">Motif
-                              Pusaka VI</span>
-                           <span class="font-label-sm text-label-sm text-outline">Pakem Tradisi</span>
-                        </div>
-                        <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Sido Mukti &amp; Sido Asih</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3 mb-4">
-                           'Sido' bermakna senantiasa terwujud, 'Mukti' bermakna kemuliaan sejati. Dihiasi motif
-                           kupu-kupu dan
-                           singgasana, mendoakan kedua insan menggapai keluhuran lahir dan batin.
-                        </p>
-                        <div class="space-y-2 mb-4 bg-surface-container p-3 rounded-md">
-                           <div class="flex items-start gap-2">
-                              <span class="material-symbols-outlined text-sm text-secondary mt-0.5">history</span>
-                              <p class="font-body-sm text-body-sm text-on-surface"><span
-                                    class="font-semibold">Sejarah:</span>
-                                 Ritus sakral daur hidup manusia (life cycle rites).</p>
-                           </div>
-                           <div class="flex items-start gap-2">
-                              <span class="material-symbols-outlined text-sm text-secondary mt-0.5">verified</span>
-                              <p class="font-body-sm text-body-sm text-on-surface"><span
-                                    class="font-semibold">Konteks:</span>
-                                 Busana wajib akad nikah dan resepsi panggih Jawa.</p>
-                           </div>
-                        </div>
-                     </div>
-                     <div>
-                        <div class="flex flex-wrap gap-1.5 mb-4">
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Kemuliaan
-                              Hidup</span>
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Akad
-                              Nikah</span>
-                           <span
-                              class="px-2.5 py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">Doa
-                              Abadi</span>
-                        </div>
-                        <button
-                           class="w-full py-2.5 px-4 bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-label-md text-label-md rounded text-center transition-colors flex items-center justify-center gap-2"
-                           onclick="openMotifModal('sidomukti')">
-                           <span>Pelajari Makna Lengkap</span>
-                           <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                        </button>
-                     </div>
-                  </div>
-               </article>
+
             </div>
          </div>
 

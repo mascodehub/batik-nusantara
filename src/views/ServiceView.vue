@@ -1,8 +1,120 @@
 <script setup>
-import { onMounted } from 'vue'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import Button from 'primevue/button'
 
+const processSteps = [
+   {
+      id: 1,
+      name: 'Konsultasi & Pemolaan Naskah',
+      captionTitle: '01. Eksplorasi Filosofi Ragam Hias & Sketsa Naskah',
+      progressPct: 0,
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAmaM68BY2c3GTA018kDPlSLP5tbNqwf-H7C6Cv5XcYHyNOsh7AecYzgR_ZN8eoI3Phb0JmF6EuxyuNigwxgp9vWKDrKYQ90T2Ww5BOGcoZVYcthgGbHWQ7gcrRcTb3FFcJRbzz1OJTJ5CijdhX_0aRymflZxtpkId5V6sM8krSwiaQpmTdtwWLUN11exbUGpEe7RIdmqxR8c5UGGX0A81dJRJ8MsGUkdyGmXa1r26sOWY5QiHmGMY',
+      description: 'Riset etimologis motif filosofis, penentuan susunan ornamen trah, serta sketsa pola manual di atas kain mori primissima atau sutra ATBM oleh kurator wastra.',
+      duration: '3–7 Hari Riset',
+      technique: 'Pola Tangan Manual',
+      techniqueIcon: 'draw',
+      video: '/videos/video-1.mp4',
+      poster: '/main-1.jpg',
+   },
+   {
+      id: 2,
+      name: 'Pencoletan & Canting Malam Tulis',
+      captionTitle: '02. Pencoletan & Canting Malam Tulis',
+      progressPct: 33,
+      image: 'https://example.com/proses-canting.jpg',
+      description: 'Penorehan lilin malam panas dengan canting tembaga presisi oleh maestro pembatik berpengalaman puluhan tahun, mengunci detail motif garis rambut (isen-isen) tembus dua sisi kain.',
+      duration: '14–45 Hari Pengerjaan',
+      technique: 'Lilin Lebah Alami',
+      techniqueIcon: 'mode_heat',
+      video: '/videos/video-2.mp4',
+      poster: '/main-2.jpg',
+   },
+   {
+      id: 3,
+      name: 'Pewarnaan Alami Soga & Celup Tradisional',
+      captionTitle: '03. Pewarnaan Alami Soga & Celup Tradisional',
+      progressPct: 66,
+      image: 'https://example.com/proses-pewarnaan.jpg',
+      description: 'Ekstraksi bahan botani murni (kulit kayu tingi, jolawe, kayu tegeran, dan indigofera murni) melalui perendaman berlapis hingga 15–20 kali untuk menghasilkan kedalaman rona hangat yang lestari.',
+      duration: '10–20 Kali Celup',
+      technique: '100% Organik Eco-Safe',
+      techniqueIcon: 'eco',
+      video: '/videos/video-3.mp4',
+      poster: '/main-3.jpg',
+   },
+   {
+      id: 4,
+      name: 'Pelorotan Lilin & Kendali Mutu',
+      captionTitle: '04. Pelorotan Lilin & Kendali Mutu',
+      progressPct: 100,
+      image: 'https://example.com/proses-finishing.jpg',
+      description: 'Pelepasan malam dalam gentong air mendidih murni, penjemuran di angin teduh tanpa sinar matahari langsung, serta inspeksi 28 titik kurasi sebelum penerbitan sertifikat keaslian.',
+      duration: '3–5 Hari Finishing',
+      technique: '28 Titik Inspeksi Mutu',
+      techniqueIcon: 'verified',
+      video: '/videos/video-4.mp4',
+      poster: '/main-3.jpg',
+   }
+];
+
+const currentStep = ref(0);
+
+const selectedStep = computed(
+   () => processSteps[currentStep.value],
+);
+
+const timelineHeights = ['0%', '33%', '66%', '100%'];
+
+function selectProcessStep(index) {
+   if (index < 0 || index >= processSteps.length) return;
+   currentStep.value = index;
+}
+
+function prevProcessStep() {
+   selectProcessStep(currentStep.value - 1);
+}
+
+function nextProcessStep() {
+   selectProcessStep(currentStep.value + 1);
+}
+
+const videoRef = ref(null)
+
+function handleVideoEnded() {
+   const nextIndex =
+      (currentStep.value + 1) % processSteps.length
+
+   selectProcessStep(nextIndex)
+}
+
+async function playCurrentVideo() {
+  await nextTick()
+
+  const video = videoRef.value
+
+  if (!video) return
+
+  video.pause()
+  video.currentTime = 0
+  video.load()
+
+  try {
+    await video.play()
+  } catch (error) {
+    console.warn('Autoplay gagal:', error)
+  }
+}
+
+// Autoplay video pertama saat halaman dibuka/reload
+onMounted(() => {
+  playCurrentVideo()
+})
+
+// Autoplay setiap kali tahapan berubah
+watch(currentStep, () => {
+  playCurrentVideo()
+})
 
 </script>
 
@@ -77,432 +189,192 @@ import Button from 'primevue/button'
       </div>
 
       <div class="segment-service-card bg-surface-container-low py-space-2xl">
-         <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
-            <!-- Section Header -->
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
-               <div>
-                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Portofolio
-                     Pelayanan</span>
-                  <h2 class="font-headline-md text-headline-md md:text-headline-lg text-primary tracking-tight mt-1">
-                     Enam Spektrum Keahlian Kriya
-                  </h2>
+         <section class="w-full bg-surface-container-low py-space-2xl" id="proses-adiluhung">
+            <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
+               <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+                  <!-- Kolom 1: Timeline Interaktif & Penjelasan Tahapan -->
+                  <div class="lg:col-span-6 flex flex-col">
+                     <span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">
+                        DEDIKASI KRIYA &amp; KETELITIAN TRADISI
+                     </span>
+                     <h2
+                        class="font-headline-md text-headline-md md:text-headline-lg text-primary tracking-tight mt-1 mb-space-sm">
+                        Empat Tahapan Menenun Cerita &amp; Makna
+                     </h2>
+                     <p class="font-body-md text-body-md text-secondary leading-relaxed mb-space-xl">
+                        Dari kemurnian guratan canting tembaga hingga fermentasi pewarna alami soga Jawa, setiap helai
+                        wastra
+                        Larasati melewati dedikasi luhur ratusan jam kerja para maestro pembatik.
+                     </p>
+                     <!-- Timeline Kontainer Vertikal -->
+                     <div class="relative pl-6 md:pl-8 space-y-space-lg">
+                        <!-- Background line -->
+                        <div class="absolute left-[19px] md:left-[23px] top-4 bottom-8 w-[2px] bg-outline-variant/40">
+                        </div>
+
+                        <!-- Active progress line -->
+                        <div
+                           class="absolute left-[19px] md:left-[23px] top-4 w-[2px] bg-tertiary-container transition-all duration-500"
+                           :style="{ height: timelineHeights[currentStep] }"></div>
+
+                        <!-- Timeline items -->
+                        <div v-for="(step, index) in processSteps" :key="step.id"
+                           class="timeline-step relative group cursor-pointer transition-all duration-300"
+                           :class="index === currentStep ? 'opacity-100' : 'opacity-80 hover:opacity-100'"
+                           @click="selectProcessStep(index)">
+                           <!-- Node -->
+                           <div
+                              class="step-node absolute -left-6 md:-left-8 top-1.5 w-10 h-10 rounded-full flex items-center justify-center font-label-md text-label-md font-bold transition-all duration-300"
+                              :class="{
+                                 'bg-primary-container text-on-primary ring-4 ring-tertiary-container/20 shadow-md':
+                                    index === currentStep,
+                                 'bg-secondary text-surface-bright ring-2 ring-tertiary-container/30':
+                                    index < currentStep,
+                                 'bg-surface-container text-secondary ring-2 ring-outline-variant/60':
+                                    index > currentStep
+                              }">
+                              {{ String(index + 1).padStart(2, '0') }}
+                           </div>
+
+                           <!-- Card -->
+                           <div
+                              class="step-card ml-8 md:ml-10 p-space-md md:p-space-lg rounded-lg transition-all duration-300"
+                              :class="{
+                                 'border border-primary/10 bg-surface-container-lowest shadow-sm':
+                                    index === currentStep,
+                                 'border border-transparent bg-surface-container-lowest/70 hover:bg-surface-container-lowest':
+                                    index !== currentStep
+                              }">
+                              <div class="flex items-center justify-between mb-1 gap-2">
+                                 <span class="font-label-sm text-label-sm uppercase tracking-widest"
+                                    :class="index === currentStep ? 'text-tertiary-container font-semibold' : 'text-outline'">
+                                    Tahap {{ String(index + 1).padStart(2, '0') }}
+                                 </span>
+
+                                 <span v-if="index === currentStep"
+                                    class="step-badge inline-flex items-center gap-1 text-[11px] font-medium text-tertiary-container bg-tertiary-container/10 px-2 py-0.5 rounded-full">
+                                    Aktif Ditampilkan
+                                 </span>
+                              </div>
+
+                              <h3 class="font-title-lg text-title-lg text-primary mb-1.5">
+                                 {{ step.name }}
+                              </h3>
+
+                              <p class="font-body-md text-body-md text-secondary leading-relaxed">
+                                 {{ step.description }}
+                              </p>
+
+                              <div
+                                 class="mt-space-sm pt-space-xs flex flex-wrap gap-2 text-outline font-label-sm text-label-sm">
+                                 <span class="inline-flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[15px] text-tertiary-container">
+                                       schedule
+                                    </span>
+                                    {{ step.duration }}
+                                 </span>
+
+                                 <span>•</span>
+
+                                 <span class="inline-flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[15px] text-tertiary-container">
+                                       {{ step.techniqueIcon }}
+                                    </span>
+                                    {{ step.technique }}
+                                 </span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Kolom 2: Wadah Player Video Interaktif -->
+                  <div class="lg:col-span-6 lg:sticky lg:top-28">
+                     <div
+                        class="bg-surface-container-lowest rounded-xl p-3 md:p-4 shadow-xl border border-outline-variant/40">
+                        <!-- Video Player Container -->
+                        <div
+                           class="relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-lg overflow-hidden bg-primary-container shadow-inner group">
+                           <!-- Main image -->
+                           <!-- <img :key="selectedStep.id" :src="selectedStep.image"
+                              :alt="`Visual proses ${selectedStep.name}`"
+                              class="w-full h-full object-cover transition-opacity duration-700 filter brightness-90 group-hover:scale-105" /> -->
+
+                           <!-- <video ref="videoRef"
+                              class="w-full h-full object-cover transition-opacity duration-700 filter brightness-90"
+                              src="/video/video-1.mp4" poster="/main-1.jpg" controls preload="metadata"
+                              @play="handlePlay" @pause="handlePause">
+                              Browser kamu tidak mendukung pemutaran video.
+                           </video> -->
+
+                           <video ref="videoRef"
+                              class="w-full h-full object-cover transition-opacity duration-700 filter brightness-90"
+                              :src="selectedStep.video" :poster="selectedStep.poster" controls playsinline
+                              preload="metadata" @ended="handleVideoEnded" autoplay muted>
+                              Browser tidak mendukung pemutaran video.
+                           </video>
+                           <!-- Gradient -->
+                           <div
+                              class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent pointer-events-none">
+                           </div>
+
+                           <!-- Caption -->
+                           <div class="absolute bottom-3 left-4 right-4 pointer-events-none">
+                              <p class="text-surface-bright font-title-md text-title-md drop-shadow-md truncate">
+                                 {{ selectedStep.captionTitle }}
+                              </p>
+                           </div>
+                        </div>
+                        <!-- Player Scrub Bar & Navigation Controls -->
+                        <div class="mt-3.5 px-1 flex flex-col gap-3">
+                           <!-- Progress bar -->
+                           <div
+                              class="relative w-full h-2 bg-surface-container rounded-full overflow-hidden cursor-pointer"
+                              @click="selectProcessStep(Math.min(processSteps.length - 1, Math.floor($event.offsetX / $event.currentTarget.clientWidth * processSteps.length)))">
+                              <div class="bg-tertiary-container h-full transition-all duration-300"
+                                 :style="{ width: selectedStep.progressPct + '%' }"></div>
+                           </div>
+
+                           <!-- Controls -->
+                           <div class="flex items-center justify-between pt-1 gap-3">
+                              <div class="flex items-center gap-2">
+                                 <button type="button" :disabled="currentStep === 0" title="Tahap Sebelumnya"
+                                    class="w-8 h-8 rounded-full border border-outline-variant/60 flex items-center justify-center text-primary hover:border-gray-400 hover:bg-surface-container transition-colors disabled:opacity-40"
+                                    @click="prevProcessStep">
+                                    <span class="material-symbols-outlined text-white text-[18px]">skip_previous</span>
+                                 </button>
+
+                                 <button type="button" :disabled="currentStep === processSteps.length - 1"
+                                    title="Tahap Selanjutnya"
+                                    class="w-8 h-8 rounded-full border border-outline-variant/60 flex items-center justify-center text-primary hover:border-gray-400 hover:bg-surface-container transition-colors disabled:opacity-40"
+                                    @click="nextProcessStep">
+                                    <span class="material-symbols-outlined text-white text-[18px]">skip_next</span>
+                                 </button>
+
+                                 <span class="font-label-sm text-label-sm text-secondary ml-1">
+                                    Tahap {{ currentStep + 1 }} dari {{ processSteps.length }}
+                                 </span>
+                              </div>
+
+                              <!-- Quick dots -->
+                              <div class="flex items-center gap-1.5">
+                                 <button v-for="(step, index) in processSteps" :key="`dot-${step.id}`" type="button"
+                                    :aria-label="`Beralih ke Tahap ${index + 1}`"
+                                    :aria-current="index === currentStep ? 'step' : undefined"
+                                    class="w-6 h-6 rounded-full text-xs font-semibold flex items-center justify-center transition-all"
+                                    :class="index === currentStep
+                                       ? 'bg-primary-container text-surface-bright shadow-sm scale-110'
+                                       : 'bg-surface-container text-secondary hover:bg-surface-container-high'
+                                       " @click="selectProcessStep(index)">
+                                    {{ index + 1 }}
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
                </div>
-               <p class="font-body-md text-body-md text-secondary max-w-md">
-                  Setiap layanan dikerjakan dengan presisi tinggi melalui riset motif dan pengawasan standar mutu ketat.
-               </p>
             </div>
-            <!-- Grid of 6 Services -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
-               <!-- CARD 1: Penjualan Kain Batik -->
-               <article
-                  class="flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden group hover:bg-surface transition-all duration-300 shadow-sm hover:shadow-md">
-                  <div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
-                     <img alt="Penjualan Kain Batik Tulis dan Cap Batik Nusantara"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        data-alt="Draped artisanal Indonesian batik fabric in rich soga brown, indigo blue, and cream colors showing authentic hand-drawn Canting wax details on an antique wooden workshop table."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeBxbb4VECFkvPONaM28OGlZOEkwkh0arzuZmnc3AfvBK7ggqoXbc-88j0kfuiBDQtddFNGH6TzEdiBEbAPhLDEnlTDTiSZEz_pvPrIbyYW1ErH146WQg-wOHtQhUKXdVjv18PitJiUn7u0b75mESEJ2UPgvM9xg2Vm9zvEmHB2NaM-8_BiL9gnXoS7vl7LIAEHaxEY7XWm8wfnpXRDyn_bDIXL6EiSDji0IjICGlmHr5SwGQ-YPc" />
-                     <div class="absolute top-3 left-3">
-                        <span
-                           class="px-2.5 py-1 rounded bg-primary-container text-surface-bright font-label-sm text-label-sm tracking-wider uppercase">
-                           Wastra Bahan
-                        </span>
-                     </div>
-                     <div
-                        class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded text-primary font-label-sm text-label-sm">
-                        Tulis &amp; Cap
-                     </div>
-                  </div>
-                  <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
-                     <div>
-                        <div
-                           class="flex items-center gap-space-xs text-outline mb-1 font-label-sm text-label-sm uppercase tracking-wider">
-                           <span class="material-symbols-outlined text-[16px]">texture</span>
-                           <span>Koleksi Lembaran Wastra</span>
-                        </div>
-                        <h3
-                           class="font-headline-sm text-headline-sm text-primary mb-2 group-hover:text-tertiary-container transition-colors">
-                           Penjualan Kain Batik
-                        </h3>
-                        <p class="font-body-md text-body-md text-secondary leading-relaxed mb-space-md">
-                           Koleksi kain batik tulis halus dan cap berkualitas tinggi dengan bahan primissima, sutra
-                           ATBM, dan
-                           pewarna alami soga alam yang ramah lingkungan.
-                        </p>
-                        <ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Batik Tulis Halus (Pengerjaan 3-6 bulan)</span>
-                           </li>
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Batik Cap Klasik &amp; Kombinasi</span>
-                           </li>
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Sutra ATBM, Katun Primissima, Dobby</span>
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="pt-space-md flex items-center justify-between">
-                        <button
-                           class="inline-flex bg-white hover:border-white items-center gap-2 font-label-lg text-label-lg text-primary hover:text-tertiary-container group/btn transition-colors"
-                           onclick="openDetailModal('kain')" type="button">
-                           <span>Lihat Detail &amp; Spesifikasi</span>
-                           <span
-                              class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                        </button>
-                     </div>
-                  </div>
-               </article>
-               <!-- CARD 2: Produk Fashion Batik -->
-               <article
-                  class="flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden group hover:bg-surface transition-all duration-300 shadow-sm hover:shadow-md">
-                  <div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
-                     <img alt="Fashion Batik Ready to Wear"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        data-alt="Modern Indonesian woman in architectural concrete interior wearing an elegant tailored batik blazer suit with botanical motif paired with dark trousers, quiet luxury look."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC24VBBYwp6fhNAPMQDMTJftzaEvBJb0bzX0db4eZOnTLVLDFzD5pWof_Lef8CdMCvSbAQAgwnZybpGTEi4Fk7c2Z9kr9Uctz7B1c8mHtgr8IZgBnbHdAS-1CvJTbWaqfR32nqNIj7kHMrWEevFpWUQIPr2ocDDJfi93D9eXFmFZy2nPZdF44K9QpC6BXuJPKP26-ziNc1VDpR4dDT9ftomzT86CC0ryQGv7fqX-uJ9fybtKYj1pxM" />
-                     <div class="absolute top-3 left-3">
-                        <span
-                           class="px-2.5 py-1 rounded bg-primary-container text-surface-bright font-label-sm text-label-sm tracking-wider uppercase">
-                           Ready-to-Wear
-                        </span>
-                     </div>
-                     <div
-                        class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded text-primary font-label-sm text-label-sm">
-                        Pria &amp; Wanita
-                     </div>
-                  </div>
-                  <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
-                     <div>
-                        <div
-                           class="flex items-center gap-space-xs text-outline mb-1 font-label-sm text-label-sm uppercase tracking-wider">
-                           <span class="material-symbols-outlined text-[16px]">apparel</span>
-                           <span>Busana Siap Pakai</span>
-                        </div>
-                        <h3
-                           class="font-headline-sm text-headline-sm text-primary mb-2 group-hover:text-tertiary-container transition-colors">
-                           Produk Fashion Batik
-                        </h3>
-                        <p class="font-body-md text-body-md text-secondary leading-relaxed mb-space-md">
-                           Busana siap pakai (ready-to-wear) dan adibusana bergaya kontemporer untuk pria dan wanita
-                           dengan
-                           potongan modern elegan yang nyaman dipakai sehari-hari.
-                        </p>
-                        <ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Blazer &amp; Outerwear Siluet Modern</span>
-                           </li>
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Kemeja Formal Pria Pola Pas Sambung</span>
-                           </li>
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Dress &amp; Tunik Elegan Serat Alami</span>
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="pt-space-md flex items-center justify-between">
-                        <button
-                           class="inline-flex bg-white hover:border-white items-center gap-2 font-label-lg text-label-lg text-primary hover:text-tertiary-container group/btn transition-colors"
-                           onclick="openDetailModal('fashion')" type="button">
-                           <span>Lihat Detail &amp; Spesifikasi</span>
-                           <span
-                              class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                        </button>
-                     </div>
-                  </div>
-               </article>
-               <!-- CARD 3: Custom Tailoring (Bespoke) -->
-               <article
-                  class="flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden group hover:bg-surface transition-all duration-300 shadow-sm hover:shadow-md">
-                  <div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
-                     <img alt="Custom Batik Bespoke Batik Nusantara"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        data-alt="Indonesian high fashion model posing in an art gallery wearing an haute couture asymmetric draped evening gown made of dark floral batik silk, dramatic refined lighting."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0lxx7o-xZtr6Yto4hsdIOgW-_VAxNmo_sVRLQt7b5NQlePkg3pTkyo40zpuzOGffElqIkxR3gVIG7I4_2WXvpLPpKl3BqXFZnOWFNkxLeDctFvjjnkvnQHMCS4yNkXO8gp451q8mydJiis6uYu5usEW_NFovl8eZTgbxcRJw8IgHekrmwiDk08pk_3wieu13mPEnQK5jfJWeNTamxvsGhc8MHXtlsq2VIA2qlgBPPSWFkQp2BdO4" />
-                     <div class="absolute top-3 left-3">
-                        <span
-                           class="px-2.5 py-1 rounded bg-tertiary-container text-surface-bright font-label-sm text-label-sm tracking-wider uppercase">
-                           Adibusana Eksklusif
-                        </span>
-                     </div>
-                     <div
-                        class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded text-primary font-label-sm text-label-sm">
-                        Satu Desain Satu Pemilik
-                     </div>
-                  </div>
-                  <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
-                     <div>
-                        <div
-                           class="flex items-center gap-space-xs text-outline mb-1 font-label-sm text-label-sm uppercase tracking-wider">
-                           <span class="material-symbols-outlined text-[16px]">straighten</span>
-                           <span>Tailor-Made Adibusana</span>
-                        </div>
-                        <h3
-                           class="font-headline-sm text-headline-sm text-primary mb-2 group-hover:text-tertiary-container transition-colors">
-                           Produk Batik Custom (Bespoke)
-                        </h3>
-                        <p class="font-body-md text-body-md text-secondary leading-relaxed mb-space-md">
-                           Pembuatan busana tailor-made dengan pengukuran siluet presisi dan penyesuaian motif khusus
-                           berfilosofi personal untuk resepsi pernikahan, gala, atau busana panggung.
-                        </p>
-                        <ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Konsultasi Motif Filosofis Personal</span>
-                           </li>
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Pengukuran Siluet Presisi 28 Titik Tubuh</span>
-                           </li>
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Fitting Eksklusif di Studio / Private Suite</span>
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="pt-space-md flex items-center justify-between">
-                        <button
-                           class="inline-flex bg-white hover:border-white items-center gap-2 font-label-lg text-label-lg text-primary hover:text-tertiary-container group/btn transition-colors"
-                           onclick="openDetailModal('bespoke')" type="button">
-                           <span>Lihat Detail &amp; Spesifikasi</span>
-                           <span
-                              class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                        </button>
-                     </div>
-                  </div>
-               </article>
-               <!-- CARD 4: Souvenir & Cinderamata Batik -->
-               <article
-                  class="flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden group hover:bg-surface transition-all duration-300 shadow-sm hover:shadow-md">
-                  <div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
-                     <img alt="Cinderamata Souvenir Batik Eksklusif"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        data-alt="Luxury handcrafted home living and executive gift set featuring parang batik silk cushions, hand-dyed table runner, and ceramic artisan pieces on clean solid teak wood table."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmaM68BY2c3GTA018kDPlSLP5tbNqwf-H7C6Cv5XcYHyNOsh7AecYzgR_ZN8eoI3Phb0JmF6EuxyuNigwxgp9vWKDrKYQ90T2Ww5BOGcoZVYcthgGbHWQ7gcrRcTb3FFcJRbzz1OJTJ5CijdhX_0aRymflZxtpkId5V6sM8krSwiaQpmTdtwWLUN11exbUGpEe7RIdmqxR8c5UGGX0A81dJRJ8MsGUkdyGmXa1r26sOWY5QiHmGMY" />
-                     <div class="absolute top-3 left-3">
-                        <span
-                           class="px-2.5 py-1 rounded bg-primary-container text-surface-bright font-label-sm text-label-sm tracking-wider uppercase">
-                           Cinderamata Kenegaraan
-                        </span>
-                     </div>
-                     <div
-                        class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded text-primary font-label-sm text-label-sm">
-                        Kemasan Kayu Jati
-                     </div>
-                  </div>
-                  <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
-                     <div>
-                        <div
-                           class="flex items-center gap-space-xs text-outline mb-1 font-label-sm text-label-sm uppercase tracking-wider">
-                           <span class="material-symbols-outlined text-[16px]">featured_seasonal_and_gifts</span>
-                           <span>Bingkisan Kehormatan</span>
-                        </div>
-                        <h3
-                           class="font-headline-sm text-headline-sm text-primary mb-2 group-hover:text-tertiary-container transition-colors">
-                           Souvenir &amp; Cinderamata Batik
-                        </h3>
-                        <p class="font-body-md text-body-md text-secondary leading-relaxed mb-space-md">
-                           Bingkisan eksklusif berupa scarf sutra, clutch, selendang tenun batik, kotak kayu ukir batik,
-                           dan
-                           set kado bernilai seni tinggi untuk delegasi serta tamu VIP.
-                        </p>
-                        <ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Hampers Kemasan Kotak Kayu Jati Ukir</span>
-                           </li>
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Pure Silk Hand-rolled Scarf Eksklusif</span>
-                           </li>
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Sertifikat Filosofi Motif &amp; Keaslian</span>
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="pt-space-md flex items-center justify-between">
-                        <button
-                           class="inline-flex bg-white hover:border-white items-center gap-2 font-label-lg text-label-lg text-primary hover:text-tertiary-container group/btn transition-colors"
-                           onclick="openDetailModal('souvenir')" type="button">
-                           <span>Lihat Detail &amp; Spesifikasi</span>
-                           <span
-                              class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                        </button>
-                     </div>
-                  </div>
-               </article>
-               <!-- CARD 5: Pesanan Partai / Grosir Institusi -->
-               <article
-                  class="flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden group hover:bg-surface transition-all duration-300 shadow-sm hover:shadow-md">
-                  <div
-                     class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container flex items-center justify-center p-space-xl bg-gradient-to-br from-surface-container to-surface-container-high">
-                     <!-- Graphical Rich Accent for B2B Scale -->
-                     <div
-                        class="w-full h-full flex flex-col justify-between p-space-md bg-surface-container-lowest/80 backdrop-blur-sm rounded">
-                        <div class="flex items-center justify-between">
-                           <span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Kapasitas
-                              Produksi</span>
-                           <span class="text-tertiary-container font-title-md text-title-md font-bold">10.000+
-                              m/bln</span>
-                        </div>
-                        <div class="space-y-2">
-                           <div class="flex justify-between font-label-sm text-label-sm text-secondary">
-                              <span>Konsistensi Celup Warna</span>
-                              <span class="text-primary font-semibold">Delta E &lt; 0.8</span>
-                           </div>
-                           <div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
-                              <div class="bg-primary h-full w-[94%]"></div>
-                           </div>
-                        </div>
-                        <div class="flex items-center gap-2 text-outline-variant font-label-sm text-label-sm">
-                           <span class="material-symbols-outlined text-[16px] text-tertiary-container">domain</span>
-                           <span>Standar BUMN, Kementerian &amp; Korporat</span>
-                        </div>
-                     </div>
-                     <div class="absolute top-3 left-3">
-                        <span
-                           class="px-2.5 py-1 rounded bg-primary-container text-surface-bright font-label-sm text-label-sm tracking-wider uppercase">
-                           Institusi &amp; B2B
-                        </span>
-                     </div>
-                  </div>
-                  <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
-                     <div>
-                        <div
-                           class="flex items-center gap-space-xs text-outline mb-1 font-label-sm text-label-sm uppercase tracking-wider">
-                           <span class="material-symbols-outlined text-[16px]">inventory_2</span>
-                           <span>Pengadaan Skala Besar</span>
-                        </div>
-                        <h3
-                           class="font-headline-sm text-headline-sm text-primary mb-2 group-hover:text-tertiary-container transition-colors">
-                           Pesanan Partai &amp; Grosir Seragam
-                        </h3>
-                        <p class="font-body-md text-body-md text-secondary leading-relaxed mb-space-md">
-                           Pengadaan seragam batik dinas, instansi kementerian, BUMN, perbankan, dan swasta nasional
-                           dengan
-                           jaminan konsistensi warna, kekuatan serat, dan ketepatan termin jadwal.
-                        </p>
-                        <ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Kapasitas Skala Besar Hingga Ribuan Potong</span>
-                           </li>
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Konsistensi Spektrum Warna Formula Lab</span>
-                           </li>
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Mockup Desain Digital &amp; Sample Fisik Gratis</span>
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="pt-space-md flex items-center justify-between">
-                        <button
-                           class="inline-flex bg-white hover:border-white items-center gap-2 font-label-lg text-label-lg text-primary hover:text-tertiary-container group/btn transition-colors"
-                           onclick="openDetailModal('grosir')" type="button">
-                           <span>Lihat Detail &amp; Spesifikasi</span>
-                           <span
-                              class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                        </button>
-                     </div>
-                  </div>
-               </article>
-               <!-- CARD 6: Custom Pola & Konsultasi Motif Batik -->
-               <article
-                  class="flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden group hover:bg-surface transition-all duration-300 shadow-sm hover:shadow-md">
-                  <div
-                     class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container flex items-center justify-center p-space-lg bg-gradient-to-tr from-surface-container-highest via-surface-container to-surface-bright">
-                     <!-- Visual Motif Vector Accent -->
-                     <div class="relative w-full h-full flex flex-col justify-center items-center text-center p-4">
-                        <svg class="w-20 h-20 text-tertiary-container/30 mb-2" fill="none" stroke="currentColor"
-                           viewbox="0 0 100 100">
-                           <circle cx="50" cy="50" r="38" stroke-dasharray="3 3" stroke-width="1.5"></circle>
-                           <circle cx="35" cy="50" r="18" stroke-width="1.5"></circle>
-                           <circle cx="65" cy="50" r="18" stroke-width="1.5"></circle>
-                           <circle cx="50" cy="35" r="18" stroke-width="1.5"></circle>
-                           <circle cx="50" cy="65" r="18" stroke-width="1.5"></circle>
-                           <circle cx="50" cy="50" fill="currentColor" r="4"></circle>
-                        </svg>
-                        <span class="font-headline-sm text-headline-sm text-primary italic">"Kawung Ratu Prabu"</span>
-                        <span class="font-label-sm text-label-sm text-outline uppercase tracking-widest mt-1">Hak Paten
-                           &amp;
-                           Sertifikasi Hak Cipta</span>
-                     </div>
-                     <div class="absolute top-3 left-3">
-                        <span
-                           class="px-2.5 py-1 rounded bg-primary text-surface-bright font-label-sm text-label-sm tracking-wider uppercase">
-                           Riset &amp; Konsultasi
-                        </span>
-                     </div>
-                  </div>
-                  <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
-                     <div>
-                        <div
-                           class="flex items-center gap-space-xs text-outline mb-1 font-label-sm text-label-sm uppercase tracking-wider">
-                           <span class="material-symbols-outlined text-[16px]">history_edu</span>
-                           <span>Desain &amp; Lisensi Motif</span>
-                        </div>
-                        <h3
-                           class="font-headline-sm text-headline-sm text-primary mb-2 group-hover:text-tertiary-container transition-colors">
-                           Custom Pola &amp; Konsultasi Motif
-                        </h3>
-                        <p class="font-body-md text-body-md text-secondary leading-relaxed mb-space-md">
-                           Riset etimologis, penciptaan filosofi, dan pendaftaran lisensi hak kekayaan intelektual
-                           (HAKI) motif
-                           batik khas bagi entitas perusahaan, trah keluarga, atau acara akbar.
-                        </p>
-                        <ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Hak Cipta Desain Eksklusif Terdaftar HAKI</span>
-                           </li>
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Buku Dokumentasi &amp; Rekam Filosofi Nilai Budaya</span>
-                           </li>
-                           <li class="flex items-center gap-2">
-                              <span
-                                 class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
-                              <span>Pedoman Penggunaan Motif (Brand Styleguide)</span>
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="pt-space-md flex items-center justify-between">
-                        <button
-                           class="inline-flex bg-white hover:border-white items-center gap-2 font-label-lg text-label-lg text-primary hover:text-tertiary-container group/btn transition-colors"
-                           onclick="openDetailModal('konsultasi')" type="button">
-                           <span>Lihat Detail &amp; Spesifikasi</span>
-                           <span
-                              class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                        </button>
-                     </div>
-                  </div>
-               </article>
-            </div>
-         </div>
+         </section>
       </div>
 
       <div class="segment-workflow w-full bg-surface py-space-2xl">
