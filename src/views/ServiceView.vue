@@ -340,14 +340,14 @@ watch(currentStep, () => {
                                  <button type="button" :disabled="currentStep === 0" title="Tahap Sebelumnya"
                                     class="w-8 h-8 rounded-full border border-outline-variant/60 flex items-center justify-center text-primary hover:border-gray-400 hover:bg-surface-container transition-colors disabled:opacity-40"
                                     @click="prevProcessStep">
-                                    <span class="material-symbols-outlined text-white text-[18px]">skip_previous</span>
+                                    <span class="material-symbols-outlined text-[18px]">skip_previous</span>
                                  </button>
 
                                  <button type="button" :disabled="currentStep === processSteps.length - 1"
                                     title="Tahap Selanjutnya"
                                     class="w-8 h-8 rounded-full border border-outline-variant/60 flex items-center justify-center text-primary hover:border-gray-400 hover:bg-surface-container transition-colors disabled:opacity-40"
                                     @click="nextProcessStep">
-                                    <span class="material-symbols-outlined text-white text-[18px]">skip_next</span>
+                                    <span class="material-symbols-outlined text-[18px]">skip_next</span>
                                  </button>
 
                                  <span class="font-label-sm text-label-sm text-secondary ml-1">
