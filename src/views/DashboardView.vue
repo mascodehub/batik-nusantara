@@ -33,12 +33,9 @@ const galleryItems = ref([
     description:
       'Sutra ATBM murni dengan pewarnaan alami kayu soga dan tingi. Pengerjaan canting halus selama 4 bulan oleh maestro batik Giriloyo dengan presisi geometris sakral khas keraton Mataram. Menampilkan kemegahan Parang Barong yang dahulu dikhususkan bagi para bangsawan berwibawa tinggi.',
     image:
-      'https://lh3.googleusercontent.com/aida/AEtjO1Uh0EXDiHAt-hHwbKsD6V-vSUE5s5waBfQEYXWbgQM7Csp86tyEktDfw7cxdRBb6Gt2Tf8vrPdTlXcc-PzbskZDcCNUxCMr2I_vEkYkvGBI0pARTWVBb4MkC9xnrB_f5G0Y2lg4RHUl8rNpdTUUTCygK--6xfsgRbnmfWOkgKjZxxokcuAtDjo-cLUbAvjf-0vJjQiVLg9_Ln8jZADHI4zQB7QvziYjr8WF66BVz04eCiZV3K8HgBvfjA',
+      '/images/collections/1111.jpeg',
     images: [
-      'https://lh3.googleusercontent.com/aida/AEtjO1Uh0EXDiHAt-hHwbKsD6V-vSUE5s5waBfQEYXWbgQM7Csp86tyEktDfw7cxdRBb6Gt2Tf8vrPdTlXcc-PzbskZDcCNUxCMr2I_vEkYkvGBI0pARTWVBb4MkC9xnrB_f5G0Y2lg4RHUl8rNpdTUUTCygK--6xfsgRbnmfWOkgKjZxxokcuAtDjo-cLUbAvjf-0vJjQiVLg9_Ln8jZADHI4zQB7QvziYjr8WF66BVz04eCiZV3K8HgBvfjA',
-      'https://lh3.googleusercontent.com/aida/AEtjO1UwOB4OmaYaQFvVcOvlKs5LQMhUzyBlK0AoIyqZm9YGjBqkuVhjmUmppjzLOUUSOjBO6MQMLzc9lXKdDyaEXF-uPL2FV6DDraQiZY3BuP9H0Eavn0DtiFZXQlw5_i17eAT0X1-i6R9tg4ydz26pQPNuZZOUCb06VVKPxesY1IJt8qAwhYi6pV1fpAa8YT9o6wVrj5K2J9l8rkIZKsZ2r0TZIHbS687Gn8SncXWlK8StjOtGubGBio2Z',
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDpGhWp5sFcYiBkRRnbIxKmpiff4nYBNEmpaQxuBqCcPOIp-P-ImxmB0i4eTsxdzjlKgncPSczQOCTWrhl54F4gw2n_byIsjsr7L8EbGoSR_tSPA74AVVDBtYGXPriVvQ_9ecFCjMYcO2sG7uh5tdhFks3DBQy25BPk4aU2BnBmEVEn51bVE4-MT4UsxngRQKByFdozKSPVxgPOyyQ_TNFHpqn3c4lAW827HbDQ2Cu60n6Kg5oGzuI',
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuD8A63OiFL0_p3kcYgmHW9B_OiFmEcUWuwnZimgp7zUYG9_DAPa9q9MAzWy95xih_LES4Bh589JHto0CY7NgTECC15a4w4vuFDUs_NQ1NAIQOh1VoP1tfCvXwwjmKnPRlCcE_x8gFNvxwPRoWnbdA9F2K1PIv7RdP3s3OOModlRLRy3PPvbgIcx1WQ6k8YdXmzzG0dmLv1Qms2vXvv-b_4okw52bqUHVq4n2-ASfIPpFx1S0twEMx4'
+      '/images/collections/1111.jpeg',
     ],
     material: 'Sutra ATBM Murni (Alat Tenun Bukan Mesin)',
     origin: 'Giriloyo, Imogiri, Yogyakarta',
@@ -50,9 +47,12 @@ const galleryItems = ref([
   },
   {
     category: "fashion",
-    categoryLabel: "Fashion",
+    categoryLabel: 'Kain Batik',
     description: "Struktur blazer modern dengan paduan motif Sekar Jagad monokromatik. Menghadirkan wibawa formal dengan kenyamanan linen premium. Didesain untuk para pemimpin kontemporer yang menghargai paduan warisan budaya Nusantara dan ketajaman siluet internasional modern.",
-    image: "https://lh3.googleusercontent.com/aida/AEtjO1UwOB4OmaYaQFvVcOvlKs5LQMhUzyBlK0AoIyqZm9YGjBqkuVhjmUmppjzLOUUSOjBO6MQMLzc9lXKdDyaEXF-uPL2FV6DDraQiZY3BuP9H0Eavn0DtiFZXQlw5_i17eAT0X1-i6R9tg4ydz26pQPNuZZOUCb06VVKPxesY1IJt8qAwhYi6pV1fpAa8YT9o6wVrj5K2J9l8rkIZKsZ2r0TZIHbS687Gn8SncXWlK8StjOtGubGBio2Z",
+    image: "/images/collections/1222.jpeg",
+    images: [
+      '/images/collections/1222.jpeg',
+    ],
     material: "Linen Blend & Katun Primissima Batik Tulis",
     origin: "Surakarta & Jakarta Atelier",
     tag: "Ready-to-Wear",
@@ -63,14 +63,11 @@ const galleryItems = ref([
   },
   {
     category: "fashion",
-    categoryLabel: "Fashion",
+    categoryLabel: 'Kain Batik',
     description: "Gaun malam potongan asimetris berpadu filosofi motif Sido Asih yang melambangkan kasih sayang abadi dan keanggunan wanita Nusantara. Jatuhan kain yang dramatis mengalir seperti ombak pesisir Samudra Hindia dengan tatahan payet tembaga antik artisan kotagede.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDpGhWp5sFcYiBkRRnbIxKmpiff4nYBNEmpaQxuBqCcPOIp-P-ImxmB0i4eTsxdzjlKgncPSczQOCTWrhl54F4gw2n_byIsjsr7L8EbGoSR_tSPA74AVVDBtYGXPriVvQ_9ecFCjMYcO2sG7uh5tdhFks3DBQy25BPk4aU2BnBmEVEn51bVE4-MT4UsxngRQKByFdozKSPVxgPOyyQ_TNFHpqn3c4lAW827HbDQ2Cu60n6Kg5oGzuI",
+    image: "/images/collections/1333.jpeg",
     images: [
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDpGhWp5sFcYiBkRRnbIxKmpiff4nYBNEmpaQxuBqCcPOIp-P-ImxmB0i4eTsxdzjlKgncPSczQOCTWrhl54F4gw2n_byIsjsr7L8EbGoSR_tSPA74AVVDBtYGXPriVvQ_9ecFCjMYcO2sG7uh5tdhFks3DBQy25BPk4aU2BnBmEVEn51bVE4-MT4UsxngRQKByFdozKSPVxgPOyyQ_TNFHpqn3c4lAW827HbDQ2Cu60n6Kg5oGzuI',
-      'https://lh3.googleusercontent.com/aida/AEtjO1Uh0EXDiHAt-hHwbKsD6V-vSUE5s5waBfQEYXWbgQM7Csp86tyEktDfw7cxdRBb6Gt2Tf8vrPdTlXcc-PzbskZDcCNUxCMr2I_vEkYkvGBI0pARTWVBb4MkC9xnrB_f5G0Y2lg4RHUl8rNpdTUUTCygK--6xfsgRbnmfWOkgKjZxxokcuAtDjo-cLUbAvjf-0vJjQiVLg9_Ln8jZADHI4zQB7QvziYjr8WF66BVz04eCiZV3K8HgBvfjA',
-      'https://lh3.googleusercontent.com/aida/AEtjO1UwOB4OmaYaQFvVcOvlKs5LQMhUzyBlK0AoIyqZm9YGjBqkuVhjmUmppjzLOUUSOjBO6MQMLzc9lXKdDyaEXF-uPL2FV6DDraQiZY3BuP9H0Eavn0DtiFZXQlw5_i17eAT0X1-i6R9tg4ydz26pQPNuZZOUCb06VVKPxesY1IJt8qAwhYi6pV1fpAa8YT9o6wVrj5K2J9l8rkIZKsZ2r0TZIHbS687Gn8SncXWlK8StjOtGubGBio2Z',
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuD8A63OiFL0_p3kcYgmHW9B_OiFmEcUWuwnZimgp7zUYG9_DAPa9q9MAzWy95xih_LES4Bh589JHto0CY7NgTECC15a4w4vuFDUs_NQ1NAIQOh1VoP1tfCvXwwjmKnPRlCcE_x8gFNvxwPRoWnbdA9F2K1PIv7RdP3s3OOModlRLRy3PPvbgIcx1WQ6k8YdXmzzG0dmLv1Qms2vXvv-b_4okw52bqUHVq4n2-ASfIPpFx1S0twEMx4'
+      '/images/collections/1333.jpeg',
     ],
     material: "Sutra Organza & Kain Mori Sutra Superfine",
     origin: "Yogyakarta Creative Hub",
@@ -82,9 +79,12 @@ const galleryItems = ref([
   },
   {
     category: "interior",
-    categoryLabel: "Produk Rumah Tangga",
+    categoryLabel: 'Kain Batik',
     description: "Dekorasi ruang tamu berupa bantal sofa sutra dan taplak meja kanvas katun motif Truntum geometris yang hangat dan bersahaja. Menghadirkan suasana keheningan ruang keluarga berestetika Wabi-Sabi Jawa dengan ketahanan cuci tinggi untuk pemakaian harian mewah.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuD8A63OiFL0_p3kcYgmHW9B_OiFmEcUWuwnZimgp7zUYG9_DAPa9q9MAzWy95xih_LES4Bh589JHto0CY7NgTECC15a4w4vuFDUs_NQ1NAIQOh1VoP1tfCvXwwjmKnPRlCcE_x8gFNvxwPRoWnbdA9F2K1PIv7RdP3s3OOModlRLRy3PPvbgIcx1WQ6k8YdXmzzG0dmLv1Qms2vXvv-b_4okw52bqUHVq4n2-ASfIPpFx1S0twEMx4",
+    image: "/images/collections/1444.jpeg",
+    images: [
+      '/images/collections/1444.jpeg',
+    ],
     material: "Kanvas Katun Organik & Sutra Habutai",
     origin: "Cirebon & Surakarta Workshop",
     tag: "Living & Decor",
@@ -115,46 +115,26 @@ const galleryItems = ref([
               </div>
               <h1
                 class="font-display-xl text-display-xl-mobile md:text-display-xl text-primary leading-tight mb-space-md">
-                Warisan Batik, <br class="hidden sm:inline" />
+                When Heritage, <br class="hidden sm:inline" />
                 <span class="italic font-display-xl text-secondary">
-                  Dibawa ke Masa Kini
+                  Meets New Expressions
                 </span>
               </h1>
               <p class="font-body-lg text-body-md md:text-body-lg text-secondary max-w-xl mb-space-xl leading-relaxed">
-                Menjual kain batik berkualitas serta menghadirkan berbagai produk dan layanan berbasis batik untuk
-                kebutuhan personal, bisnis, dan berbagai kebutuhan lainnya.
+                Rooted in Indonesian batik tradition, we create fabrics and contemporary pieces that carry the character
+                of craftsmanship, culture, and individual expression.
               </p>
               <div class="flex flex-wrap items-center gap-space-md">
                 <a class="inline-flex items-center justify-center bg-primary text-surface-bright hover:text-gray-300 font-label-lg text-label-lg px-7 py-3.5 rounded-sm hover:bg-tertiary-container transition-colors duration-200"
                   data-path="galeri" href="gallery">
-                  Lihat Produk
+                  EXPLORE COLLECTIONS
                 </a>
                 <a class="inline-flex items-center justify-center bg-transparent text-primary font-label-lg text-label-lg px-7 py-3.5 rounded-sm bg-surface-container-low hover:bg-secondary-container transition-colors duration-200"
                   data-path="contact" href="contact">
-                  Hubungi Kami
+                  CUSTOM DESIGN
                 </a>
               </div>
-              <div
-                class="mt-space-2xl pt-space-md flex items-center gap-space-lg sm:gap-space-xl bg-surface-container-low/60 p-space-md rounded-sm max-w-lg">
-                <div class="flex flex-col">
-                  <span class="font-headline-sm text-headline-sm text-primary font-serif">
-                    100%
-                  </span>
-                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Serat Alami</span>
-                </div>
-                <div class="w-px h-8 bg-surface-container-highest"></div>
-                <div class="flex flex-col">
-                  <span class="font-headline-sm text-headline-sm text-primary font-serif">Pewarna</span>
-                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Soga Alam &amp;
-                    Nabati</span>
-                </div>
-                <div class="w-px h-8 bg-surface-container-highest"></div>
-                <div class="flex flex-col">
-                  <span class="font-headline-sm text-headline-sm text-primary font-serif">Autentik</span>
-                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Karya Tangan
-                    Asli</span>
-                </div>
-              </div>
+
             </div>
             <!-- Visual Column (Asymmetric layered compositions) -->
             <div class="lg:col-span-6 relative flex flex-col sm:flex-row gap-space-md items-end">
@@ -197,63 +177,34 @@ const galleryItems = ref([
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
           <!-- Left Column: Story & Metrics -->
           <div class="lg:col-span-7 flex flex-col">
-            <span
-              class="font-label-md text-label-md uppercase tracking-[0.2em] text-on-tertiary-container mb-space-xs">Tentang
-              Batik Nusantara</span>
+            <span class="font-label-md text-label-md uppercase tracking-[0.2em] text-on-tertiary-container mb-space-xs">
+              A CONTINUING TRADITION
+            </span>
             <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-space-md">
-              Harmoni Ketelitian Tangan &amp; Keabadian Nilai Budaya
+              Tradition, with Room to Create
             </h2>
             <div class="space-y-space-md font-body-md text-body-md text-secondary leading-relaxed mb-space-xl">
               <p>
-                Batik Nusantara adalah usaha yang bergerak dalam bidang fashion terutama dalam penyediaan bahan batik,
-                tenun dan butik, baik dalam skala kecil maupun dalam partai besar. Batik Nusantara telah ada sejak tahun
-                1986, semula hanya menerima pesanan seragam batik untuk kader di Posyandu di Klaten Jawa Tengah tahun
-                1986, hingga berkembang sampai dengan sekarang.
+                Since 1986, Batik Nusantara has continued to explore the possibilities of batik while staying rooted in
+                traditional craftsmanship. We embrace contemporary trends and evolving tastes while preserving the
+                essence of the craft. Beyond our collections, we also create custom designs that bring individual ideas,
+                concepts, and cultural inspirations to life. 
               </p>
               <p>
-                Kualitas Terbaik dan Inovasi Berkumpul dalam Setiap Pola Batik Kami, Mempersembahkan Koleksi Batik
-                Elegan yang Sesuai dengan Gaya Hidup Anda.
+                Through this balance, we believe batik can remain
+                meaningful while continuing to evolve.
               </p>
             </div>
-            <!-- Counter Grid -->
-            <div class="grid grid-cols-3 gap-space-md pt-space-lg bg-surface-container-low p-space-lg rounded-sm">
-              <div class="flex flex-col">
-                <span
-                  class="font-display-xl text-headline-md md:text-display-xl text-primary leading-none font-serif">15<span
-                    class="text-on-tertiary-container font-sans text-headline-sm">+</span></span>
-                <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider mt-2">Tahun
-                  Pelestarian</span>
-              </div>
-              <div class="flex flex-col">
-                <span
-                  class="font-display-xl text-headline-md md:text-display-xl text-primary leading-none font-serif">240<span
-                    class="text-on-tertiary-container font-sans text-headline-sm">+</span></span>
-                <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider mt-2">Pengrajin
-                  Binaan</span>
-              </div>
-              <div class="flex flex-col">
-                <span
-                  class="font-display-xl text-headline-md md:text-display-xl text-primary leading-none font-serif">1.200<span
-                    class="text-on-tertiary-container font-sans text-headline-sm">+</span></span>
-                <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider mt-2">Motif
-                  Filosofis</span>
-              </div>
-            </div>
+            
           </div>
           <!-- Right Column: Framing Visual -->
           <div class="lg:col-span-5 flex flex-col items-center">
             <div class="w-full bg-surface-container-low p-space-md rounded-sm">
-              <div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-surface-container">
+              <div class="relative aspect-[4/3] overflow-hidden rounded-sm bg-surface-container">
                 <img alt="Potret karya batik kontemporer dalam perpaduan busana formal modern"
                   class="w-full h-full object-cover" src="/main-3.jpeg" />
               </div>
-              <div class="mt-space-md flex items-center justify-between">
-                <div class="flex flex-col">
-                  <span class="font-title-md text-title-md text-primary">Atelier Batik Nusantara</span>
-                  <span class="font-body-sm text-body-sm text-outline">Pemberdayaan Wastra Berkelanjutan</span>
-                </div>
-                <span class="material-symbols-outlined text-secondary text-2xl">verified</span>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -263,34 +214,17 @@ const galleryItems = ref([
     <div class="segment-goal bg-surface-container-low py-space-2xl">
       <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
         <div class="text-center max-w-2xl mx-auto mb-space-xl">
+          <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">
+            EXPLORE BATIK NUSANTARA
+          </h2>
           <span
-            class="font-label-md text-label-md uppercase tracking-[0.2em] text-on-tertiary-container mb-space-xs block">Komitmen
-            Kami</span>
-          <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Visi &amp; Misi
-            Keberlanjutan</h2>
+            class="font-label-md text-label-md uppercase tracking-[0.2em] text-on-tertiary-container mb-space-xs block">
+            MADE IN MANY FORMS
+          </span>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
-          <!-- Visi Card -->
-          <div class="lg:col-span-5 bg-surface-container-lowest p-space-xl rounded-sm flex flex-col justify-between">
-            <div>
-              <div
-                class="w-12 h-12 rounded-sm bg-surface-container-high flex items-center justify-center text-primary mb-space-lg">
-                <span class="material-symbols-outlined text-2xl">visibility</span>
-              </div>
-              <span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-outline block mb-space-xs">Visi
-                Utama</span>
-              <p class="font-headline-sm text-headline-sm text-primary leading-relaxed font-serif">
-                "Optimisme Masa Depan Cerah Untuk Batik Nusantara Dalam Melestarikan Busana Ciri Khas Indonesia Hingga
-                Dikenal di seluruh Dunia."
-              </p>
-            </div>
-            <div class="mt-space-xl pt-space-md flex items-center gap-space-sm text-secondary">
-              <span class="w-8 h-px bg-outline-variant"></span>
-              <span class="font-label-sm text-label-sm tracking-wider uppercase">Fokus Jangka Panjang</span>
-            </div>
-          </div>
           <!-- Misi Cards Grid -->
-          <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-space-md">
+          <div class="lg:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-space-md">
             <div class="bg-surface-container-lowest p-space-lg rounded-sm flex flex-col justify-start">
               <span
                 class="font-display-xl text-headline-md text-on-tertiary-container font-serif mb- space-xs">01</span>
@@ -315,14 +249,6 @@ const galleryItems = ref([
                 Meningkatkan promosi baik regional maupun nasional.
               </p>
             </div>
-            <div class="bg-surface-container-lowest p-space-lg rounded-sm flex flex-col justify-start">
-              <span
-                class="font-display-xl text-headline-md text-on-tertiary-container font-serif mb- space-xs">04</span>
-              <h3 class="font-title-md text-title-md text-primary mb-space-xs">Pelayanan Profesional</h3>
-              <p class="font-body-sm text-body-sm text-secondary leading-relaxed">
-                Meningkatkan pelayanan serta kepercayaan konsumen.
-              </p>
-            </div>
           </div>
         </div>
       </div>
@@ -332,17 +258,16 @@ const galleryItems = ref([
       <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
           <div>
-            <span
-              class="font-label-md text-label-md uppercase tracking-[0.2em] text-on-tertiary-container block mb-space-xs">Katalog
-              Utama</span>
-            <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Koleksi Terpilih
+            <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">
+              DISCOVER OUR COLLECTION
             </h2>
-            <p class="font-body-md text-body-md text-secondary mt-1">Kombinasi nilai seni adiluhung dan desain
-              kontemporer.</p>
+            <p class="font-body-md text-body-md text-secondary mt-1">
+              Explore a diverse range of batik fabrics, each featuring distinctive motifs, colors, and craftsmanship.
+            </p>
           </div>
           <a class="inline-flex items-center gap-2 font-label-lg text-label-lg text-primary hover:text-on-tertiary-container transition-colors"
             data-path="galeri" href="gallery">
-            <span>Lihat Semua Koleksi</span>
+            <span>More collections</span>
             <span class="material-symbols-outlined text-lg">arrow_forward</span>
           </a>
         </div>
@@ -362,10 +287,10 @@ const galleryItems = ref([
                   {{ item.categoryLabel }}
                 </span>
 
-                <span
+                <!-- <span
                   class="bg-primary text-surface-bright font-label-sm text-label-sm uppercase px-2.5 py-1 rounded-full">
                   {{ item.tag }}
-                </span>
+                </span> -->
               </div>
             </div>
 
@@ -396,7 +321,7 @@ const galleryItems = ref([
                 <button type="button"
                   class="open-modal-btn bg-white hover:border-white inline-flex items-center gap-1.5 text-primary hover:text-on-tertiary-container font-label-md text-label-md transition-colors py-1"
                   @click.stop="openModal(item)">
-                  <span>Lihat Detail</span>
+                  <span>View Detail</span>
 
                   <span class="material-symbols-outlined text-[18px]">
                     visibility
@@ -486,25 +411,21 @@ const galleryItems = ref([
             </svg>
           </div>
           <div class="max-w-3xl mx-auto relative">
-            <span
-              class="font-label-md text-label-md uppercase tracking-[0.25em] text-on-tertiary-container block mb-space-xs">Wujudkan
-              Koleksi Impian</span>
             <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-space-md">
-              Temukan Produk Batik yang Sesuai dengan Kebutuhan Anda
+              Have Something in Mind?
             </h2>
             <p
               class="font-body-lg text-body-md md:text-body-lg text-on-secondary-container max-w-xl mx-auto mb-space-xl leading-relaxed">
-              Mulai dari busana personal, seragam instansi, hingga cinderamata berkelas penuh makna filosofis warisan
-              luhur.
+              Whether you're looking for a particular piece, exploring our collections, or developing an idea of your own, we'd love to hear from you.
             </p>
             <div class="flex flex-wrap items-center justify-center gap-space-md">
               <a class="inline-flex items-center justify-center bg-primary text-surface-bright font-label-lg text-label-lg px-8 py-3.5 rounded-sm hover:bg-tertiary-container transition-colors duration-200"
                 data-path="galeri" href="gallery">
-                Lihat Koleksi
+                EXPLORE COLLECTIONS
               </a>
               <a class="inline-flex items-center justify-center bg-surface-container-lowest text-primary font-label-lg text-label-lg px-8 py-3.5 rounded-sm hover:bg-surface-container-high transition-colors duration-200"
                 data-path="contact" href="contact">
-                Konsultasi Pesanan
+                GET IN TOUCH
               </a>
             </div>
           </div>
@@ -560,8 +481,8 @@ const galleryItems = ref([
                     type="button"
                     class="flex-none w-18 h-24 p-1 rounded overflow-hidden focus:outline-none cursor-pointer transition-colors"
                     :class="selectedImage === image
-                        ? 'border-2 border-primary'
-                        : 'border border-outline-variant/50 hover:border-primary'
+                      ? 'border-2 border-primary'
+                      : 'border border-outline-variant/50 hover:border-primary'
                       " @click="changeImage(image)">
                     <img :src="image" :alt="`${selectedItem.title} - Detail ${index + 1}`"
                       class="w-full h-full aspect-[3/4] object-cover" />
