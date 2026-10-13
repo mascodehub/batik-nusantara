@@ -228,26 +228,38 @@ const galleryItems = ref([
             <div class="bg-surface-container-lowest p-space-lg rounded-sm flex flex-col justify-start">
               <span
                 class="font-display-xl text-headline-md text-on-tertiary-container font-serif mb- space-xs">01</span>
-              <h3 class="font-title-md text-title-md text-primary mb-space-xs">Kemurnian Proses Tradisional</h3>
+              <h3 class="font-title-md text-title-md text-primary mb-space-xs">BATIK FABRICS</h3>
               <p class="font-body-sm text-body-sm text-secondary leading-relaxed">
-                Meningkatkan kualitas Batik Nusantara sesuai Standar Batik Indonesia.
+                Explore batik fabrics crafted through different techniques, from hand-stamped to fully handmade.
               </p>
+              <a class="inline-flex items-center justify-center bg-primary text-surface-bright hover:text-gray-300 font-label-lg text-label-lg px-8 py-3.5 rounded-sm hover:bg-tertiary-container transition-colors duration-200 mt-10"
+                data-path="galeri" href="gallery">
+                EXPLORE COLLECTIONS
+              </a>
             </div>
             <div class="bg-surface-container-lowest p-space-lg rounded-sm flex flex-col justify-start">
               <span
                 class="font-display-xl text-headline-md text-on-tertiary-container font-serif mb- space-xs">02</span>
-              <h3 class="font-title-md text-title-md text-primary mb-space-xs">Ekosistem Pengrajin Berdaya</h3>
+              <h3 class="font-title-md text-title-md text-primary mb-space-xs">CUSTOM DESIGN</h3>
               <p class="font-body-sm text-body-sm text-secondary leading-relaxed">
-                Meningkatkan keterampilan SDM dalam membatik.
+                Bring your own motif, concept, or cultural inspiration and turn it into a textile design.
               </p>
+              <a class="inline-flex items-center justify-center bg-primary text-surface-bright hover:text-gray-300 font-label-lg text-label-lg px-8 py-3.5 rounded-sm hover:bg-tertiary-container transition-colors duration-200 mt-10"
+                data-path="galeri" href="service">
+                EXPLORE SERVICE
+              </a>
             </div>
             <div class="bg-surface-container-lowest p-space-lg rounded-sm flex flex-col justify-start">
               <span
                 class="font-display-xl text-headline-md text-on-tertiary-container font-serif mb- space-xs">03</span>
-              <h3 class="font-title-md text-title-md text-primary mb-space-xs">Publikasi</h3>
+              <h3 class="font-title-md text-title-md text-primary mb-space-xs">CONTEMPORARY APPAREL</h3>
               <p class="font-body-sm text-body-sm text-secondary leading-relaxed">
-                Meningkatkan promosi baik regional maupun nasional.
+                Discover batik translated into modern silhouettes for everyday and special occasions.
               </p>
+              <a class="inline-flex items-center justify-center bg-primary text-surface-bright hover:text-gray-300 font-label-lg text-label-lg px-8 py-3.5 rounded-sm hover:bg-tertiary-container transition-colors duration-200 mt-10"
+                data-path="galeri" href="gallery">
+                EXPLORE COLLECTIONS
+              </a>
             </div>
           </div>
         </div>
