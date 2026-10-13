@@ -37,12 +37,12 @@ let list_menu = [
         STATUS: 0,
         URL: 'philosophy',
     },
-    {
-        IDMENU: 6,
-        MENU_NAME: 'Customer',
-        STATUS: 0,
-        URL: 'customer',
-    },
+    // {
+    //     IDMENU: 6,
+    //     MENU_NAME: 'Customer',
+    //     STATUS: 0,
+    //     URL: 'customer',
+    // },
     {
         IDMENU: 7,
         MENU_NAME: 'Contact',
