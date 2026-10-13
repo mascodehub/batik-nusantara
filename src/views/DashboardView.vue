@@ -287,8 +287,8 @@ const galleryItems = ref([
           <article v-for="item in galleryItems" :key="item.title"
             class="gallery-card group flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
             <!-- Image -->
-            <div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden cursor-pointer"
-              @click="openModal(item)">
+            <div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden cursor-pointer">
+              <!-- @click="openModal(item)" -->
               <img :src="item.image" :alt="item.title"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
 
@@ -307,7 +307,7 @@ const galleryItems = ref([
             </div>
 
             <!-- Content -->
-            <div class="p-space-md flex flex-col flex-1 justify-between bg-surface-container-lowest">
+            <div class="p-space-md flex flex-col flex-1 justify-between bg-surface-container-lowest hidden">
               <div>
                 <span
                   class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider block mb-1">
