@@ -10,7 +10,7 @@ const motifs = [
       artist: 'Heri Supriyatno',
       category: 'leadership',
       image:
-         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+         '/images/philosophy/ABHIBOYO_.png',
       alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
       description: `
       Inspired by Abhimanyu, a figure symbolizing courage, responsibility, and heroism, the Abhiboyo motif combines these values with the crocodile (boyo), an iconic symbol of Surabaya.
@@ -23,7 +23,7 @@ const motifs = [
       artist: 'Wahyu Subianto',
       category: 'leadership',
       image:
-         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+         '/images/philosophy/BANYU SEMARAK.png',
       alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
       description: `
       Inspired by the vibrant kampung life of Wonokromo, Surabaya, the Gembili Wonokromo motif captures the rhythm of everyday life within the city where people, places, and stories come together.
@@ -32,24 +32,11 @@ const motifs = [
    },
    {
       id: 'abhiboyo',
-      title: 'ABHIBOYO',
-      artist: 'Heri Supriyatno',
-      category: 'leadership',
-      image:
-         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
-      alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
-      description: `
-      Inspired by Abhimanyu, a figure symbolizing courage, responsibility, and heroism, the Abhiboyo motif combines these values with the crocodile (boyo), an iconic symbol of Surabaya.
-      The motif reflects the resilience and unwavering spirit of the people of Surabaya in facing challenges and standing strong to protect their home.
-      The intertwined elements, leaves, and flowers represent perseverance, unity, peace, and compassion values that continue to shape the spirit of community and everyday life.`
-   },
-   {
-      id: 'abhiboyo',
       title: 'REMO SURABAYAN',
       artist: 'Umi Badriah',
       category: 'leadership',
       image:
-         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+         '/images/philosophy/GEMBILI WONOKROMO.png',
       alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
       description: `
       Inspired by Tari Remo, one of Surabaya’s iconic traditional dances, the Remo Surabayan motif brings together stylized elements of the dancer’s attire with the distinctive four-leaf clover, a beloved symbol of Surabaya.
@@ -62,7 +49,7 @@ const motifs = [
       artist: 'Arina Halimatus Anjani',
       category: 'leadership',
       image:
-         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+         '/images/philosophy/GREGET REL WONOKROMO.png',
       alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
       description: `
       Inspired by Sparkling Dance and Surabaya’s iconic culinary heritage, Rujak Cingur (a traditional dish from Surabaya), the Sparkling Taste of Surabaya motif celebrates the energy, beauty, and cultural diversity of the people of Surabaya.
@@ -75,7 +62,7 @@ const motifs = [
       artist: 'Risha Iffatur Rahmah',
       category: 'leadership',
       image:
-         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+         '/images/philosophy/KEMBANG BUNGUR.png',
       alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
       description: `
       Inspired by the bungur flower, a distinctive floral symbol of Surabaya, the Kembang Bungur motif reflects the beauty, solidarity, tolerance, and open-minded spirit of the city’s people.
@@ -88,7 +75,7 @@ const motifs = [
       artist: 'Nuraini Farida',
       category: 'leadership',
       image:
-         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+         '/images/philosophy/KINTIR-KINTIRAN.jpg',
       alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
       description: `
       Inspired by Surabaya’s rivers, the Kintir-Kintiran motif celebrates the city’s connection to water and the natural richness it represents, envisioning clean, unpolluted waterways as a reflection of environmental harmony.
@@ -101,7 +88,7 @@ const motifs = [
       artist: 'Suryawati Liman Halim',
       category: 'leadership',
       image:
-         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+         '/images/philosophy/PESONA MANGROVE SURABAYA.jpg',
       alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
       description: `
       Banyu Semarak portrays Surabaya as a city of water that has grown into a vibrant metropolitan hub, rich in history, culture, and diversity.
@@ -114,7 +101,7 @@ const motifs = [
       artist: 'Eka Sumarlin',
       category: 'leadership',
       image:
-         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+         '/images/philosophy/REMO SUROBOYOAN.png',
       alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
       description: `
       Inspired by Pasar Turi, one of Surabaya’s historic markets, this motif captures the vibrant atmosphere of urban life and the energy of its people.
@@ -127,7 +114,7 @@ const motifs = [
       artist: `Muchammad Syafi'i`,
       category: 'leadership',
       image:
-         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+         '/images/philosophy/SKENA.jpg',
       alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
       description: `
       Inspired by Wonorejo Mangrove Forest, this motif celebrates Surabaya’s natural beauty through symbols of strength, endurance, and harmony.
@@ -140,7 +127,7 @@ const motifs = [
       artist: `Risha Iffatur Rahmah`,
       category: 'leadership',
       image:
-         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+         '/images/philosophy/SPARKLING SURABAYA.png',
       alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
       description: `
       The Suroboyoan batik motif celebrates Surabaya’s identity through symbols of heroism, togetherness, and cultural diversity. The 10 November motif, inspired by the iconic Heroes Monument, represents the courage, unity, and fighting spirit of the city’s people.
@@ -153,7 +140,7 @@ const motifs = [
       artist: `Risha Iffatur Rahmah`,
       category: 'leadership',
       image:
-         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+         '/images/philosophy/SUROBOYOAN.jpg',
       alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
       description: `
       The Skena Surabaya motif captures the spirit of exploring the city in a relaxed, free-spirited, and meaningful way.
@@ -166,7 +153,7 @@ const motifs = [
       artist: `Davit Eko Kris Cahyono`,
       category: 'leadership',
       image:
-         'https://lh3.googleusercontent.com/aida-public/AB6AXuCaDnRb4F6rLv1gcIw0qkazhjct4kEf3wgeMCl7zMH_AyYBTcZ1dts6f8r--mHrttkJAj694b31zXGBuohwB14ojKLtYWMrUX-jyreMj0WXQ3ms84S1Pq_SFyqjfqBJ7IaEmHArnbXkkAfAogn0J-GnZWOFjU26nK7x6UMEWeGv58XXvv7U64l2ubwYWcYC6VnFBhEp-DYvtflqOJLBwl-VJmDuSsaDqE1D1iiG0fMUjt8ONhASBbk',
+         '/images/philosophy/TJAP TOENDJOENGAN.jpg',
       alt: 'Close-up motif batik Abhiboyo dengan pola diagonal dan warna cokelat',
       description: `
       Inspired by the festive atmosphere of Tjap Toendjoengan’s night market, this motif celebrates the spirit of togetherness and the cultural diversity of Surabaya. It reflects a community where people from different backgrounds live side by side in harmony.
@@ -174,6 +161,7 @@ const motifs = [
       Bringing together culinary traditions, historical landmarks, and local culture, the motif embodies unity, diversity, and pride in Surabaya’s heritage a living legacy that continues to evolve with the city.`
    }
 ];
+
 
 </script>
 
