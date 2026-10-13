@@ -346,7 +346,7 @@ const galleryItems = ref([
       </div>
     </div>
 
-    <div class="segment-benefit w-full bg-surface-container-lowest py-space-2xl">
+    <div class="segment-benefit w-full bg-surface-container-lowest py-space-2xl hidden">
       <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
         <div class="text-center max-w-2xl mx-auto mb-space-xl">
           <span
