@@ -31,7 +31,7 @@ const galleryItems = ref([
    },
    {
       category: "fashion",
-      categoryLabel: "Fashion",
+      categoryLabel: 'Kain Batik',
       description: "Struktur blazer modern dengan paduan motif Sekar Jagad monokromatik. Menghadirkan wibawa formal dengan kenyamanan linen premium. Didesain untuk para pemimpin kontemporer yang menghargai paduan warisan budaya Nusantara dan ketajaman siluet internasional modern.",
       image: "/images/collections/1222.jpeg",
       material: "Linen Blend & Katun Primissima Batik Tulis",
@@ -44,7 +44,7 @@ const galleryItems = ref([
    },
    {
       category: "fashion",
-      categoryLabel: "Fashion",
+      categoryLabel: 'Kain Batik',
       description: "Gaun malam potongan asimetris berpadu filosofi motif Sido Asih yang melambangkan kasih sayang abadi dan keanggunan wanita Nusantara. Jatuhan kain yang dramatis mengalir seperti ombak pesisir Samudra Hindia dengan tatahan payet tembaga antik artisan kotagede.",
       image: "/images/collections/1333.jpeg",
       material: "Sutra Organza & Kain Mori Sutra Superfine",
@@ -57,7 +57,7 @@ const galleryItems = ref([
    },
    {
       category: "interior",
-      categoryLabel: "Produk Rumah Tangga",
+      categoryLabel: 'Kain Batik',
       description: "Dekorasi ruang tamu berupa bantal sofa sutra dan taplak meja kanvas katun motif Truntum geometris yang hangat dan bersahaja. Menghadirkan suasana keheningan ruang keluarga berestetika Wabi-Sabi Jawa dengan ketahanan cuci tinggi untuk pemakaian harian mewah.",
       image: "/images/collections/1444.jpeg",
       material: "Kanvas Katun Organik & Sutra Habutai",
@@ -70,7 +70,7 @@ const galleryItems = ref([
    },
    {
       category: "aksesori",
-      categoryLabel: "Aksesori",
+      categoryLabel: 'Kain Batik',
       description: "Aksen selendang lembut bertabur ragam hias Nitik legendaris, disempurnakan rumbai tenun tangan berornamen tembaga. Motif Nitik membutuhkan ketelitian garis titik geometri yang luar biasa, dikerjakan oleh para tetua pembatik yang menjaga keaslian teknik kuno abad ke-18.",
       image: "/images/collections/1555.jpeg",
       material: "100% Sutra Crepe de Chine Alami",
@@ -83,7 +83,7 @@ const galleryItems = ref([
    },
    {
       category: "custom",
-      categoryLabel: "Produk Custom",
+      categoryLabel: 'Kain Batik',
       description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
       image: "/images/collections/1666.jpeg",
       material: "Tenun Sutra Baron Grade AAA",
@@ -96,7 +96,7 @@ const galleryItems = ref([
    },
    {
       category: "custom",
-      categoryLabel: "Produk Custom",
+      categoryLabel: 'Kain Batik',
       description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
       image: "/images/collections/1777.jpeg",
       material: "Tenun Sutra Baron Grade AAA",
@@ -109,7 +109,7 @@ const galleryItems = ref([
    },
    {
       category: "custom",
-      categoryLabel: "Produk Custom",
+      categoryLabel: 'Kain Batik',
       description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
       image: "/images/collections/1888.jpeg",
       material: "Tenun Sutra Baron Grade AAA",
@@ -122,7 +122,7 @@ const galleryItems = ref([
    },
    {
       category: "custom",
-      categoryLabel: "Produk Custom",
+      categoryLabel: 'Kain Batik',
       description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
       image: "/images/collections/2222.jpeg",
       material: "Tenun Sutra Baron Grade AAA",
@@ -135,7 +135,7 @@ const galleryItems = ref([
    },
    {
       category: "custom",
-      categoryLabel: "Produk Custom",
+      categoryLabel: 'Kain Batik',
       description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
       image: "/images/collections/3333.jpeg",
       material: "Tenun Sutra Baron Grade AAA",
@@ -148,7 +148,7 @@ const galleryItems = ref([
    },
    {
       category: "custom",
-      categoryLabel: "Produk Custom",
+      categoryLabel: 'Kain Batik',
       description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
       image: "/images/collections/4444.jpeg",
       material: "Tenun Sutra Baron Grade AAA",
@@ -161,7 +161,7 @@ const galleryItems = ref([
    },
    {
       category: "custom",
-      categoryLabel: "Produk Custom",
+      categoryLabel: 'Kain Batik',
       description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
       image: "/images/collections/5555.jpeg",
       material: "Tenun Sutra Baron Grade AAA",
@@ -174,7 +174,7 @@ const galleryItems = ref([
    },
    {
       category: "custom",
-      categoryLabel: "Produk Custom",
+      categoryLabel: 'Kain Batik',
       description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
       image: "/images/collections/6666.jpeg",
       material: "Tenun Sutra Baron Grade AAA",
@@ -187,7 +187,7 @@ const galleryItems = ref([
    },
    {
       category: "custom",
-      categoryLabel: "Produk Custom",
+      categoryLabel: 'Kain Batik',
       description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
       image: "/images/collections/7777.jpeg",
       material: "Tenun Sutra Baron Grade AAA",
@@ -200,7 +200,7 @@ const galleryItems = ref([
    },
    {
       category: "custom",
-      categoryLabel: "Produk Custom",
+      categoryLabel: 'Kain Batik',
       description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
       image: "/images/collections/8888.jpeg",
       material: "Tenun Sutra Baron Grade AAA",
@@ -210,7 +210,163 @@ const galleryItems = ref([
       title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
       subtitle: "Layanan Tailoring VIP",
       exclusive: "Bespoke Commission"
-   }
+   },
+   {
+      category: "custom",
+      categoryLabel: 'Kain Batik',
+      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
+      image: "/images/philosphy/ABHIBOYO_.png",
+      material: "Tenun Sutra Baron Grade AAA",
+      origin: "Atelier Eksklusif Batik Nusantara",
+      tag: "Pesanan Khusus",
+      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
+      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
+      subtitle: "Layanan Tailoring VIP",
+      exclusive: "Bespoke Commission"
+   },
+   {
+      category: "custom",
+      categoryLabel: 'Kain Batik',
+      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
+      image: "/images/philosphy/BANYU SEMARAK.png",
+      material: "Tenun Sutra Baron Grade AAA",
+      origin: "Atelier Eksklusif Batik Nusantara",
+      tag: "Pesanan Khusus",
+      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
+      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
+      subtitle: "Layanan Tailoring VIP",
+      exclusive: "Bespoke Commission"
+   },
+   {
+      category: "custom",
+      categoryLabel: 'Kain Batik',
+      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
+      image: "/images/philosophy/GEMBILI WONOKROMO.png",
+      material: "Tenun Sutra Baron Grade AAA",
+      origin: "Atelier Eksklusif Batik Nusantara",
+      tag: "Pesanan Khusus",
+      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
+      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
+      subtitle: "Layanan Tailoring VIP",
+      exclusive: "Bespoke Commission"
+   },
+   {
+      category: "custom",
+      categoryLabel: 'Kain Batik',
+      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
+      image: "/images/philosophy/GREGET REL WONOKROMO.png",
+      material: "Tenun Sutra Baron Grade AAA",
+      origin: "Atelier Eksklusif Batik Nusantara",
+      tag: "Pesanan Khusus",
+      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
+      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
+      subtitle: "Layanan Tailoring VIP",
+      exclusive: "Bespoke Commission"
+   },
+   {
+      category: "custom",
+      categoryLabel: 'Kain Batik',
+      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
+      image: "/images/philosophy/KEMBANG BUNGUR.png",
+      material: "Tenun Sutra Baron Grade AAA",
+      origin: "Atelier Eksklusif Batik Nusantara",
+      tag: "Pesanan Khusus",
+      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
+      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
+      subtitle: "Layanan Tailoring VIP",
+      exclusive: "Bespoke Commission"
+   },
+   {
+      category: "custom",
+      categoryLabel: 'Kain Batik',
+      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
+      image: "/images/philosophy/KINTIR-KINTIRAN.jpg",
+      material: "Tenun Sutra Baron Grade AAA",
+      origin: "Atelier Eksklusif Batik Nusantara",
+      tag: "Pesanan Khusus",
+      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
+      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
+      subtitle: "Layanan Tailoring VIP",
+      exclusive: "Bespoke Commission"
+   },
+   {
+      category: "custom",
+      categoryLabel: 'Kain Batik',
+      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
+      image: "/images/philosophy/PESONA MANGROVE SURABAYA.jpg",
+      material: "Tenun Sutra Baron Grade AAA",
+      origin: "Atelier Eksklusif Batik Nusantara",
+      tag: "Pesanan Khusus",
+      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
+      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
+      subtitle: "Layanan Tailoring VIP",
+      exclusive: "Bespoke Commission"
+   },
+   {
+      category: "custom",
+      categoryLabel: 'Kain Batik',
+      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
+      image: "/images/philosophy/REMO SUROBOYOAN.png",
+      material: "Tenun Sutra Baron Grade AAA",
+      origin: "Atelier Eksklusif Batik Nusantara",
+      tag: "Pesanan Khusus",
+      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
+      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
+      subtitle: "Layanan Tailoring VIP",
+      exclusive: "Bespoke Commission"
+   },
+   {
+      category: "custom",
+      categoryLabel: 'Kain Batik',
+      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
+      image: "/images/philosophy/SKENA.jpg",
+      material: "Tenun Sutra Baron Grade AAA",
+      origin: "Atelier Eksklusif Batik Nusantara",
+      tag: "Pesanan Khusus",
+      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
+      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
+      subtitle: "Layanan Tailoring VIP",
+      exclusive: "Bespoke Commission"
+   },
+   {
+      category: "custom",
+      categoryLabel: 'Kain Batik',
+      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
+      image: "/images/philosophy/SPARKLING SURABAYA.png",
+      material: "Tenun Sutra Baron Grade AAA",
+      origin: "Atelier Eksklusif Batik Nusantara",
+      tag: "Pesanan Khusus",
+      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
+      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
+      subtitle: "Layanan Tailoring VIP",
+      exclusive: "Bespoke Commission"
+   },
+   {
+      category: "custom",
+      categoryLabel: 'Kain Batik',
+      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
+      image: "/images/philosophy/SUROBOYOAN.jpg",
+      material: "Tenun Sutra Baron Grade AAA",
+      origin: "Atelier Eksklusif Batik Nusantara",
+      tag: "Pesanan Khusus",
+      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
+      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
+      subtitle: "Layanan Tailoring VIP",
+      exclusive: "Bespoke Commission"
+   },
+   {
+      category: "custom",
+      categoryLabel: 'Kain Batik',
+      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
+      image: "/images/philosophy/TJAP TOENDJOENGAN.jpg",
+      material: "Tenun Sutra Baron Grade AAA",
+      origin: "Atelier Eksklusif Batik Nusantara",
+      tag: "Pesanan Khusus",
+      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
+      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
+      subtitle: "Layanan Tailoring VIP",
+      exclusive: "Bespoke Commission"
+   },
 ])
 
 function openModal(item) {
@@ -232,7 +388,6 @@ function closeModal() {
       selectedItem.value = null
    }, 300)
 }
-
 
 </script>
 
@@ -324,10 +479,10 @@ function closeModal() {
                         {{ item.categoryLabel }}
                      </span>
 
-                     <span
+                     <!-- <span
                         class="bg-primary text-surface-bright font-label-sm text-label-sm uppercase px-2.5 py-1 rounded-full">
                         {{ item.tag }}
-                     </span>
+                     </span> -->
                   </div>
                </div>
 
@@ -519,12 +674,12 @@ function closeModal() {
                      <div class="md:col-span-6 bg-surface-container relative min-h-[300px] md:min-h-[460px]">
                         <img :src="selectedItem.image" :alt="selectedItem.title" class="w-full h-full object-cover" />
 
-                        <div class="absolute bottom-4 left-4">
+                        <!-- <div class="absolute bottom-4 left-4">
                            <span
                               class="bg-primary text-surface-bright font-label-sm text-label-sm uppercase px-3 py-1 rounded-full shadow-sm">
                               {{ selectedItem.tag }}
                            </span>
-                        </div>
+                        </div> -->
                      </div>
 
                      <!-- Modal Text & Metadata -->
