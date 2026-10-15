@@ -116,12 +116,11 @@ sidebarMenu.value = false;
                     <div class="lg:col-span-5 flex flex-col gap-space-md">
                         <div class="flex items-center gap-space-sm">
                             <span class="font-headline-sm text-headline-sm tracking-tight text-surface-bright">
-                                Batik Nusantara Heritage
+                                Authentic Indonesian Batik, Crafted with Heritage.
                             </span>
                         </div>
                         <p class="font-body-md text-body-md text-outline-variant max-w-md leading-relaxed">
-                            Dedikasi melestarikan mahakarya wastra batik Nusantara dengan sentuhan desain modern,
-                            kualitas bahan pilihan, dan pengerjaan tangan autentik.
+                            Discover the art of batik through timeless patterns, thoughtful craftsmanship, and custom creations made to bring your vision to life.
                         </p>
                         <div class="flex items-center gap-space-md pt-space-xs"><a aria-label="Instagram"
                                 class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-surface-bright hover:bg-surface-bright hover:text-primary transition-colors duration-200"

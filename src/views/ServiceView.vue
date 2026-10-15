@@ -89,100 +89,53 @@ function handleVideoEnded() {
 }
 
 async function playCurrentVideo() {
-  await nextTick()
+   await nextTick()
 
-  const video = videoRef.value
+   const video = videoRef.value
 
-  if (!video) return
+   if (!video) return
 
-  video.pause()
-  video.currentTime = 0
-  video.load()
+   video.pause()
+   video.currentTime = 0
+   video.load()
 
-  try {
-    await video.play()
-  } catch (error) {
-    console.warn('Autoplay gagal:', error)
-  }
+   try {
+      await video.play()
+   } catch (error) {
+      console.warn('Autoplay gagal:', error)
+   }
 }
 
 // Autoplay video pertama saat halaman dibuka/reload
 onMounted(() => {
-  playCurrentVideo()
+   playCurrentVideo()
 })
 
 // Autoplay setiap kali tahapan berubah
 watch(currentStep, () => {
-  playCurrentVideo()
+   playCurrentVideo()
 })
 
 </script>
 
 <template>
    <div class="flex flex-col w-full">
-      <div class="segment-main w-full bg-surface py-space-xl md:py-space-2xl">
-         <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
+      <div class="segment-main w-full bg-surface py-32 md:py-36">
+         <div class="max-w-330 mx-auto px-margin-mobile md:px-margin">
             <!-- Editorial Header Content -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-end">
-               <div class="lg:col-span-8 flex flex-col gap-space-sm">
-                  <div
-                     class="inline-flex bg-white hover:border-white items-center gap-space-xs self-start px-3 py-1 rounded-full bg-secondary-container text-primary font-label-sm text-label-sm tracking-wider uppercase">
-                     <span
-                        class="material-symbols-outlined text-[15px] text-tertiary-container">workspace_premium</span>
-                     Katalog Layanan &amp; Kolaborasi
-                  </div>
+               <div class="lg:col-span-12 flex flex-col gap-space-sm">
                   <h1
                      class="font-headline-lg text-headline-lg md:text-display-xl text-primary tracking-tight leading-tight">
-                     Layanan dan Produk <br class="hidden sm:inline" />
-                     <em class="italic font-headline-lg md:text-display-xl text-secondary">Wastra Adiluhung</em>
+                     Your Idea,
+                     <em class="italic font-headline-lg md:text-display-xl text-secondary">
+                        Our Craft
+                     </em>
                   </h1>
                   <p class="font-body-lg text-body-lg text-secondary max-w-2xl mt-space-xs">
-                     Batik Nusantara Heritage menghadirkan ekosistem wastra Nusantara terpadu: mulai dari lembaran kain
-                     tulis
-                     pusaka, busana kriya siap pakai, adibusana pesanan pribadi, hingga pengadaan korporasi dan riset
-                     filosofi motif berlisensi.
+                     From the first sketch to the final touch, we transform your ideas into distinctive batik creations
+                     through traditional craftsmanship and thoughtful design.
                   </p>
-               </div>
-               <!-- Metric Badges / Pillars -->
-               <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-space-sm">
-                  <div
-                     class="flex items-center gap-space-md p-space-md bg-surface-container-lowest rounded-lg shadow-sm">
-                     <div
-                        class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
-                        <span class="material-symbols-outlined text-[20px]">spa</span>
-                     </div>
-                     <div>
-                        <p class="font-title-md text-title-md text-primary leading-tight">Bahan Alami Pilihan</p>
-                        <p class="font-body-sm text-body-sm text-outline">Sutra ATBM, Katun Primissima, Pewarna Soga
-                           Alam</p>
-                     </div>
-                  </div>
-                  <div
-                     class="flex items-center gap-space-md p-space-md bg-surface-container-lowest rounded-lg shadow-sm">
-                     <div
-                        class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
-                        <span class="material-symbols-outlined text-[20px]">groups</span>
-                     </div>
-                     <div>
-                        <p class="font-title-md text-title-md text-primary leading-tight">Ratusan Maestro Pengrajin</p>
-                        <p class="font-body-sm text-body-sm text-outline">Pemberdayaan sentra batik Jogja, Solo &amp;
-                           Cirebon
-                        </p>
-                     </div>
-                  </div>
-                  <div
-                     class="flex items-center gap-space-md p-space-md bg-surface-container-lowest rounded-lg shadow-sm">
-                     <div
-                        class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
-                        <span class="material-symbols-outlined text-[20px]">verified</span>
-                     </div>
-                     <div>
-                        <p class="font-title-md text-title-md text-primary leading-tight">Kurator Berpengalaman</p>
-                        <p class="font-body-sm text-body-sm text-outline">Pendampingan pemilihan motif bersertifikat
-                           keaslian
-                        </p>
-                     </div>
-                  </div>
                </div>
             </div>
          </div>
@@ -194,18 +147,10 @@ watch(currentStep, () => {
                <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
                   <!-- Kolom 1: Timeline Interaktif & Penjelasan Tahapan -->
                   <div class="lg:col-span-6 flex flex-col">
-                     <span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">
-                        DEDIKASI KRIYA &amp; KETELITIAN TRADISI
-                     </span>
                      <h2
                         class="font-headline-md text-headline-md md:text-headline-lg text-primary tracking-tight mt-1 mb-space-sm">
-                        Empat Tahapan Menenun Cerita &amp; Makna
+                        THE PROCESS
                      </h2>
-                     <p class="font-body-md text-body-md text-secondary leading-relaxed mb-space-xl">
-                        Dari kemurnian guratan canting tembaga hingga fermentasi pewarna alami soga Jawa, setiap helai
-                        wastra
-                        Larasati melewati dedikasi luhur ratusan jam kerja para maestro pembatik.
-                     </p>
                      <!-- Timeline Kontainer Vertikal -->
                      <div class="relative pl-6 md:pl-8 space-y-space-lg">
                         <!-- Background line -->
@@ -381,40 +326,33 @@ watch(currentStep, () => {
          <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
             <!-- Process Header -->
             <div class="text-center max-w-2xl mx-auto mb-space-2xl">
-               <span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Standar Operasional
-                  Adiluhung</span>
                <h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-2">
-                  Alur Pengerjaan Layanan
+                  From Idea to Creation
                </h2>
-               <p class="font-body-md text-body-md text-secondary mt-2">
-                  Dari guratan canting pertama hingga busana tiba di tangan Anda, kami menjaga setiap tahapan penuh
-                  ketelitian dan penghormatan pada tradisi leluhur.
-               </p>
             </div>
             <!-- Process 4-Step Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg relative">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg relative">
                <!-- Step 1 -->
                <div
                   class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col justify-between relative group hover:bg-surface-container-low transition-colors">
                   <div>
                      <div class="flex items-center justify-between mb-space-md">
                         <span
-                           class="font-headline-lg text-headline-lg text-tertiary-container font-light opacity-50">01</span>
+                           class="font-headline-lg text-headline-md text-tertiary-container font-light opacity-50">01</span>
                         <div
-                           class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+                           class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
                            <span class="material-symbols-outlined text-[20px]">forum</span>
                         </div>
                      </div>
-                     <h3 class="font-title-lg text-title-lg text-primary mb-2">Konsultasi &amp; Kurasi Kebutuhan</h3>
+                     <h4 class="font-title-lg text-title-lg text-primary mb-2">DISCUSS YOUR IDEA</h4>
                      <p class="font-body-sm text-body-sm text-secondary leading-relaxed">
-                        Eksplorasi preferensi motif leluhur, kebutuhan volume pemakaian, pemilihan bahan baku (sutra,
-                        katun
-                        super, dobby), hingga penentuan skema budget.
+                        Share your ideas, references, existing designs, preferred colors, or simply tell us what you
+                        have in mind.
                      </p>
                   </div>
                   <div
                      class="mt-space-md pt-space-sm text-outline font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
-                     <span class="material-symbols-outlined text-[14px]">schedule</span> 1-2 Hari Kerja
+                     <span class="material-symbols-outlined text-[14px]">schedule</span> Typical timeline: 1–3 days
                   </div>
                </div>
                <!-- Step 2 -->
@@ -423,22 +361,21 @@ watch(currentStep, () => {
                   <div>
                      <div class="flex items-center justify-between mb-space-md">
                         <span
-                           class="font-headline-lg text-headline-lg text-tertiary-container font-light opacity-50">02</span>
+                           class="font-headline-lg text-headline-md text-tertiary-container font-light opacity-50">02</span>
                         <div
-                           class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+                           class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
                            <span class="material-symbols-outlined text-[20px]">draw</span>
                         </div>
                      </div>
-                     <h3 class="font-title-lg text-title-lg text-primary mb-2">Sketsa Pola &amp; Persetujuan Desain</h3>
+                     <h4 class="font-title-lg text-title-lg text-primary mb-2">DEVELOP THE DESIGN</h4>
                      <p class="font-body-sm text-body-sm text-secondary leading-relaxed">
-                        Pembuatan visualisasi digital (mockup), penetapan filosofi corak, serta sampling warna soga
-                        fisik
-                        sebelum proses pengerjaan massal dimulai.
+                        Based on our discussion, we develop the motif, colors, and details of your custom batik for your
+                        approval.
                      </p>
                   </div>
                   <div
                      class="mt-space-md pt-space-sm text-outline font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
-                     <span class="material-symbols-outlined text-[14px]">schedule</span> 3-5 Hari Kerja
+                     <span class="material-symbols-outlined text-[14px]">schedule</span> Typical timeline: 1–2 days
                   </div>
                </div>
                <!-- Step 3 -->
@@ -447,22 +384,20 @@ watch(currentStep, () => {
                   <div>
                      <div class="flex items-center justify-between mb-space-md">
                         <span
-                           class="font-headline-lg text-headline-lg text-tertiary-container font-light opacity-50">03</span>
+                           class="font-headline-lg text-headline-md text-tertiary-container font-light opacity-50">03</span>
                         <div
-                           class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+                           class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
                            <span class="material-symbols-outlined text-[20px]">brush</span>
                         </div>
                      </div>
-                     <h3 class="font-title-lg text-title-lg text-primary mb-2">Proses Canting &amp; Celup Tradisional
-                     </h3>
+                     <h4 class="font-title-lg text-title-lg text-primary mb-2">CRAFTING YOUR BATIK</h4>
                      <p class="font-body-sm text-body-sm text-secondary leading-relaxed">
-                        Pengerjaan tangan oleh maestro pengrajin: pencantingan malam panas, pewarnaan rendam soga alam
-                        berlapis, dan proses pelorotan ramah lingkungan.
+                        After the design is approved, our artisans begin the batik-making process.
                      </p>
                   </div>
                   <div
                      class="mt-space-md pt-space-sm text-outline font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
-                     <span class="material-symbols-outlined text-[14px]">schedule</span> 14 - 60 Hari
+                     <span class="material-symbols-outlined text-[14px]">schedule</span> Typical timeline: 3–4 weeks
                   </div>
                </div>
                <!-- Step 4 -->
@@ -471,109 +406,117 @@ watch(currentStep, () => {
                   <div>
                      <div class="flex items-center justify-between mb-space-md">
                         <span
-                           class="font-headline-lg text-headline-lg text-tertiary-container font-light opacity-50">04</span>
+                           class="font-headline-lg text-headline-md text-tertiary-container font-light opacity-50">04</span>
                         <div
-                           class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+                           class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
                            <span class="material-symbols-outlined text-[20px]">verified_user</span>
                         </div>
                      </div>
-                     <h3 class="font-title-lg text-title-lg text-primary mb-2">Kontrol Mutu &amp; Pengiriman Khusus</h3>
+                     <h4 class="font-title-lg text-title-lg text-primary mb-2">FINAL CHECK AND PACKAGING</h4>
                      <p class="font-body-sm text-body-sm text-secondary leading-relaxed">
-                        Pemeriksaan jahitan dan kepekatan corak secara teliti, penerbitan sertifikat keaslian wastra
-                        berhologram, serta pengemasan boks kayu eksklusif.
+                        Once your batik is complete, we carefully inspect and prepare your order for delivery.
                      </p>
                   </div>
                   <div
                      class="mt-space-md pt-space-sm text-outline font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
-                     <span class="material-symbols-outlined text-[14px]">schedule</span> 2-3 Hari Pengiriman
+                     <span class="material-symbols-outlined text-[14px]">schedule</span> Typical timeline: 1–2 days
+                  </div>
+               </div>
+               <!-- Step 5 -->
+               <div
+                  class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col justify-between relative group hover:bg-surface-container-low transition-colors">
+                  <div>
+                     <div class="flex items-center justify-between mb-space-md">
+                        <span
+                           class="font-headline-lg text-headline-md text-tertiary-container font-light opacity-50">05</span>
+                        <div
+                           class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
+                           <span class="material-symbols-outlined text-[20px]">package_2</span>
+                        </div>
+                     </div>
+                     <h4 class="font-title-lg text-title-lg text-primary mb-2">ON ITS WAY TO YOU</h4>
+                     <p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+                        Your order is shipped to your destination.
+                        Shipping time varies by destination.
+                     </p>
                   </div>
                </div>
             </div>
+
+            <!-- Process Header -->
+            <div class="my-4">
+
+               <div
+                  class="w-full bg-secondary-container/50 p-space-lg rounded-lg shadow-sm flex items-start gap-space-md">
+                  <div
+                     class="w-10 h-10 rounded-full bg-surface-container-lowest shrink-0 flex items-center justify-center text-primary mt-0.5">
+                     <span class="material-symbols-outlined text-[20px]">info</span>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                     <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        <strong>Please note :</strong> Timelines are estimates and may vary depending on the complexity
+                        of the design, number of
+                        revisions, production technique, quantity, and response time during the process.
+                     </p>
+                  </div>
+               </div>
+            </div>
+
          </div>
       </div>
 
       <div class="segment-value w-full bg-surface-container py-space-2xl">
-         <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
+         <div class="max-w-330 mx-auto px-margin-mobile md:px-margin">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
-               <div class="lg:col-span-5 flex flex-col gap-space-md">
-                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Kemitraan
-                     Terpercaya</span>
+               <div class="lg:col-span-12 flex flex-col gap-space-md text-center">
                   <h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">
-                     Mengapa Memilih Layanan Batik Nusantara Heritage?
+                     Various Services
                   </h2>
-                  <p class="font-body-md text-body-md text-secondary leading-relaxed">
-                     Kami memadukan integritas teknik leluhur dengan tata kelola manajemen proyek modern, menghadirkan
-                     produk
-                     wastra tanpa kompromi kualitas untuk setiap level kebutuhan.
-                  </p>
-                  <div class="flex flex-col gap-space-sm mt-space-sm">
-                     <div class="flex items-center gap-space-sm">
-                        <span class="material-symbols-outlined text-tertiary-container text-[20px]">check_box</span>
-                        <span class="font-title-md text-title-md text-primary">Standarisasi Laboratorium Pengujian
-                           Kain</span>
-                     </div>
-                     <div class="flex items-center gap-space-sm">
-                        <span class="material-symbols-outlined text-tertiary-container text-[20px]">check_box</span>
-                        <span class="font-title-md text-title-md text-primary">Transparansi Asal-Usul (Traceable
-                           Provenance)</span>
-                     </div>
-                     <div class="flex items-center gap-space-sm">
-                        <span class="material-symbols-outlined text-tertiary-container text-[20px]">check_box</span>
-                        <span class="font-title-md text-title-md text-primary">Kapasitas Produksi Massal Skala
-                           Korporasi</span>
-                     </div>
-                  </div>
                </div>
-               <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+               <div class="lg:col-span-12 grid grid-cols-1 sm:grid-cols-3 gap-space-md">
                   <!-- Pillar 1 -->
                   <div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col gap-space-sm">
                      <div
                         class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-2">
-                        <span class="material-symbols-outlined text-[24px]">verified</span>
+                        <span class="material-symbols-outlined text-[24px]">apparel</span>
                      </div>
-                     <h3 class="font-headline-sm text-headline-sm text-primary">100% Autentisitas Terjamin</h3>
+                     <h3 class="font-headline-sm text-headline-sm text-primary">
+                        Existing Design, New Color
+                     </h3>
                      <p class="font-body-sm text-body-sm text-secondary leading-relaxed">
-                        Bukan batik printing artifisial. Seluruh koleksi kain diproses melalui rintangan lilin malam
-                        orisinal
-                        oleh pembatik terdaftar di sentra kriya Jawa.
+                        CUSTOMIZE OUR DESIGNS
+                        Choose from our existing batik motifs and personalize the color palette to match your
+                        preferences, brand identity, or project needs.
                      </p>
                   </div>
                   <!-- Pillar 2 -->
                   <div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col gap-space-sm">
                      <div
                         class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-2">
-                        <span class="material-symbols-outlined text-[24px]">tune</span>
+                        <span class="material-symbols-outlined text-[24px]">cognition</span>
                      </div>
-                     <h3 class="font-headline-sm text-headline-sm text-primary">Fleksibilitas Kustomisasi</h3>
+                     <h3 class="font-headline-sm text-headline-sm text-primary">
+                        Your Own Design
+                     </h3>
                      <p class="font-body-sm text-body-sm text-secondary leading-relaxed">
-                        Mulai dari satu helai busana adibusana pribadi hingga pengadaan 5.000 potong seragam dinas
-                        kenegaraan
-                        dengan konsistensi mutu yang seragam.
+                        BRING YOUR DESIGN
+                        Have a finished design ready? We can help bring your artwork to life as batik fabric, tailored
+                        to your specifications and selected production technique.
                      </p>
                   </div>
                   <!-- Pillar 3 -->
                   <div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col gap-space-sm">
                      <div
                         class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-2">
-                        <span class="material-symbols-outlined text-[24px]">eco</span>
+                        <span class="material-symbols-outlined text-[24px]">lightbulb</span>
                      </div>
-                     <h3 class="font-headline-sm text-headline-sm text-primary">Pewarna Ramah Lingkungan</h3>
+                     <h3 class="font-headline-sm text-headline-sm text-primary">
+                        Form Concept to Design
+                     </h3>
                      <p class="font-body-sm text-body-sm text-secondary leading-relaxed">
-                        Pemanfaatan soga tingi, jolawe, tegeran, dan indigofera murni yang tidak mencemari lingkungan
-                        sekaligus menjaga kelembutan kain di kulit sensitif.
-                     </p>
-                  </div>
-                  <!-- Pillar 4 -->
-                  <div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col gap-space-sm">
-                     <div
-                        class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-2">
-                        <span class="material-symbols-outlined text-[24px]">handshake</span>
-                     </div>
-                     <h3 class="font-headline-sm text-headline-sm text-primary">Etika Perdagangan Berkelanjutan</h3>
-                     <p class="font-body-sm text-body-sm text-secondary leading-relaxed">
-                        Skema fair-wage yang memastikan kesejahteraan maestro pengrajin perempuan di desa binaan
-                        Yogyakarta,
-                        Surakarta, dan pesisir Cirebon.
+                        DEVELOP A CUSTOM DESIGN
+                        Starting with just an idea? Share your inspiration, references, or concept with us. Our team
+                        will develop the design for you, with room for revisions before production begins.
                      </p>
                   </div>
                </div>
@@ -582,50 +525,28 @@ watch(currentStep, () => {
       </div>
 
       <div class="segment-cta w-full bg-primary-container text-surface-bright py-space-2xl relative overflow-hidden">
-         <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin relative z-10">
-            <div
-               class="bg-primary/60 backdrop-blur-md p-space-xl md:p-space-2xl rounded-xl shadow-xl flex flex-col lg:flex-row items-center justify-between gap-space-xl">
-               <div class="flex flex-col gap-space-md max-w-xl text-center lg:text-left">
-                  <div
-                     class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-surface-container-lowest/10 self-center lg:self-start text-surface-bright font-label-sm text-label-sm uppercase tracking-widest">
-                     <span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
-                     Reservasi &amp; Konsultasi Kemitraan
-                  </div>
-                  <h2
-                     class="font-headline-lg text-headline-lg md:text-display-xl text-surface-bright tracking-tight leading-tight">
-                     Butuh Produk atau Layanan Batik Khusus?
-                  </h2>
-                  <p class="font-body-lg text-body-lg text-outline-variant leading-relaxed">
-                     Diskusikan kebutuhan seragam korporat, busana adibusana pribadi, maupun cinderamata kenegaraan
-                     bersama
-                     tim kurator dan desainer Batik Nusantara Heritage.
-                  </p>
-                  <!-- Quick contact tags -->
-                  <div class="flex flex-wrap items-center justify-center lg:justify-start gap-space-sm pt-2">
-                     <span
-                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest/5 text-surface-container font-label-sm text-label-sm">
-                        <span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">verified</span>
-                        Respon Cepat WhatsApp (&lt; 15 menit)
-                     </span>
-                     <span
-                        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest/5 text-surface-container font-label-sm text-label-sm">
-                        <span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">event</span>
-                        Kunjungan Private Showroom Yogyakarta
-                     </span>
-                  </div>
-               </div>
-               <div class="flex flex-col sm:flex-row lg:flex-col gap-space-md w-full lg:w-auto min-w-[280px]">
-                  <a class="flex items-center justify-center gap-space-sm bg-surface-bright text-primary font-label-lg text-label-lg px-space-xl py-4 rounded-lg hover:bg-surface-container-highest transition-colors duration-200 text-center font-bold"
-                     href="contact" rel="noopener noreferrer">
-                     <span class="material-symbols-outlined text-[20px]">chat</span>
-                     <span>Konsultasi Sekarang</span>
+         <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
+            <div class="max-w-3xl mx-auto text-center flex flex-col items-center">
+               <span class="font-label-sm text-label-sm text-on-tertiary-container tracking-widest uppercase mb-3">
+                  CUSTOM DESIGN CONSULTATION
+               </span>
+               <h2 class="font-headline-lg text-headline-lg text-surface-bright leading-tight mb-4">
+                  Made Beyond the Catalogue
+               </h2>
+               <p class="font-body-lg text-body-lg text-outline-variant mb-8 leading-relaxed">
+                  Our catalogue is only a starting point. If you have your own motif, illustration, or concept, share
+                  it with us. Together, we can explore how your idea can be developed into a unique textile design.
+               </p>
+               <div class="flex flex-col sm:flex-row items-center gap-4">
+                  <a class="w-full sm:w-auto px-8 py-3.5 bg-secondary-container text-primary font-label-lg text-label-lg rounded hover:bg-surface-bright transition-colors font-semibold"
+                     href="contact">
+                     Discuss Your Idea
                   </a>
-                  <button
-                     class="flex items-center justify-center gap-space-sm bg-transparent border-0 text-surface-bright font-label-lg text-label-lg px-space-xl py-4 rounded-lg hover:bg-surface-container-lowest/10 transition-colors duration-200 text-center"
-                     onclick="triggerPdfDownload()" type="button">
-                     <span class="material-symbols-outlined text-[20px]">download</span>
-                     <span>Unduh Panduan Layanan (PDF)</span>
-                  </button>
+                  <a class="inline-flex items-center justify-center bg-transparent border border-outline-variant text-surface-bright font-label-lg text-label-lg px-space-lg py-3 rounded-lg hover:bg-surface-bright/10 transition-colors duration-200"
+                     href="https://canva.link/adgkxvnlq16msyx" target="_blank">
+                     <span class="material-symbols-outlined text-[18px] mr-2">download</span>
+                     <span>View E-Catalog</span>
+                  </a>
                </div>
             </div>
          </div>

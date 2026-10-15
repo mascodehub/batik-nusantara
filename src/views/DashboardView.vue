@@ -106,7 +106,7 @@ const galleryItems = ref([
         <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
             <!-- Text Column -->
-            <div class="lg:col-span-6 flex flex-col justify-center">
+            <div class="lg:col-span-8 flex flex-col justify-center">
               <div class="inline-flex items-center gap-2 mb-space-sm">
                 <span class="w-6 h-px bg-on-tertiary-container"></span>
                 <span class="font-label-md text-label-md uppercase tracking-[0.2em] text-on-tertiary-container">
@@ -120,7 +120,7 @@ const galleryItems = ref([
                   Meets New Expressions
                 </span>
               </h1>
-              <p class="font-body-lg text-body-md md:text-body-lg text-secondary max-w-xl mb-space-xl leading-relaxed">
+              <p class="font-body-lg text-body-md md:text-body-lg text-secondary mb-space-xl leading-relaxed">
                 Rooted in Indonesian batik tradition, we create fabrics and contemporary pieces that carry the character
                 of craftsmanship, culture, and individual expression.
               </p>
@@ -137,20 +137,20 @@ const galleryItems = ref([
 
             </div>
             <!-- Visual Column (Asymmetric layered compositions) -->
-            <div class="lg:col-span-6 relative flex flex-col sm:flex-row gap-space-md items-end">
-              <div class="relative w-full sm:w-7/12 bg-surface-container-lowest p-2 shadow-sm rounded-sm">
-                <div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+            <div class="lg:col-span-4 relative flex flex-col sm:flex-row gap-space-md items-end justify-end">
+              <div class="relative w-full sm:w-9/12 bg-surface-container-lowest p-2 shadow-sm rounded-sm">
+                <div class="relative aspect-[2/3] overflow-hidden bg-surface-container">
                   <img alt="Kain batik tulis motif soga klasik di atas meja kayu artisan"
                     class="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgVh42R4pSUjOkiRNcQoE-kLKxrD35y7iwy-T2W9bDU5jYmvUtRyLYp493jZTrOWBPI1HCozAPHfovbPivvo037L7-TXQdiiQnXL5cCmYPxDmR9QmaNEprVBNlE1WGKUGi-5wQck5AWSlA7Yd7OJX5VGNFsOgwygwXquXzUzED075pyrea85nQq9VFDC09OIhqfzgn3sGAhOHzmGhUEOMPd-J6NpvV1RYTH1_Wwmc4AqLblzEnZNA" />
+                    src="/home-main.jpeg" />
                 </div>
-                <div class="py-2.5 px-2 flex justify-between items-center text-secondary">
+                <!-- <div class="py-2.5 px-2 flex justify-between items-center text-secondary">
                   <span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Kain Tulis
                     Solo</span>
                   <span class="font-label-sm text-label-sm font-serif italic">Est. Tradisi</span>
-                </div>
+                </div> -->
               </div>
-              <div
+              <!-- <div
                 class="relative w-full sm:w-5/12 -mt-10 sm:mt-0 bg-surface-container-lowest p-2 shadow-sm rounded-sm self-stretch flex flex-col justify-between">
                 <div class="relative aspect-[3/4] overflow-hidden bg-surface-container mb-2">
                   <img
@@ -165,7 +165,7 @@ const galleryItems = ref([
                   <p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Adaptasi estetika adiluhung
                     dalam siluet busana kontemporer.</p>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -188,23 +188,28 @@ const galleryItems = ref([
                 Since 1986, Batik Nusantara has continued to explore the possibilities of batik while staying rooted in
                 traditional craftsmanship. We embrace contemporary trends and evolving tastes while preserving the
                 essence of the craft. Beyond our collections, we also create custom designs that bring individual ideas,
-                concepts, and cultural inspirations to life. 
+                concepts, and cultural inspirations to life.
               </p>
               <p>
                 Through this balance, we believe batik can remain
                 meaningful while continuing to evolve.
               </p>
             </div>
-            
+
           </div>
           <!-- Right Column: Framing Visual -->
           <div class="lg:col-span-5 flex flex-col items-center">
             <div class="w-full bg-surface-container-low p-space-md rounded-sm">
               <div class="relative aspect-[4/3] overflow-hidden rounded-sm bg-surface-container">
-                <img alt="Potret karya batik kontemporer dalam perpaduan busana formal modern"
-                  class="w-full h-full object-cover" src="/main-3.jpeg" />
+                <video ref="videoRef"
+                  class="w-full h-full object-cover transition-opacity duration-700 filter brightness-90"
+                  src="/videos/home-about.mp4" controls preload="metadata" autoplay muted>
+                  Browser kamu tidak mendukung pemutaran video.
+                </video>
+                <!-- <img alt="Potret karya batik kontemporer dalam perpaduan busana formal modern"
+                  class="w-full h-full object-cover" src="/main-3.jpeg" /> -->
               </div>
-              
+
             </div>
           </div>
         </div>
@@ -428,7 +433,8 @@ const galleryItems = ref([
             </h2>
             <p
               class="font-body-lg text-body-md md:text-body-lg text-on-secondary-container max-w-xl mx-auto mb-space-xl leading-relaxed">
-              Whether you're looking for a particular piece, exploring our collections, or developing an idea of your own, we'd love to hear from you.
+              Whether you're looking for a particular piece, exploring our collections, or developing an idea of your
+              own, we'd love to hear from you.
             </p>
             <div class="flex flex-wrap items-center justify-center gap-space-md">
               <a class="inline-flex items-center justify-center bg-primary text-surface-bright font-label-lg text-label-lg px-8 py-3.5 rounded-sm hover:bg-tertiary-container transition-colors duration-200"

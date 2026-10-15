@@ -211,162 +211,6 @@ const galleryItems = ref([
       subtitle: "Layanan Tailoring VIP",
       exclusive: "Bespoke Commission"
    },
-   {
-      category: "custom",
-      categoryLabel: 'Kain Batik',
-      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
-      image: "/images/philosophy/ABHIBOYO_.png",
-      material: "Tenun Sutra Baron Grade AAA",
-      origin: "Atelier Eksklusif Batik Nusantara",
-      tag: "Pesanan Khusus",
-      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
-      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
-      subtitle: "Layanan Tailoring VIP",
-      exclusive: "Bespoke Commission"
-   },
-   {
-      category: "custom",
-      categoryLabel: 'Kain Batik',
-      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
-      image: "/images/philosophy/BANYU SEMARAK.png",
-      material: "Tenun Sutra Baron Grade AAA",
-      origin: "Atelier Eksklusif Batik Nusantara",
-      tag: "Pesanan Khusus",
-      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
-      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
-      subtitle: "Layanan Tailoring VIP",
-      exclusive: "Bespoke Commission"
-   },
-   {
-      category: "custom",
-      categoryLabel: 'Kain Batik',
-      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
-      image: "/images/philosophy/GEMBILI WONOKROMO.png",
-      material: "Tenun Sutra Baron Grade AAA",
-      origin: "Atelier Eksklusif Batik Nusantara",
-      tag: "Pesanan Khusus",
-      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
-      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
-      subtitle: "Layanan Tailoring VIP",
-      exclusive: "Bespoke Commission"
-   },
-   {
-      category: "custom",
-      categoryLabel: 'Kain Batik',
-      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
-      image: "/images/philosophy/GREGET REL WONOKROMO.png",
-      material: "Tenun Sutra Baron Grade AAA",
-      origin: "Atelier Eksklusif Batik Nusantara",
-      tag: "Pesanan Khusus",
-      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
-      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
-      subtitle: "Layanan Tailoring VIP",
-      exclusive: "Bespoke Commission"
-   },
-   {
-      category: "custom",
-      categoryLabel: 'Kain Batik',
-      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
-      image: "/images/philosophy/KEMBANG BUNGUR.png",
-      material: "Tenun Sutra Baron Grade AAA",
-      origin: "Atelier Eksklusif Batik Nusantara",
-      tag: "Pesanan Khusus",
-      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
-      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
-      subtitle: "Layanan Tailoring VIP",
-      exclusive: "Bespoke Commission"
-   },
-   {
-      category: "custom",
-      categoryLabel: 'Kain Batik',
-      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
-      image: "/images/philosophy/KINTIR-KINTIRAN.jpg",
-      material: "Tenun Sutra Baron Grade AAA",
-      origin: "Atelier Eksklusif Batik Nusantara",
-      tag: "Pesanan Khusus",
-      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
-      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
-      subtitle: "Layanan Tailoring VIP",
-      exclusive: "Bespoke Commission"
-   },
-   {
-      category: "custom",
-      categoryLabel: 'Kain Batik',
-      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
-      image: "/images/philosophy/PESONA MANGROVE SURABAYA.jpg",
-      material: "Tenun Sutra Baron Grade AAA",
-      origin: "Atelier Eksklusif Batik Nusantara",
-      tag: "Pesanan Khusus",
-      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
-      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
-      subtitle: "Layanan Tailoring VIP",
-      exclusive: "Bespoke Commission"
-   },
-   {
-      category: "custom",
-      categoryLabel: 'Kain Batik',
-      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
-      image: "/images/philosophy/REMO SUROBOYOAN.png",
-      material: "Tenun Sutra Baron Grade AAA",
-      origin: "Atelier Eksklusif Batik Nusantara",
-      tag: "Pesanan Khusus",
-      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
-      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
-      subtitle: "Layanan Tailoring VIP",
-      exclusive: "Bespoke Commission"
-   },
-   {
-      category: "custom",
-      categoryLabel: 'Kain Batik',
-      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
-      image: "/images/philosophy/SKENA.jpg",
-      material: "Tenun Sutra Baron Grade AAA",
-      origin: "Atelier Eksklusif Batik Nusantara",
-      tag: "Pesanan Khusus",
-      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
-      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
-      subtitle: "Layanan Tailoring VIP",
-      exclusive: "Bespoke Commission"
-   },
-   {
-      category: "custom",
-      categoryLabel: 'Kain Batik',
-      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
-      image: "/images/philosophy/SPARKLING SURABAYA.png",
-      material: "Tenun Sutra Baron Grade AAA",
-      origin: "Atelier Eksklusif Batik Nusantara",
-      tag: "Pesanan Khusus",
-      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
-      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
-      subtitle: "Layanan Tailoring VIP",
-      exclusive: "Bespoke Commission"
-   },
-   {
-      category: "custom",
-      categoryLabel: 'Kain Batik',
-      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
-      image: "/images/philosophy/SUROBOYOAN.jpg",
-      material: "Tenun Sutra Baron Grade AAA",
-      origin: "Atelier Eksklusif Batik Nusantara",
-      tag: "Pesanan Khusus",
-      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
-      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
-      subtitle: "Layanan Tailoring VIP",
-      exclusive: "Bespoke Commission"
-   },
-   {
-      category: "custom",
-      categoryLabel: 'Kain Batik',
-      description: "Layanan tailor kustom eksklusif perorangan dan instansi kenegaraan dengan pengukuran siluet presisi dan pemilihan motif personal. Setiap lembar kain dipola langsung sesuai postur tubuh agar motif Parang Kusumo tersambung sempurna tanpa jeda pada saku, kerah, dan plaket kancing.",
-      image: "/images/philosophy/TJAP TOENDJOENGAN.jpg",
-      material: "Tenun Sutra Baron Grade AAA",
-      origin: "Atelier Eksklusif Batik Nusantara",
-      tag: "Pesanan Khusus",
-      technique: "Batik Pola Tubuh (Bespoke Pattern Matching)",
-      title: "Kemeja Tenun Sutra Pola Kustom Parang Kusumo",
-      subtitle: "Layanan Tailoring VIP",
-      exclusive: "Bespoke Commission"
-   },
 ])
 
 function openModal(item) {
@@ -399,18 +243,18 @@ function closeModal() {
          <div class="flex flex-col items-center text-center max-w-3xl mx-auto">
             <div class="flex items-center gap-space-sm mb-space-xs">
                <span class="h-px w-8 bg-on-tertiary-container"></span>
-               <span class="font-label-sm text-label-sm tracking-widest text-on-tertiary-container uppercase">KATALOG
-                  KARYA
-                  &amp; KURASI</span>
+               <span class="font-label-sm text-label-sm tracking-widest text-on-tertiary-container uppercase">
+                  BATIK COLLECTION
+               </span>
                <span class="h-px w-8 bg-on-tertiary-container"></span>
             </div>
             <h1
                class="font-display-xl text-display-xl-mobile md:text-display-xl text-primary tracking-tight mt-space-xs mb-space-md">
-               Galeri Wastra &amp; Mahakarya Batik
+               Discover Our Collection
             </h1>
             <p class="font-body-lg text-body-lg text-secondary leading-relaxed">
-               Eksplorasi ragam kain batik tulis pesisir dan pedalaman, siluet busana kontemporer, ornamen interior,
-               hingga karya kreasi kustom bernilai seni adiluhung.
+               Explore a selection of batik fabrics shaped by traditional craftsmanship, distinctive motifs, and
+               contemporary design.
             </p>
             <div class="flex items-center gap-space-md mt-space-lg">
                <span class="h-px w-16 bg-outline-variant"></span>
@@ -532,12 +376,13 @@ function closeModal() {
          </div>
       </div>
 
-      <div class="segment-motif-overview w-full bg-surface-container-low py-space-2xl mb-space-2xl">
-         <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
+      <div class="segment-motif-overview w-full bg-surface-container-low py-space-2xl mb-space-2xl hidden">
+         <div class="max-w-330 mx-auto px-margin-mobile md:px-margin">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
                <div class="lg:col-span-5 flex flex-col">
                   <span
-                     class="font-label-sm text-label-sm text-on-tertiary-container tracking-widest uppercase mb-space-xs">FILOSOFI
+                     class="font-label-sm text-label-sm text-on-tertiary-container tracking-widest uppercase mb-space-xs">
+                     FILOSOFI
                      &amp; PROVENANSI</span>
                   <h2
                      class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight mb-space-md">
@@ -598,47 +443,30 @@ function closeModal() {
          </div>
       </div>
 
-      <div class="segment-cta w-full max-w-[1320px] mx-auto px-margin-mobile md:px-margin mb-space-2xl">
-         <div
-            class="bg-primary-container text-surface-bright rounded-xl p-space-xl md:p-space-2xl relative overflow-hidden shadow-xl">
-            <div class="relative z-10 max-w-2xl flex flex-col items-start">
-               <span class="font-label-sm text-label-sm text-tertiary-fixed tracking-widest uppercase mb-space-xs">
-                  LAYANAN KURATOR &amp; COMMISSION
+      <div class="segment-cta w-full bg-primary-container text-surface-container-low py-space-2xl">
+         <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
+            <div class="max-w-3xl mx-auto text-center flex flex-col items-center">
+               <span class="font-label-sm text-label-sm text-on-tertiary-container tracking-widest uppercase mb-3">
+                  CUSTOM DESIGN CONSULTATION
                </span>
-               <h2
-                  class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-surface-bright tracking-tight mb-space-md">
-                  Menginginkan Karya atau Motif Tertentu?
+               <h2 class="font-headline-lg text-headline-lg text-surface-bright leading-tight mb-4">
+                  Made Beyond the Catalogue
                </h2>
-               <p class="font-body-lg text-body-lg text-outline-variant leading-relaxed mb-space-xl">
-                  Kami melayani kurasi khusus koleksi wastra antik, pesanan busana custom, hingga cinderamata eksklusif
-                  berlisensi filosofis untuk institusi negara maupun kolektor pribadi.
+               <p class="font-body-lg text-body-lg text-outline-variant mb-8 leading-relaxed">
+                  Our catalogue is only a starting point. If you have your own motif, illustration, or concept, share
+                  it with us. Together, we can explore how your idea can be developed into a unique textile design.
                </p>
-               <div class="flex flex-wrap items-center gap-space-md">
-                  <a class="inline-flex items-center justify-center bg-surface-bright text-primary font-label-lg text-label-lg px-space-xl py-3 rounded-lg hover:bg-secondary-container transition-colors duration-200 shadow-sm"
+               <div class="flex flex-col sm:flex-row items-center gap-4">
+                  <a class="w-full sm:w-auto px-8 py-3.5 bg-secondary-container text-primary font-label-lg text-label-lg rounded hover:bg-surface-bright transition-colors font-semibold"
                      href="contact">
-                     <span>Konsultasi Kurator</span>
-                     <span class="material-symbols-outlined text-[18px] ml-2">north_east</span>
+                     Discuss Your Idea
                   </a>
                   <a class="inline-flex items-center justify-center bg-transparent border border-outline-variant text-surface-bright font-label-lg text-label-lg px-space-lg py-3 rounded-lg hover:bg-surface-bright/10 transition-colors duration-200"
-                     href="#">
+                     href="https://canva.link/adgkxvnlq16msyx" target="_blank">
                      <span class="material-symbols-outlined text-[18px] mr-2">download</span>
-                     <span>Unduh E-Katalog (PDF)</span>
+                     <span>View E-Catalog</span>
                   </a>
                </div>
-            </div>
-            <!-- Subtle background batik motif geometry decorative SVG -->
-            <div
-               class="absolute right-0 bottom-0 top-0 w-1/2 opacity-5 pointer-events-none flex items-center justify-end pr- space-xl">
-               <svg class="w-[480px] h-[480px] text-surface-bright" fill="currentColor" viewbox="0 0 100 100">
-                  <circle cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-width="1.5"></circle>
-                  <circle cx="50" cy="50" fill="none" r="25" stroke="currentColor" stroke-width="1"></circle>
-                  <ellipse cx="50" cy="50" fill="none" rx="30" ry="10" stroke="currentColor" stroke-width="1"></ellipse>
-                  <ellipse cx="50" cy="50" fill="none" rx="10" ry="30" stroke="currentColor" stroke-width="1"></ellipse>
-                  <circle cx="20" cy="50" fill="none" r="10" stroke="currentColor" stroke-width="0.8"></circle>
-                  <circle cx="80" cy="50" fill="none" r="10" stroke="currentColor" stroke-width="0.8"></circle>
-                  <circle cx="50" cy="20" fill="none" r="10" stroke="currentColor" stroke-width="0.8"></circle>
-                  <circle cx="50" cy="80" fill="none" r="10" stroke="currentColor" stroke-width="0.8"></circle>
-               </svg>
             </div>
          </div>
       </div>
