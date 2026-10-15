@@ -14,7 +14,7 @@ const processSteps = [
       duration: '3–7 Hari Riset',
       technique: 'Pola Tangan Manual',
       techniqueIcon: 'draw',
-      video: '/videos/process/menggambar.mp4',
+      video: 'https://github.com/mascodehub/batik-nusantara/raw/refs/heads/master/public/videos/process/menggambar.mp4',
       poster: '/main-1.jpg',
    },
    {
@@ -27,7 +27,7 @@ const processSteps = [
       duration: '14–45 Hari Pengerjaan',
       technique: 'Lilin Lebah Alami',
       techniqueIcon: 'mode_heat',
-      video: '/videos/process/mencanting.mp4',
+      video: 'https://github.com/mascodehub/batik-nusantara/raw/refs/heads/master/public/videos/process/mencanting.mp4',
       poster: '/main-2.jpg',
    },
    {
@@ -40,7 +40,7 @@ const processSteps = [
       duration: '10–20 Kali Celup',
       technique: '100% Organik Eco-Safe',
       techniqueIcon: 'eco',
-      video: '/videos/process/mewarnai.mp4',
+      video: 'https://github.com/mascodehub/batik-nusantara/raw/refs/heads/master/public/videos/process/mewarnai.mp4',
       poster: '/main-3.jpg',
    },
 ];
@@ -141,7 +141,7 @@ watch(currentStep, () => {
                      <!-- Timeline Kontainer Vertikal -->
                      <div class="relative pl-6 md:pl-8 space-y-space-lg">
                         <!-- Background line -->
-                        <div class="absolute left-[19px] md:left-[23px] top-4 bottom-8 w-[2px] bg-outline-variant/40">
+                        <div class="absolute left-[19px] md:left-[23px] top-4 bottom-48 w-[2px] bg-outline-variant/40">
                         </div>
 
                         <!-- Active progress line -->

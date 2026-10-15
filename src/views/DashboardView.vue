@@ -203,7 +203,7 @@ const galleryItems = ref([
               <div class="relative aspect-[4/3] overflow-hidden rounded-sm bg-surface-container">
                 <video ref="videoRef"
                   class="w-full h-full object-cover transition-opacity duration-700 filter brightness-90"
-                  src="/videos/home-about.mp4" controls preload="metadata" autoplay muted>
+                  src="https://github.com/mascodehub/batik-nusantara/raw/refs/heads/master/public/videos/home-about.mp4" controls preload="metadata" autoplay muted>
                   Browser kamu tidak mendukung pemutaran video.
                 </video>
                 <!-- <img alt="Potret karya batik kontemporer dalam perpaduan busana formal modern"
