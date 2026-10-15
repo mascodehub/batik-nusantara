@@ -6,56 +6,43 @@ import Button from 'primevue/button'
 const processSteps = [
    {
       id: 1,
-      name: 'Konsultasi & Pemolaan Naskah',
-      captionTitle: '01. Eksplorasi Filosofi Ragam Hias & Sketsa Naskah',
+      name: 'Tracing the Design',
+      captionTitle: '01. Tracing the Design',
       progressPct: 0,
       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAmaM68BY2c3GTA018kDPlSLP5tbNqwf-H7C6Cv5XcYHyNOsh7AecYzgR_ZN8eoI3Phb0JmF6EuxyuNigwxgp9vWKDrKYQ90T2Ww5BOGcoZVYcthgGbHWQ7gcrRcTb3FFcJRbzz1OJTJ5CijdhX_0aRymflZxtpkId5V6sM8krSwiaQpmTdtwWLUN11exbUGpEe7RIdmqxR8c5UGGX0A81dJRJ8MsGUkdyGmXa1r26sOWY5QiHmGMY',
-      description: 'Riset etimologis motif filosofis, penentuan susunan ornamen trah, serta sketsa pola manual di atas kain mori primissima atau sutra ATBM oleh kurator wastra.',
+      description: 'The process begins by carefully transferring the chosen design onto the fabric. Each line is traced onto the surface as a guide for the canting process, ensuring that every detail of the motif is positioned accurately before the batik-making begins.',
       duration: '3–7 Hari Riset',
       technique: 'Pola Tangan Manual',
       techniqueIcon: 'draw',
-      video: '/videos/video-1.mp4',
+      video: '/videos/process/menggambar.mp4',
       poster: '/main-1.jpg',
    },
    {
       id: 2,
-      name: 'Pencoletan & Canting Malam Tulis',
-      captionTitle: '02. Pencoletan & Canting Malam Tulis',
-      progressPct: 33,
+      name: 'Applying the Wax',
+      captionTitle: '02. Applying the Wax',
+      progressPct: 50,
       image: 'https://example.com/proses-canting.jpg',
-      description: 'Penorehan lilin malam panas dengan canting tembaga presisi oleh maestro pembatik berpengalaman puluhan tahun, mengunci detail motif garis rambut (isen-isen) tembus dua sisi kain.',
+      description: 'Once the design is transferred, the artisan follows each traced line using a canting, a traditional Indonesian tool used to apply melted batik wax (malam) onto the fabric. The wax creates a barrier that prevents the dye from penetrating the covered areas, gradually defining the intricate details of the motif.',
       duration: '14–45 Hari Pengerjaan',
       technique: 'Lilin Lebah Alami',
       techniqueIcon: 'mode_heat',
-      video: '/videos/video-2.mp4',
+      video: '/videos/process/mencanting.mp4',
       poster: '/main-2.jpg',
    },
    {
       id: 3,
-      name: 'Pewarnaan Alami Soga & Celup Tradisional',
-      captionTitle: '03. Pewarnaan Alami Soga & Celup Tradisional',
-      progressPct: 66,
+      name: 'Adding Color',
+      captionTitle: '03. Adding Color',
+      progressPct: 100,
       image: 'https://example.com/proses-pewarnaan.jpg',
-      description: 'Ekstraksi bahan botani murni (kulit kayu tingi, jolawe, kayu tegeran, dan indigofera murni) melalui perendaman berlapis hingga 15–20 kali untuk menghasilkan kedalaman rona hangat yang lestari.',
+      description: 'With the wax lines in place, color is carefully applied to the fabric. Depending on the desired result, the artisan works with selected dyes and applies them to each section with precision, allowing the colors to gradually bring the design to life while preserving the character of the handmade process.',
       duration: '10–20 Kali Celup',
       technique: '100% Organik Eco-Safe',
       techniqueIcon: 'eco',
-      video: '/videos/video-3.mp4',
+      video: '/videos/process/mewarnai.mp4',
       poster: '/main-3.jpg',
    },
-   {
-      id: 4,
-      name: 'Pelorotan Lilin & Kendali Mutu',
-      captionTitle: '04. Pelorotan Lilin & Kendali Mutu',
-      progressPct: 100,
-      image: 'https://example.com/proses-finishing.jpg',
-      description: 'Pelepasan malam dalam gentong air mendidih murni, penjemuran di angin teduh tanpa sinar matahari langsung, serta inspeksi 28 titik kurasi sebelum penerbitan sertifikat keaslian.',
-      duration: '3–5 Hari Finishing',
-      technique: '28 Titik Inspeksi Mutu',
-      techniqueIcon: 'verified',
-      video: '/videos/video-4.mp4',
-      poster: '/main-3.jpg',
-   }
 ];
 
 const currentStep = ref(0);
@@ -193,12 +180,12 @@ watch(currentStep, () => {
                               <div class="flex items-center justify-between mb-1 gap-2">
                                  <span class="font-label-sm text-label-sm uppercase tracking-widest"
                                     :class="index === currentStep ? 'text-tertiary-container font-semibold' : 'text-outline'">
-                                    Tahap {{ String(index + 1).padStart(2, '0') }}
+                                    Step {{ String(index + 1).padStart(2, '0') }}
                                  </span>
 
                                  <span v-if="index === currentStep"
                                     class="step-badge inline-flex items-center gap-1 text-[11px] font-medium text-tertiary-container bg-tertiary-container/10 px-2 py-0.5 rounded-full">
-                                    Aktif Ditampilkan
+                                    Play
                                  </span>
                               </div>
 
@@ -211,7 +198,7 @@ watch(currentStep, () => {
                               </p>
 
                               <div
-                                 class="mt-space-sm pt-space-xs flex flex-wrap gap-2 text-outline font-label-sm text-label-sm">
+                                 class="mt-space-sm pt-space-xs flex flex-wrap gap-2 text-outline font-label-sm text-label-sm hidden">
                                  <span class="inline-flex items-center gap-1">
                                     <span class="material-symbols-outlined text-[15px] text-tertiary-container">
                                        schedule
@@ -253,7 +240,7 @@ watch(currentStep, () => {
 
                            <video ref="videoRef"
                               class="w-full h-full object-cover transition-opacity duration-700 filter brightness-90"
-                              :src="selectedStep.video" :poster="selectedStep.poster" controls playsinline
+                              :src="selectedStep.video"  controls playsinline
                               preload="metadata" @ended="handleVideoEnded" autoplay muted>
                               Browser tidak mendukung pemutaran video.
                            </video>
