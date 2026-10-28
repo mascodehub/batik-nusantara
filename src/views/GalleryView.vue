@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import Button from 'primevue/button'
 // const btn = document.getElementById('mobile-menu-btn');
@@ -10,6 +10,40 @@ import Button from 'primevue/button'
 
 //    });
 // }
+
+const imageModules = import.meta.glob(
+  '/src/assets/images/collections/*.{jpg,jpeg,png,webp,avif}',
+  {
+    eager: true,
+    query: '?url',
+    import: 'default'
+  }
+);
+
+const galleryImages = computed(() =>
+  Object.entries(imageModules).map(([path, url]) => {
+    const filename = path.split('/').pop();
+    const title = filename
+      .replace(/\.[^.]+$/, '')
+      .replace(/[-_]/g, ' ')
+      .replace(/\b\w/g, char => char.toUpperCase());
+      
+      return {
+         title,
+         image: url,
+         path,
+         category: 'kain',
+         categoryLabel: 'Kain Batik',
+         material: 'Sutra ATBM Murni (Alat Tenun Bukan Mesin)',
+         origin: 'Giriloyo, Imogiri, Yogyakarta',
+         tag: 'Koleksi Maestro',
+         technique: 'Batik Tulis Canting Tembaga Halus (4 Bulan Proses)',
+         title: 'Kain Tulis Klasik Parang Barong Soga Alam',
+         subtitle: 'Pewarnaan Soga Alami',
+         exclusive: 'Karya Eksklusif 1/1',
+      };
+  })
+);
 
 const showModalDetail = ref(false)
 const selectedItem = ref(null)
@@ -264,7 +298,7 @@ function closeModal() {
          </div>
       </div>
 
-      <div class="segment-filter w-full max-w-[1320px] mx-auto px-margin-mobile md:px-margin mb-space-xl hidden">
+      <div class="segment-filter w-full max-w-330 mx-auto px-margin-mobile md:px-margin mb-space-xl hidden">
          <div
             class="flex items-center justify-start md:justify-center overflow-x-auto no-scrollbar py-space-xs gap-2 sm:gap-space-sm"
             id="gallery-filter-group">
@@ -306,15 +340,15 @@ function closeModal() {
          </div>
       </div>
 
-      <div class="segment-gallery-grid w-full max-w-[1320px] mx-auto px-margin-mobile md:px-margin mb-space-2xl">
+      <div class="segment-gallery-grid w-full max-w-330 mx-auto px-margin-mobile md:px-margin mb-space-2xl">
          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="gallery-grid">
-            <article v-for="item in galleryItems" :key="item.title"
+            <article v-for="item in galleryImages" :key="item.title"
                class="gallery-card group flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
                <!-- Image -->
-               <div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden cursor-pointer">
+               <div class="relative w-full aspect-8/9 bg-surface-container overflow-hidden cursor-pointer">
                   <!-- @click="openModal(item)" -->
                   <img :src="item.image" :alt="item.title"
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+                     class="w-full h-full object-fill group-hover:scale-105 transition-transform duration-500 ease-out" />
 
                   <!-- Badges -->
                   <div class="absolute top-3 left-3 flex gap-2">

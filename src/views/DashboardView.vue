@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import Button from 'primevue/button'
 
@@ -26,75 +26,45 @@ const changeImage = (image) => {
   selectedImage.value = image;
 };
 
-const galleryItems = ref([
+const imageModules = import.meta.glob(
+  '/src/assets/images/collections/*.{jpg,jpeg,png,webp,avif}',
   {
-    category: 'kain',
-    categoryLabel: 'Kain Batik',
-    description:
-      'Sutra ATBM murni dengan pewarnaan alami kayu soga dan tingi. Pengerjaan canting halus selama 4 bulan oleh maestro batik Giriloyo dengan presisi geometris sakral khas keraton Mataram. Menampilkan kemegahan Parang Barong yang dahulu dikhususkan bagi para bangsawan berwibawa tinggi.',
-    image:
-      '/images/collections/1111.jpeg',
-    images: [
-      '/images/collections/1111.jpeg',
-    ],
-    material: 'Sutra ATBM Murni (Alat Tenun Bukan Mesin)',
-    origin: 'Giriloyo, Imogiri, Yogyakarta',
-    tag: 'Koleksi Maestro',
-    technique: 'Batik Tulis Canting Tembaga Halus (4 Bulan Proses)',
-    title: 'Kain Tulis Klasik Parang Barong Soga Alam',
-    subtitle: 'Pewarnaan Soga Alami',
-    exclusive: 'Karya Eksklusif 1/1',
-  },
-  {
-    category: "fashion",
-    categoryLabel: 'Kain Batik',
-    description: "Struktur blazer modern dengan paduan motif Sekar Jagad monokromatik. Menghadirkan wibawa formal dengan kenyamanan linen premium. Didesain untuk para pemimpin kontemporer yang menghargai paduan warisan budaya Nusantara dan ketajaman siluet internasional modern.",
-    image: "/images/collections/1222.jpeg",
-    images: [
-      '/images/collections/1222.jpeg',
-    ],
-    material: "Linen Blend & Katun Primissima Batik Tulis",
-    origin: "Surakarta & Jakarta Atelier",
-    tag: "Ready-to-Wear",
-    technique: "Semi-Bespoke Tailoring dengan Hand-stitched Lapel",
-    title: "Modern Tailored Blazer Sekar Jagad",
-    subtitle: "Siluet Kontemporer",
-    exclusive: "Edisi Terbatas"
-  },
-  {
-    category: "fashion",
-    categoryLabel: 'Kain Batik',
-    description: "Gaun malam potongan asimetris berpadu filosofi motif Sido Asih yang melambangkan kasih sayang abadi dan keanggunan wanita Nusantara. Jatuhan kain yang dramatis mengalir seperti ombak pesisir Samudra Hindia dengan tatahan payet tembaga antik artisan kotagede.",
-    image: "/images/collections/1333.jpeg",
-    images: [
-      '/images/collections/1333.jpeg',
-    ],
-    material: "Sutra Organza & Kain Mori Sutra Superfine",
-    origin: "Yogyakarta Creative Hub",
-    tag: "Adibusana",
-    technique: "Draping Eksklusif & Batik Tulis Dua Muka",
-    title: "Gaun Pesta Sido Asih Samodra",
-    subtitle: "Evening Couture",
-    exclusive: "Karya Adibusana"
-  },
-  {
-    category: "interior",
-    categoryLabel: 'Kain Batik',
-    description: "Dekorasi ruang tamu berupa bantal sofa sutra dan taplak meja kanvas katun motif Truntum geometris yang hangat dan bersahaja. Menghadirkan suasana keheningan ruang keluarga berestetika Wabi-Sabi Jawa dengan ketahanan cuci tinggi untuk pemakaian harian mewah.",
-    image: "/images/collections/1444.jpeg",
-    images: [
-      '/images/collections/1444.jpeg',
-    ],
-    material: "Kanvas Katun Organik & Sutra Habutai",
-    origin: "Cirebon & Surakarta Workshop",
-    tag: "Living & Decor",
-    technique: "Batik Cap Tembaga Kombinasi Tulis Rengrengan",
-    title: "Set Aksesori Interior & Table Runner Truntum",
-    subtitle: "Tata Ruang Nusantara",
-    exclusive: "Set Terpadu 5 Pcs"
-  },
-])
+    eager: true,
+    query: '?url',
+    import: 'default'
+  }
+);
 
+let galleryItems = computed(() =>
+  Object.entries(imageModules).map(([path, url]) => {
+    const filename = path.split('/').pop();
+    const title = filename
+      .replace(/\.[^.]+$/, '')
+      .replace(/[-_]/g, ' ')
+      .replace(/\b\w/g, char => char.toUpperCase());
+
+    return {
+      title,
+      image: url,
+      images: [url],
+      path,
+      category: 'kain',
+      categoryLabel: 'Kain Batik',
+      categoryLabel: 'Kain Batik',
+      description:
+        'Sutra ATBM murni dengan pewarnaan alami kayu soga dan tingi. Pengerjaan canting halus selama 4 bulan oleh maestro batik Giriloyo dengan presisi geometris sakral khas keraton Mataram. Menampilkan kemegahan Parang Barong yang dahulu dikhususkan bagi para bangsawan berwibawa tinggi.',
+      material: 'Sutra ATBM Murni (Alat Tenun Bukan Mesin)',
+      origin: 'Giriloyo, Imogiri, Yogyakarta',
+      tag: 'Koleksi Maestro',
+      technique: 'Batik Tulis Canting Tembaga Halus (4 Bulan Proses)',
+      title: 'Kain Tulis Klasik Parang Barong Soga Alam',
+      subtitle: 'Pewarnaan Soga Alami',
+      exclusive: 'Karya Eksklusif 1/1',
+    };
+  })
+);
+
+galleryItems = galleryItems.value.slice(0, 4);
 
 </script>
 
@@ -141,8 +111,7 @@ const galleryItems = ref([
               <div class="relative w-full sm:w-9/12 bg-surface-container-lowest p-2 shadow-sm rounded-sm">
                 <div class="relative aspect-[2/3] overflow-hidden bg-surface-container">
                   <img alt="Kain batik tulis motif soga klasik di atas meja kayu artisan"
-                    class="w-full h-full object-cover"
-                    src="/home-main.jpeg" />
+                    class="w-full h-full object-cover" src="/home-main.jpeg" />
                 </div>
                 <!-- <div class="py-2.5 px-2 flex justify-between items-center text-secondary">
                   <span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Kain Tulis
@@ -203,11 +172,12 @@ const galleryItems = ref([
               <div class="relative aspect-[4/3] overflow-hidden rounded-sm bg-surface-container">
                 <video ref="videoRef"
                   class="w-full h-full object-cover transition-opacity duration-700 filter brightness-90"
-                  src="https://github.com/mascodehub/batik-nusantara/raw/refs/heads/master/public/videos/home-about.mp4" controls preload="metadata" autoplay muted>
+                  src="https://github.com/mascodehub/batik-nusantara/raw/refs/heads/master/public/videos/home-about.mp4"
+                  controls preload="metadata" autoplay muted>
                   Browser kamu tidak mendukung pemutaran video.
                 </video>
                 <!-- <img alt="Potret karya batik kontemporer dalam perpaduan busana formal modern"
-                  class="w-full h-full object-cover" src="/main-3.jpeg" /> -->
+                  class="w-full h-full object-cover" src="/main-3.jpg" /> -->
               </div>
 
             </div>
@@ -292,10 +262,10 @@ const galleryItems = ref([
           <article v-for="item in galleryItems" :key="item.title"
             class="gallery-card group flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
             <!-- Image -->
-            <div class="relative w-full aspect-[3/4] bg-surface-container overflow-hidden cursor-pointer">
+            <div class="relative w-full aspect-3/4 bg-surface-container overflow-hidden cursor-pointer">
               <!-- @click="openModal(item)" -->
               <img :src="item.image" :alt="item.title"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+                class="w-full h-full object-fill group-hover:scale-105 transition-transform duration-500 ease-out" />
 
               <!-- Badges -->
               <div class="absolute top-3 left-3 flex gap-2">
